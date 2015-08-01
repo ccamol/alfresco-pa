@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>documentHistoryPopup</shortname>
+  <description>documentHistoryPopup</description>
+  <family>dashlet</family>
+  <url>/dashlets/documentHistoryPopup</url>
+</webscript>

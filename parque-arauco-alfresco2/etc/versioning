@@ -1,0 +1,4 @@
+Desabilitar versionamiento automático modificando: /tomcat/shared/classes/alfresco-global.properties
+Agregar:
+# Versioning
+version.store.enableAutoVersioning=false

@@ -1,0 +1,5 @@
+<webscript>
+  <shortname>getMallProjectArchitecture</shortname>
+  <description>getMallProjectArchitecture</description>
+  <url>/dashlets/getMallProjectArchitecture</url>
+</webscript>

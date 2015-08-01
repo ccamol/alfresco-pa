@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>getCheckListThirdParty</shortname>
+  <description>getCheckListThirdParty</description>
+  <url>/arauco/getCheckListThirdParty</url>
+   <format default="html">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

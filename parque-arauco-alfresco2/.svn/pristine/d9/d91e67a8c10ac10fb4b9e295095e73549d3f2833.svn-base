@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Add comment to checklist</shortname>
+  <description>Add comment to checklist</description>
+  <url>/arauco/saveComment</url>
+  <format default="json">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

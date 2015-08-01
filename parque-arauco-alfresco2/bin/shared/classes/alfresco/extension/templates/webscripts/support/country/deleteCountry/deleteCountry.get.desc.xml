@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>deleteCountry</shortname>
+  <description>Borrar Pais</description>
+  <url>/arauco/deleteCountry</url>
+  <format default="json">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

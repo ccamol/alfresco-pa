@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Upload Document</shortname>
+  <description>Upload Document</description>
+  <url>/arauco/uploadDocumentArauco</url>
+   <format default="html">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

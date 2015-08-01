@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component> 
+  <scope>page</scope>  
+  <region-id>offerAnalysisDocument</region-id>  
+  <source-id>offerAnalysisApplicant</source-id>  
+  <url>/dashlets/offerAnalysisDocument</url>  
+  <guid>page.offerAnalysisDocument.offerAnalysisApplicant</guid>  
+  <properties> 
+  </properties> 
+</component>

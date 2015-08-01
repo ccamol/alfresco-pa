@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans.dtd'>
+<beans>
+  	<bean id="areaServicePA" parent="baseJavaScriptExtension" class="com.intellego.parquearauco.security.baseprocessorextension.Areas">
+        <property name="extensionName">
+            <value>AreaService</value>
+        </property>        
+      	<property name="serviceRegistry">
+        	<ref bean="ServiceRegistry"></ref>
+      	</property>
+    </bean>
+
+  	<bean id="aclServicePA" parent="baseJavaScriptExtension" class="com.intellego.parquearauco.security.baseprocessorextension.Acls">
+        <property name="extensionName">
+            <value>AclService</value>
+        </property>        
+      	<property name="serviceRegistry">
+        	<ref bean="ServiceRegistry"></ref>
+      	</property>
+    </bean>
+
+ 	<bean id="funcionalityServicePA" parent="baseJavaScriptExtension" class="com.intellego.parquearauco.security.baseprocessorextension.Funcionalities">
+        <property name="extensionName">
+            <value>FuncionalityService</value>
+        </property>        
+      	<property name="serviceRegistry">
+        	<ref bean="ServiceRegistry"></ref>
+      	</property>
+    </bean>
+
+ 	<bean id="nodeServicePA" parent="baseJavaScriptExtension" class="com.intellego.parquearauco.security.baseprocessorextension.Nodes">
+        <property name="extensionName">
+            <value>NodeService</value>
+        </property>        
+      	<property name="serviceRegistry">
+        	<ref bean="ServiceRegistry"></ref>
+      	</property>
+    </bean>
+ 		
+ 	<bean id="rolFuncionalityServicePA" parent="baseJavaScriptExtension" class="com.intellego.parquearauco.security.baseprocessorextension.RolFuncionalities">
+        <property name="extensionName">
+            <value>RolFuncionalityService</value>
+        </property>        
+      	<property name="serviceRegistry">
+        	<ref bean="ServiceRegistry"></ref>
+      	</property>
+    </bean>
+ 		
+ 	<bean id="rolServicePA" parent="baseJavaScriptExtension" class="com.intellego.parquearauco.security.baseprocessorextension.Rols">
+        <property name="extensionName">
+            <value>RolService</value>
+        </property>        
+      	<property name="serviceRegistry">
+        	<ref bean="ServiceRegistry"></ref>
+      	</property>
+    </bean>
+
+ 	<bean id="securityServicePA" parent="baseJavaScriptExtension" class="com.intellego.parquearauco.security.baseprocessorextension.Security">
+        <property name="extensionName">
+            <value>SecurityService</value>
+        </property>        
+      	<property name="service">
+        	<ref bean="SecurityServicePA"></ref>
+      	</property>
+      	<property name="serviceRegistry">
+        	<ref bean="ServiceRegistry"></ref>
+      	</property>
+   	</bean>
+    
+ 	<bean id="testServicePA" parent="baseJavaScriptExtension" class="com.intellego.parquearauco.baseprocessorextension.Test">
+        <property name="extensionName">
+            <value>TestService</value>
+        </property>        
+      	<property name="service">
+        	<ref bean="TestServicePA"></ref>
+      	</property>
+    </bean>
+ 	
+ 	<bean id="TestServicePA" class="com.intellego.parquearauco.security.services.TestService">
+ 	</bean>
+
+	<bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+		<property name="beanNames">
+			<value>TestServicePA</value>
+		</property>
+		<property name="interceptorNames">
+			<list>
+				<value>securityServiceInterceptor</value>
+			</list>
+		</property>
+	</bean>
+ 			
+ 	<bean id="securityServiceInterceptor" class="com.intellego.parquearauco.security.aop.SecurityInterceptor">
+      	<property name="serviceRegistry">
+        	<ref bean="ServiceRegistry"></ref>
+      	</property>
+ 	</bean>
+
+ 	<bean id="SecurityServicePA" class="com.intellego.parquearauco.security.services.SecurityService">
+      	<property name="serviceRegistry">
+        	<ref bean="ServiceRegistry"></ref>
+      	</property>
+ 	</bean>
+ 		
+</beans>

@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>MallDocument</shortname>
+  <description>Mall document</description>
+  <family>dashlet</family>
+  <url>/dashlets/mallDocument</url>
+</webscript>

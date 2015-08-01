@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>getGroupSelected</shortname>
+  <description>getGroupSelected</description>
+  <url>/dashlets/getGroupSelected</url>
+  <format default="html">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

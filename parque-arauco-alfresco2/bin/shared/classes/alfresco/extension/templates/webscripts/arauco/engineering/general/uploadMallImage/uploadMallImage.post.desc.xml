@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Upload Mall Image</shortname>
+  <description>Uploads an image to Alfresco as specified by the user</description>
+  <url>/arauco/uploadMallImage</url>
+  <format default="json">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

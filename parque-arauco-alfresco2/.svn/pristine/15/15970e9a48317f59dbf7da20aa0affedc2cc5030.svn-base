@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webscript>
+  	<shortname>exportExcel</shortname>
+  	<description>Exportar a Excel</description>
+  	<url>/documentService/exportExcel</url>
+  	<format default="html">extension</format>
+  	<authentication>none</authentication>
+	<transaction>required</transaction>
+</webscript>
+

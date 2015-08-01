@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>externalUsersDownloadDocument</shortname>
+  <description>externalUsersDownloadDocument</description>
+  <family>dashlet</family>
+  <url>/dashlets/externalUsersDownloadDocument</url>
+</webscript>

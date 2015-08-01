@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>editDocument</shortname>
+	<description>Edits a single document's metadata as specified by the user</description>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+	  <format default="json">extension</format>
+	<url>/arauco/editDocument</url>
+</webscript>

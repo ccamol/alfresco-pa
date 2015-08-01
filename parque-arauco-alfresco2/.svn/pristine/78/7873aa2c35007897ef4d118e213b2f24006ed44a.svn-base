@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>BreadCrumb</shortname>
+  <description>BreadCrumb</description>
+  <family>dashlet</family>
+  <url>/dashlets/breadcrumb</url>
+</webscript>

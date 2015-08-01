@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<page>
+   <title>Management Architecture</title>
+   <description>managementArchitecture</description>
+   <template-instance>managementArchitecture</template-instance>
+   <authentication>user</authentication>
+</page>

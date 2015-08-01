@@ -1,0 +1,5 @@
+<webscript>
+  <shortname>searchProject</shortname>
+  <description>searchProject</description>
+  <url>/dashlets/searchProject</url>
+</webscript>

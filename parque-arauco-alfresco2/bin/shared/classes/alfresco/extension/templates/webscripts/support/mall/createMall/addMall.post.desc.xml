@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Add Mall</shortname>
+  <description>Add Mall</description>
+  <url>/arauco/addMall</url>
+  <format default="html">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

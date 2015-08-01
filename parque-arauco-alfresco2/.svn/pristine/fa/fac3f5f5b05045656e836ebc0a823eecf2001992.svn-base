@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component> 
+  <scope>page</scope>  
+  <region-id>contracts</region-id>  
+  <source-id>projectManagementArchitecture</source-id>  
+  <url>/dashlets/contracts</url>  
+  <guid>page.sucProject.projectManagementArchitecture</guid>  
+  <properties> 
+  </properties> 
+</component>
+

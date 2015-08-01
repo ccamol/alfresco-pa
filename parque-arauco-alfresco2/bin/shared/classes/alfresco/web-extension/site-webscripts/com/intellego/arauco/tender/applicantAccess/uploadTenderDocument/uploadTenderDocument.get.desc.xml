@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>uploadTenderDocument</shortname>
+  <description>uploadTenderDocument</description>
+  <family>dashlet</family>
+  <url>/dashlets/uploadTenderDocument</url>
+</webscript>

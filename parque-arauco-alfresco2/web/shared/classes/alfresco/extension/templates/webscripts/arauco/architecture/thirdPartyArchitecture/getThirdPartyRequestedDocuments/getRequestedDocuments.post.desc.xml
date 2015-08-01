@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>getRequestedDocuments</shortname>
+	<description>getRequestedDocuments</description>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+	  <format default="json">extension</format>
+	<url>/arauco/getRequestedDocuments</url>
+</webscript>

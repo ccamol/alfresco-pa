@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component> 
+  <scope>page</scope>  
+  <region-id>requestedDocument</region-id>  
+  <source-id>moduleContractor</source-id>  
+  <url>/dashlets/requestedDocument</url>  
+  <guid>page.requestedDocument.moduleContractor</guid>  
+  <properties> 
+  </properties> 
+</component>

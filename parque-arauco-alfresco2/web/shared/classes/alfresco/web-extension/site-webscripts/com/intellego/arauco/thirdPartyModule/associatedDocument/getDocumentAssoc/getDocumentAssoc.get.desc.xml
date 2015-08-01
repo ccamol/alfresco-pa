@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>getSharedDocument</shortname>
+  <description>getSharedDocument</description>
+  <family>dashlet</family>
+  <url>/dashlets/getDocumentAssoc</url>
+</webscript>

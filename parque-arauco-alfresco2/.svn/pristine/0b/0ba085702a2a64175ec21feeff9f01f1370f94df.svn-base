@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>Search Tendering</shortname>
+  <description>Buscador de licitaciones</description>
+  <family>dashlet</family>
+  <url>/dashlets/searchTenderApplicant</url>
+</webscript>

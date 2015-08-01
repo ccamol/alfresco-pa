@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component> 
+  <scope>page</scope>  
+  <region-id>associatedThirdPartyArchitectureDocuments</region-id>  
+  <source-id>thirdPartyArchitecture</source-id>  
+  <url>/dashlets/associatedThirdPartyArchitectureDocuments</url>  
+  <guid>page.associatedThirdPartyArchitectureDocuments.thirdPartyArchitecture</guid>  
+  <properties> 
+    <height>300</height>
+  </properties> 
+</component>

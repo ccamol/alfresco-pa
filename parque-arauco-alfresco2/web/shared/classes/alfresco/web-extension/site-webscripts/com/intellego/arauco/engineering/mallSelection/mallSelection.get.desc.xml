@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>mallSelection</shortname>
+  <description>Selección de mall</description>
+  <family>dashlet</family>
+  <url>/dashlets/mallSelection</url>
+  <authentication>user</authentication>
+<transaction>required</transaction>
+</webscript>

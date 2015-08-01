@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>List expiration</shortname>
+  <description>Mall expiration</description>
+  <family>dashlet</family>
+  <url>/dashlets/listExpiration</url>
+</webscript>

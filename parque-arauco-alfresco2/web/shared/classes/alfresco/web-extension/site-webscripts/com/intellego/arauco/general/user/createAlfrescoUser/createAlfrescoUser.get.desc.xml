@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>createAlfrescoUser</shortname>
+  <description>Create Alfresco User</description>
+  <url>/dashlets/createAlfrescoUser</url>
+  <format default="json">extension</format>
+</webscript>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<!-- =================================== -->
+<!-- Pdf Transformation -->
+<!-- -->
+<!-- Uses Convert to -->
+<!-- =================================== -->
+
+<beans>
+	<!-- Content Transformations -->
+	<!-- Generic FFmpeg transformation worker -->
+	<bean id="transformer.transformers.image.pngToPdf"
+		class="org.alfresco.repo.content.transform.RuntimeExecutableContentTransformerWorker">
+		<property name="mimetypeService">
+			<ref bean="mimetypeService" />
+		</property>
+		<property name="checkCommand">
+			<bean class="org.alfresco.util.exec.RuntimeExec">
+				<property name="command">
+					<list>
+						<value>/opt/alfresco-4.2.f/common/bin/convert</value>
+						<value>-version</value>
+					</list>
+				</property>
+				<property name="errorCodes">
+					<value>127</value>
+				</property>
+			</bean>
+		</property>
+		<property name="transformCommand">
+			<bean class="org.alfresco.util.exec.RuntimeExec">
+				<property name="commandsAndArguments">
+					<map>
+						<entry key=".*">
+							<list>
+								<!-- Lógica -->
+								<!-- Comando anidado que convierte video MP4-WMV a GIF y luego convierte 
+									el GIF a un tamaño más pequeño -->
+								<!-- El archivo de Video entrante puede ser cualquira mientras sea 
+									soportado por FFMPEG y previamente debe ser registrado como un sourceMimetype 
+									en la propiedad "explicitTransformations" de más abajo -->
+								<!-- Luego de realizar la transformación del video, el segundo comando 
+									anidado realiza la transformación del GIF resultante a un tamaño más pequeño, 
+									en esté caso se toma el ${target} como source y el mismo target queda como 
+									el nuevo target -->
+								<value>sh</value>
+								<value>-c</value>
+								<value>/opt/alfresco-4.2.f/common/bin/convert '${source}' '${target}'</value>
+							</list>
+						</entry>
+					</map>
+				</property>
+				<property name="waitForCompletion">
+					<value>true</value>
+				</property>
+				<property name="defaultProperties">
+					<props>
+						<prop key="opts"></prop>
+						<prop key="infile_opts"></prop>
+						<prop key="outfile_opts"></prop>
+					</props>
+				</property>
+			</bean>
+		</property>
+		<property name="explicitTransformations">
+			<list>
+				<!-- Transform PNG to PDF -->
+				<bean
+					class="org.alfresco.repo.content.transform.ExplictTransformationDetails">
+					<property name="sourceMimetype">
+						<value>image/png</value>
+					</property>
+					<property name="targetMimetype">
+						<value>application/x-shockwave-flash</value>
+					</property>
+				</bean>
+				<bean
+					class="org.alfresco.repo.content.transform.ExplictTransformationDetails">
+					<property name="sourceMimetype">
+						<value>image/png</value>
+					</property>
+					<property name="targetMimetype">
+						<value>application/pdf</value>
+					</property>
+				</bean>
+				<!-- Transform TIFF to PDF -->
+				<bean
+					class="org.alfresco.repo.content.transform.ExplictTransformationDetails">
+					<property name="sourceMimetype">
+						<value>image/tiff</value>
+					</property>
+					<property name="targetMimetype">
+						<value>application/x-shockwave-flash</value>
+					</property>
+				</bean>
+				<!-- Transform JPEG to PDF -->
+				<bean
+					class="org.alfresco.repo.content.transform.ExplictTransformationDetails">
+					<property name="sourceMimetype">
+						<value>image/jpeg</value>
+					</property>
+					<property name="targetMimetype">
+						<value>application/x-shockwave-flash</value>
+					</property>
+				</bean>
+				<bean
+					class="org.alfresco.repo.content.transform.ExplictTransformationDetails">
+					<property name="sourceMimetype">
+						<value>image/jpeg</value>
+					</property>
+					<property name="targetMimetype">
+						<value>application/pdf</value>
+					</property>
+				</bean>
+			</list>
+		</property>
+	</bean>
+	<bean id="transformer.temp.image.pngToPdf"
+		class="org.alfresco.repo.content.transform.ProxyContentTransformer"
+		parent="baseContentTransformer">
+		<property name="worker">
+			<ref bean="transformer.transformers.image.pngToPdf" />
+		</property>
+	</bean>
+</beans>

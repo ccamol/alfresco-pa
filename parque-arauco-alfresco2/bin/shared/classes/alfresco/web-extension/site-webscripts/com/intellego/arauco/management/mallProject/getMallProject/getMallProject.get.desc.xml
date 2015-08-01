@@ -1,0 +1,5 @@
+<webscript>
+  <shortname>getMallProject</shortname>
+  <description>getMallProject</description>
+  <url>/dashlets/getMallProject</url>
+</webscript>

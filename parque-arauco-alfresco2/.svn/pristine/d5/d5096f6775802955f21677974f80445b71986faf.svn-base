@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>workshopArea</shortname>
+  <description>Zona de Taller</description>
+  <family>dashlet</family>
+  <url>/dashlets/workshopArea</url>
+  <authentication>user</authentication>
+<transaction>required</transaction>
+</webscript>

@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>Search Document</shortname>
+	<description>Buscador de documentos</description>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+	 <format default="json">extension</format>
+	<url>/arauco/getCountry</url>
+</webscript>

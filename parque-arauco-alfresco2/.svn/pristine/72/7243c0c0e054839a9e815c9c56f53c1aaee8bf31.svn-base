@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>statusProject</shortname>
+  <description>statusProject</description>
+  <url>/arauco/statusProject</url>
+   <format default="json">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

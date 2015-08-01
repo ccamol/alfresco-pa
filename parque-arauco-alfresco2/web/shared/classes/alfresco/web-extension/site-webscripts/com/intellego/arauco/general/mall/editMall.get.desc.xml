@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>Malls</shortname>
+  <description>Malls Management</description>
+  <url>/dashlets/editMall</url>
+  <format default="json">extension</format>
+</webscript>

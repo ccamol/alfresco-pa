@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>deleteDocument</shortname>
+  <description>initiates a workflow to delete a document</description>
+  <url>/dashlets/deleteDocument</url>
+  <format default="json">extension</format>
+</webscript>

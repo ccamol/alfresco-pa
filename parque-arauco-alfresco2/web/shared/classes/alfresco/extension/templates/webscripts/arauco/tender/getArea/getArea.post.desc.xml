@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>getArea</shortname>
+	<description>getArea</description>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+	  <format default="json">extension</format>
+	<url>/arauco/getArea</url>
+</webscript>

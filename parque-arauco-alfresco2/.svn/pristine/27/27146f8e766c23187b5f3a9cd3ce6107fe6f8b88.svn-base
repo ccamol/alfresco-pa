@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Select SAP SUC</shortname>
+  <description>Select SAP SUC</description>
+  <url>/arauco/linkSUCSAP</url>
+  <format default="json">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

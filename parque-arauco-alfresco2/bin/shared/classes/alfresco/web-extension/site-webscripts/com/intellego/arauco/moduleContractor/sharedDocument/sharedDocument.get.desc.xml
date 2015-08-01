@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>sharedDocument</shortname>
+  <description>sharedDocument</description>
+  <family>dashlet</family>
+  <url>/dashlets/sharedDocument</url>
+</webscript>

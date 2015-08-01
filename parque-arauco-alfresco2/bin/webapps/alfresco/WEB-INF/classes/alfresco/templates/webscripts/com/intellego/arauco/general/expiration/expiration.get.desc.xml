@@ -1,0 +1,7 @@
+<webscript>
+	<shortname>expiration</shortname>
+	<description>Mall expiration</description>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+	<url>/arauco/expiration</url>
+</webscript>

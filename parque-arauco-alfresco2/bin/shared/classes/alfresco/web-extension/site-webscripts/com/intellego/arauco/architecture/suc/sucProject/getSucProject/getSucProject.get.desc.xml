@@ -1,0 +1,5 @@
+<webscript>
+  <shortname>getSucProject</shortname>
+  <description>getSucProject</description>
+  <url>/dashlets/getSucProject</url>
+</webscript>

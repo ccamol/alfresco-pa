@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>saveDocumentTender</shortname>
+  <description>saveDocumentTender</description>
+  <url>/arauco/saveDocumentTender</url>
+   <format default="html">extension</format>
+  <authentication runas="admin">user</authentication>
+  <transaction>required</transaction>
+</webscript>

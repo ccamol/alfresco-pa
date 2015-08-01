@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Busca Operadores</shortname>
+  <description>Busqueda Tipo de Operadores</description>
+  <url>/arauco/getDataOperator</url>
+  <format default="json">extension</format>
+    <authentication runas="admin">user</authentication>
+  <transaction>required</transaction>
+</webscript>

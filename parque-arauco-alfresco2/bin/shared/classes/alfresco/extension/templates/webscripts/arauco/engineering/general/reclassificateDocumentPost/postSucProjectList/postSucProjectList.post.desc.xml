@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>postSucProjectList</shortname>
+  <description>postSucProjectList</description>
+  <url>/arauco/postSucProjectList</url>
+   <format default="json">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

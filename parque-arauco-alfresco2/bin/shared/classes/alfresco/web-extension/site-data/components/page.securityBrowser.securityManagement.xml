@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component> 
+  <scope>page</scope>  
+  <region-id>securityBrowser</region-id>  
+  <source-id>securityManagement</source-id>  
+  <url>/dashlets/securityBrowser</url>  
+  <guid>page.securityBrowser.securityManagement</guid>  
+  <properties> 
+    <height>300</height>
+  </properties> 
+</component>

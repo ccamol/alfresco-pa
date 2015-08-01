@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans.dtd'>
+<beans>
+     	<bean id="copyServiceImpl" parent="baseJavaScriptExtension" class="com.intellego.parquearauco.copy.baseprocessorextension.CopyServiceBaseProccesor">	
+     		<property name="extensionName">
+	            <value>CopyServiceImpl</value>
+	        </property>        
+	      	<property name="service">
+	        	<ref bean="CopyServiceImpl"></ref>
+	      	</property>
+     	</bean>
+     	<bean id="CopyServiceImpl" class="com.intellego.parquearauco.copy.service.CopyServiceImpl">
+	      	<property name="serviceRegistry">
+	        	<ref bean="ServiceRegistry"></ref>
+	      	</property>
+		</bean>     	
+</beans>

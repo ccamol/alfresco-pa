@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webscript>
+  	<shortname>externalUsersDownloadDocument</shortname>
+  	<description>Descarga un archivo a través del uuid</description>
+  	<url>/documentService/externalUsersDownloadDocument</url>
+  	<format default="html">extension</format>
+  	<authentication>none</authentication>
+	<transaction>required</transaction>
+</webscript>
+

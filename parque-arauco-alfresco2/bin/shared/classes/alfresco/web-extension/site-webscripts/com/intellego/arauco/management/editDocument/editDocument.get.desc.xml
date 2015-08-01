@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>editDocument</shortname>
+  <description>editDocument</description>
+  <family>dashlet</family>
+  <url>/dashlets/editDocument</url>
+</webscript>

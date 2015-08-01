@@ -1,0 +1,455 @@
+/*estilos generales*/
+
+/*modificaciÃ³n template-light alfresco*/
+
+input.alf-search-box-text{
+	height:17px;	
+}
+.alfresco-share .alf-search-icon{
+margin-top:-6px;		
+}
+
+#share-header{
+background:#fff;
+min-height: 103px;
+}
+#doc3{
+margin:0 !important;
+}
+
+.alfresco-share .alf-header{
+background-color:#005da6;
+} 
+.alfresco-share .alf-header .dijitReset.dijitInline.dijitMenuItemLabel.dijitMenuItem {
+    color: #fff;
+}
+.alfresco-share .sticky-wrapper {
+    background-color: #cccccc!important;
+	background-image:url("../img/bg-body.jpg");
+}
+.alfresco-share .alf-header alf.menu-bar .dijitMenuPassive .dijitMenuItemHover{
+	background-color:#68a1da !important;
+}
+
+.footer{
+background:#a9a8a8 !important;
+height:50px;
+}
+.copyright{
+display:none !important;
+}
+.sticky-wrapper label, .share-form .viewmode-label{
+font-size:13px !important;
+font-weight:normal !important;
+font-family:Open Sans, Arial;
+}
+
+
+#bodyTemplate{
+	font-size:13px;
+	font-family:Open Sans;
+	font-weight:normal;
+}
+
+
+/***********VISTA INICIO****************/
+/*seleccion mall*/
+.dashlet.logos{
+background:none;
+border:none;
+}
+.dashlet.logos .title{
+background:none;
+border:none;
+}
+.mallList {
+	float:left;
+	margin:2.5px;
+	border:solid 1px #ccc;
+	}
+	
+.rowsArauco {
+    clear:both
+}
+	
+/*botones*/
+.btn-search-primary{
+	display:block;
+	width:28px;
+	height:28px;
+	background-image:url("../img/btn-search-primary.png");
+	background-repeat:no-repeat;
+	float:left;
+	margin-left:2px;
+	cursor:pointer;
+}
+.btn-second{
+	border:solid 2px #fff;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+	color:#666;
+	text-shadow:1px 1px 0 #fff;
+	
+	background: rgb(229,229,229); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(229,229,229,1) 0%, rgba(229,229,229,1) 49%, rgba(248,248,248,1) 49%, rgba(248,248,248,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(229,229,229,1)), color-stop(49%,rgba(229,229,229,1)), color-stop(49%,rgba(248,248,248,1)), color-stop(100%,rgba(248,248,248,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(229,229,229,1) 0%,rgba(229,229,229,1) 49%,rgba(248,248,248,1) 49%,rgba(248,248,248,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(229,229,229,1) 0%,rgba(229,229,229,1) 49%,rgba(248,248,248,1) 49%,rgba(248,248,248,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(229,229,229,1) 0%,rgba(229,229,229,1) 49%,rgba(248,248,248,1) 49%,rgba(248,248,248,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(229,229,229,1) 0%,rgba(229,229,229,1) 49%,rgba(248,248,248,1) 49%,rgba(248,248,248,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#f8f8f8',GradientType=0 ); /* IE6-9 */
+		
+
+}
+.btn-second:hover{
+background-position:0 13px;
+}
+#mas{
+background-image:url("../img/ico_mas.png");
+background-repeat:no-repeat;
+display:block;
+width:30px;
+height:30px;
+float:right;
+}
+#menos{
+background-image:url("../img/ico_menos.png");	
+background-repeat:no-repeat;
+display:block;
+width:30px;
+height:30px;
+float:right;	
+}
+
+
+
+.form-search .btn-primary{
+margin:14% 0;
+}
+
+
+.row{
+	padding:10px;
+	}
+
+/*Buscador inicio*/
+.searching{
+background-image:url("../img/bg-searching.jpg");
+margin:0 4px;
+border-bottom:solid 1px #ccc;
+}
+
+.searching.form{
+background-image:url("../img/bg-searching-form.jpg");
+border-top:solid 1px #fff;
+}
+
+#search {
+	float:left;
+	width:65%;
+	border-radius:50px;	
+	}
+	
+.search-title{
+	float:left;
+	padding:7px;
+	}	
+	
+.box-search {
+	padding-top:15px;
+	background:url("img/bg-serachbox.png");
+	}	
+	
+.box-search .form-group{
+	overflow:hidden;
+	width:70%;
+	margin:0 auto;
+	}
+	
+.form-search label{
+	clear:both;
+	display:block;	
+	}	
+	
+select {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+}
+
+.form-search select,.form-search input[type="file"]{
+    height: 30px !important;
+    line-height: 30px;
+}
+
+
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    border-radius: 4px;
+    color: #555555;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    padding: 4px 6px;
+    vertical-align: middle;
+	width:100%;
+}
+.container select, .container input[type="file"], .container input[type="text"], 
+.container input[type="password"], .container textarea, .container select, .container input[type="file"]{
+	width:100%!important;
+	height:27px;
+}
+
+
+
+#datetimepicker input{
+	background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+	width:90px;
+}
+.input-append .add-on, .input-prepend .add-on {
+    background-color: #EEEEEE;
+    border: 1px solid #CCCCCC;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    height: 20px;
+    line-height: 20px;
+    min-width: 16px;
+    padding: 4px 5px;
+    text-align: center;
+    text-shadow: 0 1px 0 #FFFFFF;
+    width: auto;
+}
+.input-append, .input-prepend {
+    font-size: 0;
+    margin-bottom: 5px;
+    white-space: nowrap;
+}
+.input-append .add-on:last-child, .input-append .btn:last-child, .input-append .btn-group:last-child > .dropdown-toggle {
+    border-radius: 0 4px 4px 0;
+}
+.input-append input, .input-append select, .input-append .uneditable-input {
+    border-radius: 4px 0 0 4px;
+}
+
+.bootstrap-datetimepicker-widget.dropdown-menu ul {
+	padding:0;
+	}
+	
+/****VISTA PROJECT MANAGEMENT*****/	
+#bodyTemplate{
+	height:auto;
+}
+
+.dashlet .title{
+	background-image:url("../img/bg-title-dashlet.png");
+	color:#fff;
+	height:35px;
+	text-shadow:1px 1px 0 #333;
+	line-height:23px;
+}
+.dashlet .bar{
+	background-image:url("../img/bg-bar.jpg");
+	min-height:47px;
+}
+
+.dataTables_filter input, .dataTables_filter select{
+height:25px;
+line-height:25px;
+}
+
+.small-search {
+	min-width:270px;
+}
+
+.small-search .form-control, .small-search .input-group-btn{
+	float:left;
+}
+.small-search .form-control{
+	height:30px;
+	line-height:30px;	
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+	border-right:none !important;
+	}
+.small-search .dropdown-menu.dropdown-menu-large{
+	margin-left:-185px;
+}
+.small-search .view{
+	padding:10px;
+}	
+	
+.more{
+background:#fff;
+border:solid 1px #ccc;
+border-left:none;
+border-right:none;
+min-width:15px;
+height:30px;
+display:block;
+float:left;
+}
+.more a{
+    cursor: pointer;
+    height: 30px;
+    width: 15px;
+	padding-top:12px;
+	float:left;
+}
+.wrapper-btn{
+-webkit-border-top-right-radius: 50px;
+-webkit-border-bottom-right-radius: 50px;
+-moz-border-radius-topright: 50px;
+-moz-border-radius-bottomright: 50px;
+border-top-right-radius: 50px;
+border-bottom-right-radius: 50px;
+}
+
+/*Listado*/
+.projectMallStyle.colorProject{
+background:#f1f0f0;
+border-left:solid 10px #7ba0d7;
+}
+.projectMallStyle{
+padding:10px;
+border-left:solid 10px #e4e8ef;
+width:100%;
+float:left;
+}
+
+.projectMallStyle div {
+padding:3px;
+}
+.projectMallStyle .ico{
+float:left;
+width:30px;
+height:30px;
+cursor:pointer;
+}
+.projectMallStyle .detailProject{
+float:left;
+width:70%;
+}
+.ico.editProject{
+background-image:url("../img/ico-edit.png");
+background-repeat:no-repeat;
+}
+.ico.stageProject{
+background-image:url("../img/ico-stage.png");
+}
+
+
+
+/*****************VISTA ETAPAS***********************/
+.StageList{
+width:20%;
+float:left;
+padding:5px;
+text-align:center;
+}
+.StageList img{
+width:45%;
+}
+
+
+
+/*****************MODAL***********************/
+h3.title-modal{
+font-size:20px;
+font-weight:normal;
+color:#fff;
+}
+
+.modal-body .datePickers{
+width:50%;
+}
+.modal-header{
+background-image:url("../img/bg-bar.jpg");
+}
+.modal-body{
+height:auto;
+max-height:90%;
+padding:0;
+}
+
+.modal-footer{
+text-align:center;
+background:none;
+border:none;
+}
+
+/*******************GRILLA**************************/
+.dataTableClass {
+margin-bottom:5px;
+color:#666;
+}
+.dataTables_wrapper{
+padding:20px 0;
+overflow:hidden;
+}
+
+.dataTables_length  select{
+	width:auto !important;	
+}
+
+.dataTables_length{
+	margin-right:3%;
+	float:left;
+}
+.dataTables_length label{
+	float:left;
+}
+.dataTables_info,.dataTables_paginate{
+	font-size:11px;
+} 
+
+.dataTables_info{
+	float:left;
+}
+.dataTables_paginate{
+	float:right;
+}
+.dataTables_paginate a {
+	margin-left:20px;
+}
+
+label{
+font-weight:normal !important;
+}
+
+.dashlet .dataTableClass th {
+background:#6fa74b;
+color:#fff;
+font-weight:normal;
+padding:4px 8px;
+border:none;
+border-right:solid 1px #fff;
+}
+.dataTableClass th:last-child{
+border-right:none;
+}
+/***********DROPDOWN-MENU**************/
+.dropdown-menu{
+font-size:13px;
+}
+.dropdown-menu .datePickers.hasDatepicker{
+width:80%;
+}
+.dropdown-menu p{
+font-size:11px;
+}
+.dropdown-menu label{
+font-weight:bold !important;
+color:#305da2;
+}
+.dropdown-menu .form div:last-child{
+text-align:center;
+} 
+.dropdown-menu form{
+margin-bottom:0px;
+} 
+.dropdown-menu .form-group{
+margin-bottom:0;
+}

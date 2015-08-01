@@ -1,0 +1,35 @@
+.containerSearch{
+	width: 800px;
+	height: 400px; 
+}
+
+.containerMall{
+	width: 740px; 
+	height: 278px; 
+	
+}
+#containerMallSelection{
+	overflow-y: scroll;
+	width: 700px; 
+	height: 278px;
+}
+
+/*seleccion mall*/
+.mallList {
+float:left;
+margin:2.5px;
+border:solid 1px #ccc;
+}
+
+#bodyTemplate{
+	height: 700px;
+	
+}
+
+
+
+.rowsArauco {
+clear:both
+}
+
+

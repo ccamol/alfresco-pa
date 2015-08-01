@@ -1,0 +1,7 @@
+<webscript>
+  <shortname>getSucProjectList</shortname>
+  <description>getSucProjectList</description>
+  <family>dashlet</family>
+  <url>/dashlets/getSucProjectList</url>
+   <format default="json">extension</format>
+</webscript>

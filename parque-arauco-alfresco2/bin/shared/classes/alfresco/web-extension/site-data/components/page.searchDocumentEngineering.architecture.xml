@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component> 
+  <scope>page</scope>  
+  <region-id>searchDocumentEngineering</region-id>  
+  <source-id>architecture</source-id>  
+  <url>/dashlets/searchDocumentEngineering</url>  
+  <guid>page.searchDocumentEngineering.architecture</guid>  
+  <properties> 
+    <height>500</height>
+    <with>800</with>
+  </properties> 
+</component>
+
+
+

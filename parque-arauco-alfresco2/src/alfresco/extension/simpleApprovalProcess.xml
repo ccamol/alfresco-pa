@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
+  <process id="simpleApprovalProcess" name="Flujo de aprobación simple" isExecutable="true">
+    <startEvent id="startevent1" name="Start" activiti:formKey="pawf:startEvent" ></startEvent>
+    <sequenceFlow id="flow2" sourceRef="startevent1" targetRef="approveDocument"></sequenceFlow>
+    <userTask id="approveDocument" name="Aprobar documento" activiti:assignee="${pawf_simpleReviewer}" activiti:formKey="pawf:approveDocument">
+    <extensionElements>
+        <activiti:taskListener event="create" class="org.alfresco.repo.workflow.activiti.tasklistener.ScriptTaskListener">
+          <activiti:field name="script">
+            <activiti:string>
+   				if (typeof bpm_workflowDueDate != 'undefined') task.dueDate = bpm_workflowDueDate;
+				if (typeof bpm_workflowPriority != 'undefined') task.priority = bpm_workflowPriority;
+			</activiti:string>
+          </activiti:field>
+        </activiti:taskListener>
+        <activiti:taskListener event="complete" class="org.alfresco.repo.workflow.activiti.tasklistener.ScriptTaskListener">
+          <activiti:field name="script">
+            <activiti:string>
+           		execution.setVariable('bpm_comment', task.getVariable('bpm_comment'));
+				execution.setVariable('bpm_dueDate', task.dueDate);
+				execution.setVariable('bpm_priority', task.priority);
+				execution.setVariable('pawf_reviewOutcome', task.getVariable('pawf_reviewOutcome'));
+				execution.setVariable('idTaskForDelete',task.id);
+			</activiti:string>
+          </activiti:field>
+        </activiti:taskListener>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="flow1" sourceRef="approveDocument" targetRef="approveDecision"></sequenceFlow>
+    <exclusiveGateway id="approveDecision" name="Aprobar"></exclusiveGateway>
+    <sequenceFlow id="flow3" name="No aprobar" sourceRef="approveDecision" targetRef="updateDocument">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${pawf_reviewOutcome == 'No aprobar'}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="flow5" name="Aprobar" sourceRef="approveDecision" targetRef="documentPublication"></sequenceFlow>
+    <userTask id="updateDocument" name="Actualizar/cargar nueva versión" activiti:assignee="${initiator.properties.userName}" activiti:formKey="pawf:updateDocument">
+    <extensionElements>
+        <activiti:taskListener event="create" class="org.alfresco.repo.workflow.activiti.tasklistener.ScriptTaskListener">
+          <activiti:field name="script">
+            <activiti:string>
+   				if (typeof bpm_workflowDueDate != 'undefined') task.dueDate = bpm_workflowDueDate;
+				if (typeof bpm_workflowPriority != 'undefined') task.priority = bpm_workflowPriority;
+			</activiti:string>
+          </activiti:field>
+        </activiti:taskListener>
+        <activiti:taskListener event="complete" class="org.alfresco.repo.workflow.activiti.tasklistener.ScriptTaskListener">
+          <activiti:field name="script">
+            <activiti:string>
+           		execution.setVariable('bpm_comment', task.getVariable('bpm_comment'));
+				execution.setVariable('bpm_dueDate', task.dueDate);
+				execution.setVariable('bpm_priority', task.priority);
+			</activiti:string>
+          </activiti:field>
+        </activiti:taskListener>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="flow4" sourceRef="updateDocument" targetRef="approveDocument"></sequenceFlow>
+    <serviceTask id="documentPublication" name="Publicar documento" activiti:class="com.intellego.parquearauco.workflow.delegate.PublishDocument">
+    	<extensionElements>
+			<activiti:field name="idTask">
+    			<activiti:expression>${idTaskForDelete}</activiti:expression>
+   			</activiti:field>
+			<activiti:field name="classification">
+    			<activiti:expression>${pawf_uuidClassification}</activiti:expression>
+   			</activiti:field>
+   		</extensionElements>
+    </serviceTask>
+    <sequenceFlow id="flow6" sourceRef="documentPublication" targetRef="endTask"></sequenceFlow>
+    <userTask id="endTask" name="Final" activiti:formKey="pawf:end">
+    </userTask>
+    <sequenceFlow id="flow7" sourceRef="documentPublication" targetRef="endevent1"></sequenceFlow>
+    <endEvent id="endevent1" name="End"></endEvent>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_simpleApprovalProcess">
+    <bpmndi:BPMNPlane bpmnElement="simpleApprovalProcess" id="BPMNPlane_simpleApprovalProcess">
+      <bpmndi:BPMNShape bpmnElement="startevent1" id="BPMNShape_startevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="189.0" y="60.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="approveDocument" id="BPMNShape_approveDocument">
+        <omgdc:Bounds height="55.0" width="105.0" x="154.0" y="140.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="approveDecision" id="BPMNShape_approveDecision">
+        <omgdc:Bounds height="40.0" width="40.0" x="186.0" y="240.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="updateDocument" id="BPMNShape_updateDocument">
+        <omgdc:Bounds height="55.0" width="105.0" x="300.0" y="233.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="documentPublication" id="BPMNShape_documentPublication">
+        <omgdc:Bounds height="55.0" width="105.0" x="154.0" y="310.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="endevent1" id="BPMNShape_endevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="314.0" y="320.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="flow1" id="BPMNEdge_flow1">
+        <omgdi:waypoint x="206.0" y="195.0"></omgdi:waypoint>
+        <omgdi:waypoint x="206.0" y="240.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow2" id="BPMNEdge_flow2">
+        <omgdi:waypoint x="206.0" y="95.0"></omgdi:waypoint>
+        <omgdi:waypoint x="206.0" y="140.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow3" id="BPMNEdge_flow3">
+        <omgdi:waypoint x="226.0" y="260.0"></omgdi:waypoint>
+        <omgdi:waypoint x="300.0" y="260.0"></omgdi:waypoint>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="14.0" width="54.0" x="-37.0" y="7.0"></omgdc:Bounds>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow4" id="BPMNEdge_flow4">
+        <omgdi:waypoint x="352.0" y="233.0"></omgdi:waypoint>
+        <omgdi:waypoint x="352.0" y="167.0"></omgdi:waypoint>
+        <omgdi:waypoint x="259.0" y="167.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow5" id="BPMNEdge_flow5">
+        <omgdi:waypoint x="206.0" y="280.0"></omgdi:waypoint>
+        <omgdi:waypoint x="206.0" y="310.0"></omgdi:waypoint>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="14.0" width="40.0" x="-46.0" y="-8.0"></omgdc:Bounds>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow6" id="BPMNEdge_flow6">
+        <omgdi:waypoint x="259.0" y="337.0"></omgdi:waypoint>
+        <omgdi:waypoint x="314.0" y="337.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow7" id="BPMNEdge_flow7">
+        <omgdi:waypoint x="259.0" y="337.0"></omgdi:waypoint>
+        <omgdi:waypoint x="314.0" y="337.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

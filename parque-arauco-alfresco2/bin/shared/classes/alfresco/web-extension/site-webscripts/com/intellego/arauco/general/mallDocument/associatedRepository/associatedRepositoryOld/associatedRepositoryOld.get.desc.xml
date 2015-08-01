@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>associatedRepositoryOld</shortname>
+  <description>associatedRepositoryOld</description>
+  <url>/dashlets/associatedRepositoryOld</url>
+  <format default="html">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

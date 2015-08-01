@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>mallSelection</shortname>
+  <description>Selección de mall</description>
+  <url>/arauco/createMall</url>
+  <format default="json">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

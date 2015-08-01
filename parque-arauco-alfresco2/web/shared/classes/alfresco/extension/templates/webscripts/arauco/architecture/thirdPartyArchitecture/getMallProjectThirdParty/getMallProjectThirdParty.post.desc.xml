@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>getMallProjectThirdParty</shortname>
+	<description>getMallProjectThirdParty</description>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+	  <format default="json">extension</format>
+	<url>/arauco/getMallProjectThirdParty</url>
+</webscript>

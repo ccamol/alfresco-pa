@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<page>
+   <title>Adjudicación y contrato</title>
+   <description>Adjudicación y contrato</description>
+   <template-instance>awarding</template-instance>
+   <authentication>user</authentication>
+</page>

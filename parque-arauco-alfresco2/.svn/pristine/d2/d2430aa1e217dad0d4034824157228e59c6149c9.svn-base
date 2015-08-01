@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>createSucProject</shortname>
+  <description>Pop up create project suc</description>
+  <family>dashlet</family>
+  <url>/dashlets/createArchitectureProjectPopUp</url>
+</webscript>

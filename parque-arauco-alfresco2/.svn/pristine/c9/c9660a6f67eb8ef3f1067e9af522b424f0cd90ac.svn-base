@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Select SAP MAll</shortname>
+  <description>Select SAP Mall</description>
+  <url>/arauco/selectSAPMall</url>
+  <format default="json">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

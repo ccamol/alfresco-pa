@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>rolList</shortname>
+  <description>Get the rol list</description>
+  <url>/arauco/updateRol</url>
+  <format default="json">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

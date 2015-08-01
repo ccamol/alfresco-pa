@@ -1,0 +1,5 @@
+<webscript>
+  <shortname>Classification</shortname>
+  <description>Add classification</description>
+  <url>/dashlets/associatedCount</url>
+</webscript>

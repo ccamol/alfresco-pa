@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<page>
+   <title>Architecture</title>
+   <description>architecture</description>
+   <template-instance>architecture</template-instance>
+   <authentication>user</authentication>
+</page>

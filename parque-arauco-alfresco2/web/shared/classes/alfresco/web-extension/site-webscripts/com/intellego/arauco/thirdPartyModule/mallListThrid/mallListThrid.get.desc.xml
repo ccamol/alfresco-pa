@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>mallListThrid</shortname>
+  <description>mallListThrid</description>
+  <family>dashlet</family>
+  <url>/dashlets/mallListThrid</url>
+  <authentication>user</authentication>
+<transaction>required</transaction>
+</webscript>

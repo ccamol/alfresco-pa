@@ -1,0 +1,5 @@
+<webscript>
+  <shortname>Copy Paste action</shortname>
+  <description>Copy Paste action</description>
+  <url>/dashlets/pasteFile</url>
+</webscript>

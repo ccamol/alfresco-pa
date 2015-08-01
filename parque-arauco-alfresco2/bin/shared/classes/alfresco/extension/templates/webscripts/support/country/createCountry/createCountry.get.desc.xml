@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>createCountry</shortname>
+  <description>Creación de Pais</description>
+  <url>/arauco/createCountry</url>
+  <format default="json">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

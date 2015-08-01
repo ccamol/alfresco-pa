@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 20-05-2014 01:49:42 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.intellego.parquearauco.entities.TenderEntity"
+		table="intellego_tender">
+		<id name="id" type="java.lang.Integer">
+			<column name="ID" />
+			<generator class="sequence">
+				<param name="sequence">tender_id_seq</param>
+			</generator>
+		</id>
+		<property name="tenderStatus" type="java.lang.Integer">
+			<column name="TENDERSTATUS" />
+		</property>
+		<property name="projectId" type="java.lang.String">
+			<column name="PROJECTID" />
+		</property>
+		<property name="projectName" type="java.lang.String">
+			<column name="PROJECTNAME" />
+		</property>
+		<property name="projectTypeId" type="java.lang.Integer">
+			<column name="PROJECTTYPEID" />
+		</property>
+		<many-to-one name="projectNodeType"
+			class="com.intellego.parquearauco.entities.NodeTypeEntity" fetch="join">
+			<column name="PROJECTNODETYPE" />
+		</many-to-one>
+		<property name="name" type="java.lang.String">
+			<column name="NAME" />
+		</property>
+		<property name="awardApplicant" type="java.lang.String">
+			<column name="AWARDAPPLICANT" />
+		</property>
+		<property name="awardStatus" type="java.lang.Integer">
+			<column name="AWARDSTATUS" />
+		</property>
+		<property name="participant" type="java.lang.Integer">
+			<column name="PARTICIPANT" />
+		</property>
+		<property name="initDate" type="java.util.Date">
+			<column name="INITDATE" />
+		</property>
+		<property name="endDate" type="java.util.Date">
+			<column name="ENDDATE" />
+		</property>
+		<many-to-one name="projectType"
+			class="com.intellego.parquearauco.entities.ProjectTypeEntity" fetch="join">
+			<column name="PROJECTTYPE" />
+		</many-to-one>
+		<many-to-one name="organizationalArea"
+			class="com.intellego.parquearauco.entities.OrganizationalAreaEntity"
+			fetch="join">
+			<column name="ORGANIZATIONALAREA" />
+		</many-to-one>
+	</class>
+</hibernate-mapping>

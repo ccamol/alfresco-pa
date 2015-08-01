@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Busca Listas</shortname>
+  <description>Busqueda de Id y label de las listas</description>
+  <url>/arauco/getAllDocTypes</url>
+  <format default="json">extension</format>
+    <authentication runas="admin">user</authentication>
+  <transaction>required</transaction>
+</webscript>

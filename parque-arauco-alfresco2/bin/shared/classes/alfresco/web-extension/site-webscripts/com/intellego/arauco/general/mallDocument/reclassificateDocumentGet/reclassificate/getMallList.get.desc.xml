@@ -1,0 +1,7 @@
+<webscript>
+  <shortname>getMallList</shortname>
+  <description>getMallList</description>
+  <family>dashlet</family>
+  <url>/dashlets/getMallList</url>
+   <format default="json">extension</format>
+</webscript>

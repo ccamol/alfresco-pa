@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>editDocument</shortname>
+	<description>Receives and uploads an image to Alfresco, then proceeds to set it's uuid to the "imageuuid" column on the intellego_mall</description>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+	<format default="json">extension</format>
+	<url>/arauco/editMallImage</url>
+</webscript>

@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>importantDocument</shortname>
+	<description>importantDocument</description>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+	  <format default="json">extension</format>
+	<url>/arauco/addImportantDocument</url>
+</webscript>

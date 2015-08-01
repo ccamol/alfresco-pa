@@ -1,0 +1,1 @@
+model.ticket=session.getTicket();

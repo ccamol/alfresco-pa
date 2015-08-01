@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>addProjectMall</shortname>
+  <description>addProjectMall </description>
+  <url>/arauco/closeStageTender</url>
+  <format default="json">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

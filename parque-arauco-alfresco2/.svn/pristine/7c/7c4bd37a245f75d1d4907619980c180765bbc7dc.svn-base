@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>BreadCrumb</shortname>
+  <description>BreadCrumb</description>
+  <url>/arauco/breadcrumb</url>
+   <format default="html">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

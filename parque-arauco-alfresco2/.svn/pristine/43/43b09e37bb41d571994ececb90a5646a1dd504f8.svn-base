@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Usuario</shortname>
+  <description>Búsqueda de usuarios</description>
+  <url>/arauco/getTicket</url>
+  <format default="json">extension</format>
+    <authentication runas="admin">none</authentication>
+  <transaction allowed="readonly">required</transaction>
+</webscript>

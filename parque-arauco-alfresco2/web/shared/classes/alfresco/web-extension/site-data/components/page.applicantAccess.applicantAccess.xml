@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component> 
+  <scope>page</scope>  
+  <region-id>applicantAccess</region-id>  
+  <source-id>applicantAccess</source-id>  
+  <url>/dashlets/applicantAccess</url>  
+  <guid>page.applicantAccess.applicantAccess</guid>  
+  <properties> 
+    <height>500</height>
+  </properties> 
+</component>
+
+
+

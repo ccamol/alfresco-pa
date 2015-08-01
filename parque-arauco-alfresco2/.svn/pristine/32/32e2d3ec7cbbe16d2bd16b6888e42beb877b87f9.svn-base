@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>removeImportantDocument</shortname>
+  <description>removeImportantDocument</description>
+  <family>dashlet</family>
+  <url>/dashlets/removeImportantDocument</url>
+</webscript>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding='utf-8'?> 
+ 
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+ 
+<hibernate-mapping> 
+ 
+ <class name="com.intellego.parquearauco.entities.StatusProjectStageEntity" table="intellego_stage_project"> 
+ 
+ <composite-id name="idStatusStage" class="com.intellego.parquearauco.entities.IdStatusStageEntity" > 
+ <key-many-to-one name="idProjectType" column="id_project" class="com.intellego.parquearauco.entities.ProjectTypeEntity"/> 
+ <key-many-to-one name="idStageType" column="id_stage" class="com.intellego.parquearauco.entities.StageTypeEntity" /> 
+ </composite-id> 
+ 
+ <property name="status" type="java.lang.Integer" /> 
+ 
+ </class> 
+ 
+</hibernate-mapping> 

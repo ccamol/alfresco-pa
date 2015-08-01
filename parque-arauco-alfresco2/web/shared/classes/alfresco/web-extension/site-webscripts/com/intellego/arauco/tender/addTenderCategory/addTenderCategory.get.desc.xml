@@ -1,0 +1,7 @@
+<webscript>
+	<shortname>addTenderCategory</shortname>
+	<description>addTenderCategory</description>
+	<family>dashlet</family>
+	<url>/dashlets/addTenderCategory</url>
+	<format default="json">extension</format>
+</webscript>

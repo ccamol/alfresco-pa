@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>questionsAnswersApplicantAccess</shortname>
+  <description>questionsAnswersApplicantAccess</description>
+  <family>dashlet</family>
+  <url>/dashlets/questionsAnswersApplicantAccess</url>
+</webscript>

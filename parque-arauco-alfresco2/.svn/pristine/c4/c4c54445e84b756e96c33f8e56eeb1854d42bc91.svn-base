@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 20-05-2014 01:49:42 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.intellego.parquearauco.entities.QuestionEntity"
+		table="intellego_question">
+		<id name="id" type="java.lang.Integer">
+			<column name="ID" />
+			<generator class="sequence">
+				<param name="sequence">question_id_seq</param>
+			</generator>
+		</id>
+		<property name="topicTitle" type="java.lang.String">
+			<column name="TOPICTITLE" />
+		</property>
+		<property name="author" type="java.lang.String">
+			<column name="AUTHOR" />
+		</property>
+		<property name="question" type="java.lang.String">
+			<column name="QUESTION" />
+		</property>
+		<property name="description" type="java.lang.String">
+			<column name="DESCRIPTION" />
+		</property>
+		<many-to-one name="tender"
+			class="com.intellego.parquearauco.entities.TenderEntity" fetch="join">
+			<column name="TENDER" />
+		</many-to-one>
+		<many-to-one name="category"
+			class="com.intellego.parquearauco.entities.CategoryEntity" fetch="join">
+			<column name="CATEGORY" />
+		</many-to-one>
+		<property name="status" type="java.lang.Integer">
+			<column name="STATUS" />
+		</property>
+		<property name="publicationStatus" type="java.lang.Integer">
+			<column name="PUBLICATIONSTATUS" />
+		</property>
+		   <property name="questionDate" type="java.util.Date">
+            <column name="QUESTIONDATE" />
+        </property>
+	</class>
+</hibernate-mapping>

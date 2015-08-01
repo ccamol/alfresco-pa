@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>downloadDocumentPopup</shortname>
+  <description>downloadDocumentPopup</description>
+  <family>dashlet</family>
+  <url>/dashlets/downloadDocumentPopupVersion</url>
+</webscript>

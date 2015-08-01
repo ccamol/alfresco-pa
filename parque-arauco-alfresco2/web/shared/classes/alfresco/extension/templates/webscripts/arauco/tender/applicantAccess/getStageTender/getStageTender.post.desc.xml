@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>getTenders</shortname>
+	<description>getTenders</description>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+	  <format default="json">extension</format>
+	<url>/arauco/getStageTender</url>
+</webscript>

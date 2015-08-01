@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Generate Preview</shortname>
+  <description>Creates a Flash Preview</description>
+  <url>/components/arauco/generatePreview</url>
+  <authentication runas="admin">user</authentication>
+  <format default="html">extension</format>
+  <transaction>required</transaction>
+</webscript>

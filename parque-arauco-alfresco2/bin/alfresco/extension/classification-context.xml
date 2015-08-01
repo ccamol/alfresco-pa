@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans.dtd'>
+<beans>
+     	<bean id="classificationService" parent="baseJavaScriptExtension" class="com.intellego.parquearauco.classification.baseprocessorextension.ClassificationServiceBaseProccesor">
+	        <property name="extensionName">
+	            <value>ClassificationService</value>
+	        </property>        
+	      	<property name="service">
+	        	<ref bean="ClassificationService"></ref>
+	      	</property>
+    	</bean>
+     	<bean id="ClassificationService" class="com.intellego.parquearauco.classification.services.ClassificationService">
+	      	<property name="serviceRegistry">
+	        	<ref bean="ServiceRegistry"></ref>
+	      	</property>
+		</bean>
+</beans>

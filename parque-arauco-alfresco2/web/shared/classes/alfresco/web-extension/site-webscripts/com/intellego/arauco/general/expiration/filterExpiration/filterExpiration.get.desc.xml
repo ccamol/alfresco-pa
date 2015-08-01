@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>Filter expiration</shortname>
+  <description>Filter expiration</description>
+  <family>dashlet</family>
+  <url>/dashlets/filterExpiration</url>
+</webscript>

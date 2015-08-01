@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>sendToResponsible</shortname>
+	<description>Envía notificaciones a varios responsables</description>
+	<url>/mailService/sendMail</url>
+	<authentication>user</authentication>
+    <format default="json">extension</format>
+    <transaction>required</transaction>
+</webscript>

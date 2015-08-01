@@ -1,0 +1,2 @@
+
+model.resultSet = ProjectStatusSrv.getAll();

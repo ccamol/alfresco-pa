@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>addTender</shortname>
+	<description>addTender</description>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+	  <format default="json">extension</format>
+	<url>/arauco/addConsultApplicant</url>
+</webscript>

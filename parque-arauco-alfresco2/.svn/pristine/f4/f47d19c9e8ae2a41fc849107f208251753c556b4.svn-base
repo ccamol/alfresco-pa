@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>newQuery</shortname>
+  <description>newQuery</description>
+  <url>/dashlets/newQuery</url>
+  <format default="json">extension</format>
+</webscript>

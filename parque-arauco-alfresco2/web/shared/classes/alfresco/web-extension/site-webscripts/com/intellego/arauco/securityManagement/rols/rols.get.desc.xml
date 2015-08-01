@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>Rols</shortname>
+  <description>Security Rols Management</description>
+  <family>dashlet</family>
+  <url>/dashlets/rols</url>
+</webscript>

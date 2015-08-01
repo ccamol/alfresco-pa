@@ -1,0 +1,7 @@
+<webscript>
+  <shortname>getArchitectureProjectList</shortname>
+  <description>getArchitectureProjectList</description>
+  <family>dashlet</family>
+  <url>/dashlets/getArchitectureProjectList</url>
+   <format default="json">extension</format>
+</webscript>

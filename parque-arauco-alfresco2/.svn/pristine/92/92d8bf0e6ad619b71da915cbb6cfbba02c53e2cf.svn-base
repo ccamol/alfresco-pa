@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>deleteDocument</shortname>
+	<description>delete a document</description>
+	<url>/arauco/deleteDocumentApplicant</url>
+	<format default="json">extension</format>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+</webscript>

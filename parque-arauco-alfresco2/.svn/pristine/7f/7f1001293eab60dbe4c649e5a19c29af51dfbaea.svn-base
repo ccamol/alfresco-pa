@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>deleteRol</shortname>
+  <description>Delete Rol</description>
+  <url>/dashlets/userSelected</url>
+  <format default="html">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

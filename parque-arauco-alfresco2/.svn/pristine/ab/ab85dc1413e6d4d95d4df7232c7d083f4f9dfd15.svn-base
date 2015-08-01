@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>Edit Tender</shortname>
+	<description>Editar Licitacion</description>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+	  <format default="json">extension</format>
+	<url>/arauco/enableParticipants</url>
+</webscript>

@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>getSharedDocumentAll</shortname>
+  <description>getSharedDocumentAll</description>
+  <url>/dashlets/getSharedDocumentAll</url>
+  <format default="html">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

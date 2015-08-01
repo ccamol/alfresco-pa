@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component> 
+  <scope>page</scope>  
+  <region-id>stageTender</region-id>  
+  <source-id>handingOverDocumentation</source-id>  
+  <url>/dashlets/stageTender</url>  
+  <guid>page.stageTender.handingOverDocumentation</guid>  
+  <properties> 
+    <height>300</height>
+  </properties> 
+</component>
+
+
+

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans.dtd'>
+<beans>
+	<bean id="PaServiceImplBaseProcessorExtension" parent="baseJavaScriptExtension"
+		class="com.intellego.pa.javascript.PaServiceImplBaseProcessorExtension">
+		<property name="extensionName">
+			<value>PaServiceImplBaseProcessorExtension</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+		<property name="properties">
+			<ref bean="global-properties" />
+		</property>
+	</bean>
+</beans>

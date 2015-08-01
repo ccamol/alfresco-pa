@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>uploadDocumentPopup</shortname>
+  <description>uploadDocumentPopup</description>
+  <family>dashlet</family>
+  <url>/dashlets/uploadDocument</url>
+</webscript>

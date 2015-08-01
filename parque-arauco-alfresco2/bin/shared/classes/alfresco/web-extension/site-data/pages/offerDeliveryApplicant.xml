@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<page>
+   <title>offerDeliveryApplicant</title>
+   <description>offerDeliveryApplicant</description>
+   <template-instance>offerDeliveryApplicant</template-instance>
+   <authentication>user</authentication>
+</page>

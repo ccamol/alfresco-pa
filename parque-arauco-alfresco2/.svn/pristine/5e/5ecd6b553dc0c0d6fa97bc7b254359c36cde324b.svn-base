@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>Get Applicants</shortname>
+  <description>Buscar solicitantes</description>
+  <family>dashlet</family>
+  <url>/dashlets/getApplicantsAward</url>
+</webscript>

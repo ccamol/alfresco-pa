@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>Security Browser</shortname>
+  <description>Security Browser</description>
+  <family>dashlet</family>
+  <url>/dashlets/securityBrowser</url>
+</webscript>

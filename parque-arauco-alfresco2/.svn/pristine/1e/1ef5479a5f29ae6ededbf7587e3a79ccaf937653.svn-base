@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>getAssociatedThirdPartyArchitectureDocuments</shortname>
+  <description>getAssociatedThirdPartyArchitectureDocuments</description>
+  <family>dashlet</family>
+  <url>/dashlets/getAssociatedThirdPartyArchitectureDocuments</url>
+</webscript>

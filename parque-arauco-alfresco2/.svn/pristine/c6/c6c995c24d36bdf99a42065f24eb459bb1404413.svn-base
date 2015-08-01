@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>Save Comment</shortname>
+  <description>Save Comment</description>
+  <family>dashlet</family>
+  <url>/dashlets/saveComment</url>
+</webscript>

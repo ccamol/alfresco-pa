@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>leaveTender</shortname>
+	<description>leaveTender</description>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+	  <format default="json">extension</format>
+	<url>/arauco/closeTenderQueries</url>
+</webscript>

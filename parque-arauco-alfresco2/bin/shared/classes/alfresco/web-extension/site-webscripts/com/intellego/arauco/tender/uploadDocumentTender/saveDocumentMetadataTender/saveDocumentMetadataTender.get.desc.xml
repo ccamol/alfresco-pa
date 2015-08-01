@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>saveDocumentMetadataTender</shortname>
+  <description>saveDocumentMetadataTender</description>
+  <family>dashlet</family>
+  <url>/dashlets/saveDocumentMetadataTender</url>
+</webscript>

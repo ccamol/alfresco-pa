@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>publishTenderQueries</shortname>
+	<description>publishTenderQueries</description>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+	  <format default="json">extension</format>
+	<url>/arauco/publishTenderQueries</url>
+</webscript>

@@ -1,0 +1,7 @@
+<webscript>
+	<shortname>addAnswer</shortname>
+	<description>addAnswer</description>
+	<family>dashlet</family>
+	<url>/dashlets/addAnswer</url>
+	<format default="json">extension</format>
+</webscript>

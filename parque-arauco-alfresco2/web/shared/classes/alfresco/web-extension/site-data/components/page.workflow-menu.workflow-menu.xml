@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component> 
+  <scope>page</scope>  
+  <region-id>workflow-menu</region-id>  
+  <source-id>workflow-menu</source-id>  
+  <url>/share/workflow-menu</url>  
+  <guid>page.workflow-menu</guid> 
+  <properties> 
+    <height>500</height>
+  </properties> 
+</component>

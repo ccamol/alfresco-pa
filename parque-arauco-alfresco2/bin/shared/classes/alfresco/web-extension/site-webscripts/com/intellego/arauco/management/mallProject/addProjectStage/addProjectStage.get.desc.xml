@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>addProjectStage</shortname>
+  <description>addProjectStage</description>
+  <url>/dashlets/addProjectStage</url>
+  <format default="json">extension</format>
+</webscript>

@@ -1,0 +1,7 @@
+<webscript>
+	<shortname>addCategory</shortname>
+	<description>addCategory</description>
+	<family>dashlet</family>
+	<url>/dashlets/addCategory</url>
+	<format default="json">extension</format>
+</webscript>

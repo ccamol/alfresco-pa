@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>searchTender</shortname>
+  <description>Buscador de licitaciones</description>
+  <family>dashlet</family>
+  <url>/dashlets/searchTender</url>
+</webscript>

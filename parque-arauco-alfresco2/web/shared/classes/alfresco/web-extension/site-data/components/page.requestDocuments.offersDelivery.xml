@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component> 
+  <scope>page</scope>  
+  <region-id>requestDocuments</region-id>  
+  <source-id>offersDelivery</source-id>  
+  <url>/dashlets/requestDocuments</url>  
+  <guid>page.requestDocuments.offersDelivery</guid>  
+  <properties> 
+    <height>300</height>
+  </properties> 
+</component>
+
+
+

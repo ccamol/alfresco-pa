@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>deleteSucProject</shortname>
+  <description>Borrar Proyecto Suc</description>
+  <url>/arauco/dropOutTender</url>
+  <format default="json">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

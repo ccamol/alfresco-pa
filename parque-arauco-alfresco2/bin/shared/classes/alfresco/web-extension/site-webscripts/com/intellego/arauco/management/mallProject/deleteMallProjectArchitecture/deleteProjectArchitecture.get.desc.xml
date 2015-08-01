@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>deleteProjectArchitecture</shortname>
+  <description>deleteProjectArchitecture</description>
+  <url>/dashlets/deleteProjectArchitecture</url>
+   <format default="json">extension</format>
+</webscript>

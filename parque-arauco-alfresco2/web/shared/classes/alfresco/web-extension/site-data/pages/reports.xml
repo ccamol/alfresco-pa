@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<page>
+   <title>Reportes</title>
+   <description>Reportes del sistema</description>
+   <template-instance>reports</template-instance>
+   <authentication>user</authentication>
+</page>

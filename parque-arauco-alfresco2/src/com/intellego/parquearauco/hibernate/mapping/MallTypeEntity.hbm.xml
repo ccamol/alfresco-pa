@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 26-05-2014 05:53:17 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.intellego.parquearauco.entities.MallTypeEntity" table="intellego_mall_type">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="sequence">  
+                <param name="sequence">mallType_id_seq</param>  
+            </generator> 
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+        <set name="mall" table="intellego_mall" inverse="false" lazy="false">
+            <key>
+                <column name="malltype" />
+            </key>
+            <one-to-many class="com.intellego.parquearauco.entities.MallEntity" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
+  <process id="deleteDocumentProcess" name="Flujo de solicitud de eliminación" isExecutable="true">
+    <startEvent id="startevent1" name="Start" activiti:formKey="pawf:deleteStartEvent">
+      <extensionElements>
+        <activiti:taskListener event="complete" class="org.alfresco.repo.workflow.activiti.tasklistener.ScriptTaskListener">
+          <activiti:field name="script">
+            <activiti:string>
+				execution.setVariable('bpm_dueDate', task.dueDate);
+				execution.setVariable('bpm_desciption', task.description);
+				execution.setVariable('bpm_priority', task.priority);
+				execution.setVariable('pawf_reason', task.getVariable('pawf_reason'));
+			</activiti:string>
+          </activiti:field>
+        </activiti:taskListener>
+      </extensionElements>
+    </startEvent>
+    <sequenceFlow id="toReview" sourceRef="startevent1" targetRef="reviewDeleteRequest"></sequenceFlow>
+    
+    <userTask id="reviewDeleteRequest" name="Revisar solicitud de anulación" activiti:candidateGroups="GROUP_ContentAdmin" activiti:formKey="pawf:approveDeleteRequest">
+    <extensionElements>
+        <activiti:taskListener event="create" class="org.alfresco.repo.workflow.activiti.tasklistener.ScriptTaskListener">
+          <activiti:field name="script">
+            <activiti:string>
+   				if (typeof bpm_workflowDueDate != 'undefined') task.dueDate = bpm_workflowDueDate;
+				if (typeof bpm_workflowPriority != 'undefined') task.priority = bpm_workflowPriority;
+   				<!--if (typeof bpm_workflowDescription != 'undefined') task.description = bpm_workflowDescription;-->
+				<!--if (typeof pawf_reason != 'undefined') task.setVariable('pawf_reason', pawf_reason);-->
+			</activiti:string>
+          </activiti:field>
+        </activiti:taskListener>
+        <activiti:taskListener event="complete" class="org.alfresco.repo.workflow.activiti.tasklistener.ScriptTaskListener">
+          <activiti:field name="script">
+            <activiti:string>
+				execution.setVariable('bpm_dueDate', task.dueDate);
+				execution.setVariable('bpm_desciption', task.description);
+				execution.setVariable('bpm_priority', task.priority);
+				execution.setVariable('pawf_reason', task.getVariable('pawf_reason'));
+				execution.setVariable('pawf_reviewOutcome', task.getVariable('pawf_reviewOutcome'));
+				execution.setVariable('idTaskForDelete',task.id);
+				
+			</activiti:string>
+          </activiti:field>
+        </activiti:taskListener>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="toApproveDecision" sourceRef="reviewDeleteRequest" targetRef="approveDecision"></sequenceFlow>
+
+
+    <exclusiveGateway id="approveDecision" name="Exclusive Gateway"></exclusiveGateway>
+    <sequenceFlow id="toNotifyRejected" name="Solicitud rechazada" sourceRef="approveDecision" targetRef="notifyRejected">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${pawf_reviewOutcome == 'No aprobar'}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="toDeleteDocument" name="Solicitud aprobada" sourceRef="approveDecision" targetRef="deleteDocument"></sequenceFlow>
+
+
+    <userTask id="notifyRejected" name="Anulación rechazada" activiti:formKey="pawf:notifyRejectDeleteRequest">
+    <extensionElements>
+        <activiti:taskListener event="create" class="org.alfresco.repo.workflow.activiti.tasklistener.ScriptTaskListener">
+          <activiti:field name="script">
+            <activiti:string>
+   				if (typeof bpm_workflowDueDate != 'undefined') task.dueDate = bpm_workflowDueDate;
+				if (typeof bpm_workflowPriority != 'undefined') task.priority = bpm_workflowPriority;
+   				if (typeof bpm_workflowDescription != 'undefined') task.description = bpm_workflowDescription;
+				if (typeof pawf_reason != 'undefined') task.setVariable('pawf_reason', pawf_reason);
+			</activiti:string>
+          </activiti:field>
+        </activiti:taskListener>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="toEndFromRejected" sourceRef="notifyRejected" targetRef="endevent1"></sequenceFlow>
+
+
+    <serviceTask id="deleteDocument" name="Eliminar documento" activiti:class="com.intellego.parquearauco.workflow.delegate.DeleteDocument">
+    	<extensionElements>
+			<activiti:field name="idTask">
+    			<activiti:expression>${idTaskForDelete}</activiti:expression>
+   			</activiti:field>
+   		</extensionElements>
+    </serviceTask>
+    <sequenceFlow id="toNotifyApproved" sourceRef="deleteDocument" targetRef="notifyAccepted"></sequenceFlow>
+    
+    <userTask id="notifyAccepted" name="Anulación aceptada" activiti:formKey="pawf:notifyApproveDeleteRequest">
+    <extensionElements>
+        <activiti:taskListener event="create" class="org.alfresco.repo.workflow.activiti.tasklistener.ScriptTaskListener">
+          <activiti:field name="script">
+            <activiti:string>
+   				if (typeof bpm_workflowDueDate != 'undefined') task.dueDate = bpm_workflowDueDate;
+				if (typeof bpm_workflowPriority != 'undefined') task.priority = bpm_workflowPriority;
+   				if (typeof bpm_workflowDescription != 'undefined') task.description = bpm_workflowDescription;
+				if (typeof pawf_reason != 'undefined') task.setVariable('pawf_reason', pawf_reason);
+			</activiti:string>
+          </activiti:field>
+        </activiti:taskListener>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="toEndFromApproved" sourceRef="notifyAccepted" targetRef="endevent1"></sequenceFlow>
+    <endEvent id="endevent1" name="End"></endEvent>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_deleteDocumentProcess">
+    <bpmndi:BPMNPlane bpmnElement="deleteDocumentProcess" id="BPMNPlane_deleteDocumentProcess">
+      <bpmndi:BPMNShape bpmnElement="startevent1" id="BPMNShape_startevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="80.0" y="50.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="reviewDeleteRequest" id="BPMNShape_reviewDeleteRequest">
+        <omgdc:Bounds height="55.0" width="105.0" x="160.0" y="40.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="endevent1" id="BPMNShape_endevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="447.0" y="450.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="approveDecision" id="BPMNShape_approveDecision">
+        <omgdc:Bounds height="40.0" width="40.0" x="192.0" y="177.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="notifyRejected" id="BPMNShape_notifyRejected">
+        <omgdc:Bounds height="55.0" width="105.0" x="160.0" y="293.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="deleteDocument" id="BPMNShape_deleteDocument">
+        <omgdc:Bounds height="55.0" width="105.0" x="412.0" y="254.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="notifyAccepted" id="BPMNShape_notifyAccepted">
+        <omgdc:Bounds height="55.0" width="105.0" x="412.0" y="347.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="toReview" id="BPMNEdge_toReview">
+        <omgdi:waypoint x="115.0" y="67.0"></omgdi:waypoint>
+        <omgdi:waypoint x="160.0" y="67.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="toApproveDecision" id="BPMNEdge_toApproveDecision">
+        <omgdi:waypoint x="212.0" y="95.0"></omgdi:waypoint>
+        <omgdi:waypoint x="212.0" y="177.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="toNotifyRejected" id="BPMNEdge_toNotifyRejected">
+        <omgdi:waypoint x="212.0" y="217.0"></omgdi:waypoint>
+        <omgdi:waypoint x="212.0" y="293.0"></omgdi:waypoint>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="14.0" width="95.0" x="-98.0" y="-14.0"></omgdc:Bounds>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="toDeleteDocument" id="BPMNEdge_toDeleteDocument">
+        <omgdi:waypoint x="232.0" y="197.0"></omgdi:waypoint>
+        <omgdi:waypoint x="464.0" y="196.0"></omgdi:waypoint>
+        <omgdi:waypoint x="464.0" y="254.0"></omgdi:waypoint>
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds height="14.0" width="89.0" x="-98.0" y="-19.0"></omgdc:Bounds>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="toNotifyApproved" id="BPMNEdge_toNotifyApproved">
+        <omgdi:waypoint x="464.0" y="309.0"></omgdi:waypoint>
+        <omgdi:waypoint x="464.0" y="347.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="toEndFromApproved" id="BPMNEdge_toEndFromApproved">
+        <omgdi:waypoint x="464.0" y="402.0"></omgdi:waypoint>
+        <omgdi:waypoint x="464.0" y="450.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="toEndEvent" id="BPMNEdge_toEndEvent">
+        <omgdi:waypoint x="464.0" y="402.0"></omgdi:waypoint>
+        <omgdi:waypoint x="464.0" y="450.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="toEndFromRejected" id="BPMNEdge_toEndFromRejected">
+        <omgdi:waypoint x="212.0" y="348.0"></omgdi:waypoint>
+        <omgdi:waypoint x="212.0" y="467.0"></omgdi:waypoint>
+        <omgdi:waypoint x="447.0" y="467.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

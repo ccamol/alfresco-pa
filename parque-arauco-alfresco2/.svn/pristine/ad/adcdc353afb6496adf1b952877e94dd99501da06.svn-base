@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>editSucProject</shortname>
+  <description>Editar de Proyecto Suc</description>
+  <url>/arauco/editSucProject</url>
+  <format default="json">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

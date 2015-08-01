@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27-05-2014 09:58:28 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.intellego.parquearauco.entities.CategoryEntity" table="intellego_Category">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="sequence">  
+                <param name="sequence">category_id_seq</param>  
+            </generator> 
+        </id>
+       
+         <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+       
+        <property name="description" type="java.lang.String">
+            <column name="DESCRIPTION" />
+        </property>
+           
+        <property name="categoryType" type="java.lang.String">
+            <column name="CATEGORYTYPE" />
+        </property>
+        
+        
+    </class>
+</hibernate-mapping>

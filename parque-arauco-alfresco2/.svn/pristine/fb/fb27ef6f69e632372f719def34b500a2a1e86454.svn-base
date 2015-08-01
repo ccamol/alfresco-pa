@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>getStatusProject</shortname>
+  <description>getStatusProject</description>
+  <url>/arauco/getStatusProject</url>
+   <format default="json">extension</format>
+</webscript>

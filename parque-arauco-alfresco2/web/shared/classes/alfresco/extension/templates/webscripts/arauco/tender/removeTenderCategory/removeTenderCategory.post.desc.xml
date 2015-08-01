@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>removeTenderCategory</shortname>
+	<description>removeTenderCategory</description>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+	  <format default="json">extension</format>
+	<url>/arauco/removeTenderCategory</url>
+</webscript>

@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>Project</shortname>
+  <description>Project Management</description>
+  <url>/dashlets/detailsProject</url>
+  <format default="json">extension</format>
+</webscript>

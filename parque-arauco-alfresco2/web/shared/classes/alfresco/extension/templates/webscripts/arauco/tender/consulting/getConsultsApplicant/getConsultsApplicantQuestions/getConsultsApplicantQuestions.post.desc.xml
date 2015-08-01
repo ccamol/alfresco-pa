@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>getConsultsApplicantQuestions</shortname>
+	<description>getConsultsApplicantQuestions</description>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+	  <format default="json">extension</format>
+	<url>/arauco/getConsultsApplicantQuestions</url>
+</webscript>

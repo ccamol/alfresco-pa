@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 20-05-2014 01:49:42 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.intellego.parquearauco.entities.CheckListEntity" table="intellego_checklist">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="nodeType" type="int">
+            <column name="NODETYPE" />
+        </property>
+        <property name="idDocument" type="int">
+            <column name="IDDOCUMENT" />
+        </property>
+        <property name="stageId" type="int">
+            <column name="STAGEID" />
+        </property>
+        <property name="external" type="int">
+            <column name="EXTERNAL" />
+        </property>
+    </class>
+</hibernate-mapping>

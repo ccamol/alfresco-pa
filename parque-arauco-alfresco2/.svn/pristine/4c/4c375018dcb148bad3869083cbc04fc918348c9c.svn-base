@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>saveDocumentOperator</shortname>
+  <description>saveDocumentOperator</description>
+  <url>/arauco/saveDocumentOperator</url>
+   <format default="html">extension</format>
+  <authentication runas="admin">user</authentication>
+  <transaction>required</transaction>
+</webscript>

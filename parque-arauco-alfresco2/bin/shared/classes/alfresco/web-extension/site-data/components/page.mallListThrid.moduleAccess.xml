@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component> 
+  <scope>page</scope>  
+  <region-id>mallListThrid</region-id>  
+  <source-id>moduleAccess</source-id>  
+  <url>/dashlets/mallListThrid</url>  
+  <guid>page.mallListThrid.moduleAccess</guid>  
+  <properties> 
+    <height>500</height>
+    <with>800</with>
+  </properties> 
+</component>
+
+
+

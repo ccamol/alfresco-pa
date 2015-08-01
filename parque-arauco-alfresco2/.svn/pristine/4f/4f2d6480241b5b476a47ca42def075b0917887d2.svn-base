@@ -1,0 +1,5 @@
+<webscript>
+  <shortname>Add Classification</shortname>
+  <description>Add Classification</description>
+  <url>/dashlets/editClassification</url>
+</webscript>

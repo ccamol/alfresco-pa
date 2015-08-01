@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>checkDocumentalRol</shortname>
+  <description>Check Documental Rol</description>
+  <url>/dashlets/checkDocumentalRol</url>
+  <format default="html">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

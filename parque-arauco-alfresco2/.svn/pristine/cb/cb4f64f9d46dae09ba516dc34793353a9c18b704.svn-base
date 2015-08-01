@@ -1,0 +1,7 @@
+<webscript>
+	<shortname>getAnswerForConsult</shortname>
+	<description>Buscar Respuestas</description>
+	<family>dashlet</family>
+	<url>/dashlets/getAnswerForConsult</url>
+	<format default="html">extension</format>
+</webscript>

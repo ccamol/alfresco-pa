@@ -1,0 +1,7 @@
+<webscript>
+	<shortname>removeTenderCategory</shortname>
+	<description>removeTenderCategory</description>
+	<family>dashlet</family>
+	<url>/dashlets/removeTenderCategory</url>
+	<format default="html">extension</format>
+</webscript>

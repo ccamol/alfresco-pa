@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>getImportantDocument</shortname>
+  <description>getImportantDocument</description>
+  <family>dashlet</family>
+  <url>/dashlets/getContracts</url>
+</webscript>

@@ -1,0 +1,5 @@
+<webscript>
+  <shortname>/arauco/getSucProjectGroup</shortname>
+  <description>getSucProjectGroup</description>
+  <url>/dashlets/getSucProjectGroup</url>
+</webscript>

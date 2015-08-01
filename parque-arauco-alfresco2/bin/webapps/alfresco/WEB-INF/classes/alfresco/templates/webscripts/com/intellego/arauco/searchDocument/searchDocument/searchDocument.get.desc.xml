@@ -1,0 +1,7 @@
+<webscript>
+	<shortname>Search Document</shortname>
+	<description>Buscador de documentos</description>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+	<url>/arauco/searchDocument</url>
+</webscript>

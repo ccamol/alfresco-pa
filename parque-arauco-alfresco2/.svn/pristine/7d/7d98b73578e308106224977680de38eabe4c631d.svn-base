@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>getArea</shortname>
+  <description>getArea</description>
+  <family>dashlet</family>
+  <url>/dashlets/getArea</url>
+</webscript>

@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>getTenderCategories</shortname>
+	<description>getTenderCategories</description>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+	  <format default="json">extension</format>
+	<url>/arauco/getTenderCategories</url>
+</webscript>

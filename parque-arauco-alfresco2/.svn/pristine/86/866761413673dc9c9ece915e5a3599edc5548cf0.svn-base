@@ -1,0 +1,7 @@
+<webscript>
+	<shortname>offerDeliveryDocument</shortname>
+	<description>offerDeliveryDocument</description>
+	<family>dashlet</family>
+	<url>/dashlets/offerDeliveryDocument</url>
+	<format default="html">extension</format>
+</webscript>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component> 
+  <scope>page</scope>  
+  <region-id>shareDocuments</region-id>  
+  <source-id>awarding</source-id>  
+  <url>/dashlets/shareDocuments</url>  
+  <guid>page.shareDocuments.awarding</guid>  
+  <properties> 
+    <height>300</height>
+  </properties> 
+</component>

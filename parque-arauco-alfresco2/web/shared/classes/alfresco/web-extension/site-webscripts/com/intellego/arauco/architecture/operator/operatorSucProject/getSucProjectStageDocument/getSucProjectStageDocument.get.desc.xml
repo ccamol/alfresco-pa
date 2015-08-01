@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>getSucProjectStageDocument</shortname>
+  <description>getSucProjectStageDocument</description>
+  <family>dashlet</family>
+  <url>/dashlets/getSucProjectStageDocument</url>
+</webscript>

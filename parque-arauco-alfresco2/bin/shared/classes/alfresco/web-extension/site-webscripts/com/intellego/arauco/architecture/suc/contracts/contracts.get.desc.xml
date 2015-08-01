@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>contracts</shortname>
+  <description>Suc Contracts</description>
+  <family>dashlet</family>
+  <url>/dashlets/contracts</url>
+  <authentication>user</authentication>
+<transaction>required</transaction>
+</webscript>

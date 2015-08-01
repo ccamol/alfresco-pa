@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>createMallType</shortname>
+  <description>Creación de Tipo de Mall</description>
+  <url>/arauco/createMallType</url>
+  <format default="json">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

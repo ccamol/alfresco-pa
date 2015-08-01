@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>searchEngineeringProject</shortname>
+  <description>Búsqueda de Proyecto Ingenieria</description>
+  <url>/arauco/searchEngineeringProject</url>
+  <format default="json">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

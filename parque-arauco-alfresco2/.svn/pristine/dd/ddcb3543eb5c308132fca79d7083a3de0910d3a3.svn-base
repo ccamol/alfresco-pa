@@ -1,0 +1,7 @@
+<webscript>
+	<shortname>Add Tendering</shortname>
+	<description>Agregar licitaciones</description>
+	<family>dashlet</family>
+	<url>/dashlets/addTender</url>
+	<format default="json">extension</format>
+</webscript>

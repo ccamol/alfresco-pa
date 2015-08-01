@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 26-05-2014 04:49:16 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.intellego.parquearauco.entities.DocumentTypeEntity" table="intellego_document_type">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="sequence">  
+                <param name="sequence">documentType_id_seq</param>
+            </generator> 
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+        <set name="stageTypes" table="intellego_stage_document" inverse="false" lazy="false" fetch="select" cascade="all" >
+            <key>
+                <column name="id_document" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.intellego.parquearauco.entities.StageTypeEntity">
+                <column name="id_stage" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 26-05-2014 02:38:34 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.intellego.parquearauco.entities.ProjectTypeEntity"
+		table="intellego_project_type">
+		<id name="id" type="java.lang.Integer">
+			<column name="id" />
+			<generator class="sequence">
+				<param name="sequence">projectType_id_seq</param>
+			</generator>
+		</id>
+		<property name="name" type="java.lang.String">
+			<column name="name" />
+		</property>
+		<many-to-one name="nodeType"
+			class="com.intellego.parquearauco.entities.NodeTypeEntity" fetch="join">
+			<column name="NODETYPE" />
+		</many-to-one>
+
+
+
+
+
+		<set name="stageTypes" table="intellego_stage_project" inverse="false"
+			lazy="false" fetch="select" cascade="all">
+			<key>
+				<column name="id_project" not-null="true" />
+			</key>
+			<many-to-many entity-name="com.intellego.parquearauco.entities.StageTypeEntity">
+				<column name="id_stage" not-null="true" />
+			</many-to-many>
+		</set>
+		<set name="stageTypesTender" table="intellego_stage_project_tender" inverse="false"
+			lazy="false" fetch="select" cascade="all">
+			<key>
+				<column name="id_project" not-null="true" />
+			</key>
+			<many-to-many entity-name="com.intellego.parquearauco.entities.StageTypeTenderEntity">
+				<column name="id_stage_tender" not-null="true" />
+			</many-to-many>
+		</set>
+
+
+
+		<set name="architectureProjects" table="intellego_architecture_project"
+			inverse="false" lazy="false">
+			<key>
+				<column name="PROJECTTYPE" />
+			</key>
+			<one-to-many
+				class="com.intellego.parquearauco.entities.ArchitectureProjectEntity" />
+		</set>
+		<set name="engineeringProjecs" table="intellego_engineering_project"
+			inverse="false" lazy="false">
+			<key>
+				<column name="PROJECTTYPE" />
+			</key>
+			<one-to-many
+				class="com.intellego.parquearauco.entities.EngineeringProjectEntity" />
+		</set>
+		<set name="sucProjects" table="intellego_suc_project" inverse="false"
+			lazy="false">
+			<key>
+				<column name="PROJECTTYPE" />
+			</key>
+			<one-to-many class="com.intellego.parquearauco.entities.SucProjectEntity" />
+		</set>
+	</class>
+</hibernate-mapping>
+

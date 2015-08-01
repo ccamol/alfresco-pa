@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Upload tender document</shortname>
+  <description>Upload tender document</description>
+  <url>/arauco/uploadTenderDocument</url>
+   <format default="html">extension</format>
+  <authentication runas="admin">user</authentication>
+  <transaction>required</transaction>
+</webscript>

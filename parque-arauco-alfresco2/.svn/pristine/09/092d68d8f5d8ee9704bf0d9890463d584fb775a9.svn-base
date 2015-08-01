@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>sucProject</shortname>
+  <description>Suc Project</description>
+  <family>dashlet</family>
+  <url>/dashlets/sucProject</url>
+  <authentication>user</authentication>
+<transaction>required</transaction>
+</webscript>

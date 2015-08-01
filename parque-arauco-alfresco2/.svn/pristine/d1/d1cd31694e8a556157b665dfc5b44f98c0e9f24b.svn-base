@@ -1,0 +1,7 @@
+<webscript>
+	<shortname>Get Categories</shortname>
+	<description>Buscar Categories</description>
+	<family>dashlet</family>
+	<url>/dashlets/getAllConsults</url>
+	<format default="html">extension</format>
+</webscript>

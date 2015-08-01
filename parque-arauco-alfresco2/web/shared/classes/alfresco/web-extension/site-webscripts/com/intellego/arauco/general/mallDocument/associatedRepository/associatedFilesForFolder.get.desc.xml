@@ -1,0 +1,5 @@
+<webscript>
+	<shortname>associatedFilesForFolder</shortname>
+	<description>Get the files in folder</description>
+	<url>/dashlets/associatedFilesForFolder</url>
+</webscript>

@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>getChecklistOperator</shortname>
+  <description>getChecklistOperator</description>
+  <url>/arauco/getChecklistOperator</url>
+   <format default="html">extension</format>
+  <authentication runas="admin">user</authentication>
+  <transaction>required</transaction>
+</webscript>

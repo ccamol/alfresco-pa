@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>checkStage</shortname>
+  <description>checkStage</description>
+  <family>dashlet</family>
+  <url>/dashlets/checkList</url>
+</webscript>

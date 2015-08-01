@@ -1,0 +1,5 @@
+<webscript>
+  <shortname>Return parents Folders</shortname>
+  <description>Return parents Folders</description>
+  <url>/dashlets/parentRecurseFolders</url>
+</webscript>

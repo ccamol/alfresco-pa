@@ -1,0 +1,5 @@
+<webscript>
+  <shortname>getProjectModule</shortname>
+  <description>getProjectModule</description>
+  <url>/dashlets/getProjectModule</url>
+</webscript>

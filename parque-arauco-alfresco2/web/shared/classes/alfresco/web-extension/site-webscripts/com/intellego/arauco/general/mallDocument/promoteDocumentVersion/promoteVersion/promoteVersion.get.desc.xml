@@ -1,0 +1,7 @@
+<webscript>
+  <shortname>promoteVersion</shortname>
+  <description>promoteVersion</description>
+  <family>dashlet</family>
+  <url>/dashlets/promoteVersion</url>
+  <format default="json">extension</format>
+</webscript>

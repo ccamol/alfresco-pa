@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component> 
+  <scope>page</scope>  
+  <region-id>tender</region-id>  
+  <source-id>tender</source-id>  
+  <url>/dashlets/tender</url>  
+  <guid>page.tender.tender</guid>  
+  <properties> 
+    <height>500</height>
+  </properties> 
+</component>
+
+
+

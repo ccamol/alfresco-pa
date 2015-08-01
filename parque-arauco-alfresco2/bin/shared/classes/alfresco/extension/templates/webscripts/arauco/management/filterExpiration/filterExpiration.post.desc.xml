@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Filter expiration</shortname>
+  <description>Filter expiration</description>
+  <url>/arauco/filterExpiration</url>
+   <format default="json">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

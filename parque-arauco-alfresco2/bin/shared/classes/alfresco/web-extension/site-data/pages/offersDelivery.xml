@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<page>
+   <title>Entrega de ofertas</title>
+   <description>Entrega de ofertas</description>
+   <template-instance>offersDelivery</template-instance>
+   <authentication>user</authentication>
+</page>

@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>ThirdPartyRequestedDocuments</shortname>
+  <description>ThirdPartyRequestedDocuments</description>
+  <family>dashlet</family>
+  <url>/dashlets/requestedDocumentsThirdPartyArchitecture</url>
+</webscript>

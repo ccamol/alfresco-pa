@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component> 
+  <scope>page</scope>  
+  <region-id>mallSelection</region-id>  
+  <source-id>engineering</source-id>  
+  <url>/dashlets/mallSelection</url>  
+  <guid>page.mallSelection.engineering</guid>  
+  <properties> 
+    <height>500</height>
+    <with>800</with>
+  </properties> 
+</component>
+
+
+

@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>SUC</shortname>
+  <description>SUC Details</description>
+  <url>/dashlets/sucDetails</url>
+  <format default="json">extension</format>
+</webscript>

@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>countryList</shortname>
+  <description>Get all Countries</description>
+  <url>/arauco/getCountries</url>
+  <format default="json">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

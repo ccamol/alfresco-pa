@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans.dtd'>
+<beans>
+    <!-- Registration of new models -->	
+    <bean id="paworkflow.dictionaryBootstrap" parent="dictionaryModelBootstrap" depends-on="dictionaryBootstrap">
+        <property name="models">
+            <list>
+                <value>alfresco/extension/paWorkflowModel.xml</value>
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="myworkflows.workflowBootstrap" parent="workflowDeployer">
+	  <property name="workflowDefinitions">
+		<list>
+		  <props>
+			<prop key="engineId">activiti</prop>
+			<prop key="location">alfresco/extension/simpleApprovalProcess.xml</prop>
+			<prop key="mimetype">text/xml</prop>
+			<prop key="redeploy">true</prop>
+		  </props>
+		</list>
+	  </property>
+	</bean>	
+	
+    <bean id="multipleApproval.workflowBootstrap" parent="workflowDeployer">
+	  <property name="workflowDefinitions">
+		<list>
+		  <props>
+			<prop key="engineId">activiti</prop>
+			<prop key="location">alfresco/extension/multipleApprovalProcess.xml</prop>
+			<prop key="mimetype">text/xml</prop>
+			<prop key="redeploy">true</prop>
+		  </props>
+		</list>
+	  </property>
+	</bean>	
+	
+    <bean id="deleteDocument.workflowBootstrap" parent="workflowDeployer">
+	  <property name="workflowDefinitions">
+		<list>
+		  <props>
+			<prop key="engineId">activiti</prop>
+			<prop key="location">alfresco/extension/deleteDocumentProcess.xml</prop>
+			<prop key="mimetype">text/xml</prop>
+			<prop key="redeploy">true</prop>
+		  </props>
+		</list>
+	  </property>
+	</bean>	
+    
+   	<bean id="flowByDocumentServicePA" parent="baseJavaScriptExtension" class="com.intellego.parquearauco.workflow.baseprocessorextension.FlowByDocuments">
+        <property name="extensionName">
+            <value>FlowByDocumentService</value>
+        </property>        
+      	<property name="serviceRegistry">
+        	<ref bean="ServiceRegistry"></ref>
+      	</property>
+    </bean>
+    
+    <bean id="TicketAlfresco" parent="baseJavaScriptExtension" class="com.intellego.parquearauco.workflow.baseprocessorextension.TicketAlfresco">
+        <property name="extensionName">
+            <value>TicketAlfresco</value>
+        </property>        
+      	<property name="serviceRegistry">
+        	<ref bean="ServiceRegistry"></ref>
+      	</property>
+    </bean>
+    
+	<bean id="WorkflowPackage" parent="baseJavaScriptExtension" class="com.intellego.parquearauco.workflow.baseprocessorextension.WorkflowUtils">
+        <property name="extensionName">
+            <value>WorkflowUtils</value>
+        </property>        
+        <property name="nodeService">
+           <ref bean="NodeService"/>
+        </property>
+        <property name="searchService">
+           <ref bean="SearchService"/>
+        </property>
+        <property name="workflowService">
+           <ref bean="WorkflowService"/>
+        </property>
+        <property name="FileFolderService">
+           <ref bean="fileFolderService"/>
+        </property>
+    </bean>
+    
+</beans>

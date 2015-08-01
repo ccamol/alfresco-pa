@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component> 
+  <scope>page</scope>  
+  <region-id>projectModule</region-id>  
+  <source-id>thirdPartyModule</source-id>  
+  <url>/dashlets/projectModule</url>  
+  <guid>page.projectModule.thirdPartyModul</guid>  
+  <properties> 
+    <height>500</height>
+    <with>800</with>
+  </properties> 
+</component>
+

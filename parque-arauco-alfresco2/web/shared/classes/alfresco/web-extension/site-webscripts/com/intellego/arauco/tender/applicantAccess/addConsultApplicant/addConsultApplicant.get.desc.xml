@@ -1,0 +1,7 @@
+<webscript>
+	<shortname>addCategory</shortname>
+	<description>addCategory</description>
+	<family>dashlet</family>
+	<url>/dashlets/addConsultApplicant</url>
+	<format default="json">extension</format>
+</webscript>

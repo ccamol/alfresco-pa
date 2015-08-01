@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>dataList</shortname>
+  <description>Get all dataList from Alfresco</description>
+  <url>/arauco/administration/dataList</url>
+  <format default="json">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

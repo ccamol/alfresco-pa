@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>User ticket</shortname>
+  <description>Get user ticket</description>
+  <url>/arauco/getUserTicket</url>
+  <format default="json">extension</format>
+    <authentication runas="admin">user</authentication>
+  <transaction allowed="readonly">required</transaction>
+</webscript>

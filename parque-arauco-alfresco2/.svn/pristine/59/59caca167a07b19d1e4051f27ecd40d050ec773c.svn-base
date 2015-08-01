@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component> 
+  <scope>page</scope>  
+  <region-id>awardEvaluationConsult</region-id>  
+  <source-id>awardEvaluationApplicantAccess</source-id>  
+  <url>/dashlets/awardEvaluationConsult</url>  
+  <guid>page.awardEvaluationConsult.awardEvaluationApplicantAccess</guid>  
+  <properties> 
+  </properties> 
+</component>

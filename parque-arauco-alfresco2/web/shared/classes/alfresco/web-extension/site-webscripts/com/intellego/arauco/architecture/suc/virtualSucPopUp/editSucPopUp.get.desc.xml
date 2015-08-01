@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>editSucPopUp</shortname>
+  <description>editSucPopUp</description>
+  <family>dashlet</family>
+  <url>/dashlets/virtualSucPopup</url>
+</webscript>

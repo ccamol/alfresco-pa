@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>Leave Tender</shortname>
+  <description>Abandonar Licitación</description>
+  <family>dashlet</family>
+  <url>/dashlets/leaveTender</url>
+</webscript>

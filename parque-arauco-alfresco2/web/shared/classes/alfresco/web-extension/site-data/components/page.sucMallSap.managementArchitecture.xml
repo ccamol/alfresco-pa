@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component> 
+  <scope>page</scope>  
+  <region-id>sucMallSap</region-id>  
+  <source-id>managementArchitecture</source-id>  
+  <url>/dashlets/sucMallSap</url>  
+  <guid>page.sucMallSap.managementArchitecture</guid>  
+  <properties> 
+  </properties> 
+</component>
+

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="pawf:workflowmodel" xmlns="http://www.alfresco.org/model/dictionary/1.0">
+ 	<imports>
+		<!-- Import Alfresco Dictionary Definitions -->
+		<import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d" />
+		<!-- Import Alfresco System Definitions -->
+		<import uri="http://www.alfresco.org/model/system/1.0" prefix="sys" />
+		<!-- Import Alfresco Content Domain Model Definitions -->
+		<import uri="http://www.alfresco.org/model/content/1.0" prefix="cm" />
+		<!-- Import User Model Definitions -->
+		<import uri="http://www.alfresco.org/model/user/1.0" prefix="usr" />
+		<import uri="http://www.alfresco.org/model/bpm/1.0" prefix="bpm" />
+	</imports>
+	<namespaces>
+		<namespace uri="http://www.parquearauco.com/model/workflow/1.0" prefix="pawf" />
+	</namespaces>
+	<constraints>
+		<constraint name="pawf:reviewOutcomeOptions" type="LIST">
+			<parameter name="allowedValues">
+				<list>
+					<value>Aprobar</value>
+					<value>No aprobar</value>
+				</list>
+			</parameter>
+		</constraint>
+	</constraints>
+	<types>
+ 		<type name="pawf:startEvent">
+			<title>Inicio publicación</title>
+			<parent>bpm:startTask</parent>
+			<mandatory-aspects>
+				<aspect>bpm:assignee</aspect>
+				<aspect>pawf:simpleReviewAssignment</aspect>
+				<aspect>pawf:classification</aspect>
+			</mandatory-aspects>
+ 		</type>
+ 		<type name="pawf:multipleStartEvent">
+			<title>Inicio publicación</title>
+			<parent>bpm:startTask</parent>
+			<mandatory-aspects>
+				<aspect>bpm:assignee</aspect>
+				<aspect>pawf:multipleReviewes</aspect>
+				<aspect>pawf:classification</aspect>
+			</mandatory-aspects>
+ 		</type>
+ 		<type name="pawf:deleteStartEvent">
+			<title>Inicio solicutd eliminación</title>
+			<parent>bpm:startTask</parent>
+			<mandatory-aspects>
+				<aspect>bpm:assignee</aspect>
+				<aspect>pawf:deleteAspect</aspect>
+			</mandatory-aspects>
+ 		</type>
+		<type name="pawf:approveDocument">
+			<parent>bpm:workflowTask</parent>
+			<overrides>
+                <property name="bpm:packageItemActionGroup">
+                    <default>edit_package_item_actions</default>
+                </property>
+            </overrides>
+   			<mandatory-aspects>
+				<aspect>pawf:reviewResultOutcome</aspect>
+			</mandatory-aspects>
+		</type>
+		<type name="pawf:end">
+			<title>Flujo finalizado</title>
+			<parent>bpm:workflowTask</parent>
+		</type>
+		<type name="pawf:approveDeleteRequest">
+			<parent>bpm:workflowTask</parent>
+			<overrides>
+                <property name="bpm:packageItemActionGroup">
+                    <default>edit_package_item_actions</default>
+                </property>
+            </overrides>
+   			<mandatory-aspects>
+				<aspect>pawf:reviewResultOutcome</aspect>
+				<aspect>pawf:deleteAspect</aspect>
+			</mandatory-aspects>
+		</type>
+		<type name="pawf:multipleApproveDocument">
+			<parent>bpm:workflowTask</parent>
+			<overrides>
+                <property name="bpm:packageItemActionGroup">
+                    <default>edit_package_item_actions</default>
+                </property>
+            </overrides>
+   			<mandatory-aspects>
+				<aspect>pawf:reviewResultOutcome</aspect>
+			</mandatory-aspects>
+		</type>
+		<type name="pawf:updateDocument">
+			<parent>bpm:workflowTask</parent>
+			<overrides>
+                <property name="bpm:packageItemActionGroup">
+                    <default>edit_package_item_actions</default>
+                </property>
+            </overrides>
+		</type>
+		<type name="pawf:notifyApproveDeleteRequest">
+			<parent>bpm:workflowTask</parent>
+			<overrides>
+                <property name="bpm:packageItemActionGroup">
+                    <default>edit_package_item_actions</default>
+                </property>
+            </overrides>
+   			<mandatory-aspects>
+				<aspect>pawf:deleteAspect</aspect>
+			</mandatory-aspects>
+		</type>
+		<type name="pawf:notifyRejectDeleteRequest">
+			<parent>bpm:workflowTask</parent>
+			<overrides>
+                <property name="bpm:packageItemActionGroup">
+                    <default>edit_package_item_actions</default>
+                </property>
+            </overrides>
+   			<mandatory-aspects>
+				<aspect>pawf:deleteAspect</aspect>
+			</mandatory-aspects>
+		</type>
+	</types>
+ 	
+	
+ 	<aspects>
+ 		<aspect name="pawf:reviewResultOutcome">
+			<properties>
+				<property name="pawf:reviewOutcome">
+					<type>d:text</type>
+					<default>No aprobar</default>
+					<constraints>
+						<constraint ref="pawf:reviewOutcomeOptions" />
+					</constraints>
+				</property>
+			</properties>
+		</aspect>
+ 		<aspect name="pawf:deleteAspect">
+			<properties>
+				<property name="pawf:reason">
+					<type>d:text</type>
+				</property>
+			</properties>
+		</aspect>
+		<aspect name="pawf:simpleReviewAssignment">
+			<properties>
+				<property name="pawf:simpleReviewer">
+					<type>d:text</type>
+				</property>
+			</properties>
+		</aspect>
+		<aspect name="pawf:multipleReviewes">
+			<properties>
+				<property name="pawf:reviewers">
+					<type>d:text</type>
+				</property>
+				<property name="pawf:counter">
+					<type>d:int</type>
+				</property>
+				<property name="pawf:conditionReviewer">
+					<type>d:text</type>
+				</property>
+			</properties>
+		</aspect>
+		<aspect name="pawf:commentsAspect">
+			<properties>
+				<property name="pawf:comments">
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+				</property>
+			</properties>
+		</aspect>
+		<aspect name="pawf:classification">
+			<properties>
+				<property name="pawf:uuidClassification">
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+				</property>
+			</properties>
+		</aspect>
+	</aspects>
+</model>

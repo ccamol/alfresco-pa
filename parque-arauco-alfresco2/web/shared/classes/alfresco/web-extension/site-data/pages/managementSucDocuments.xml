@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<page>
+   <title>Management SUC Documents</title>
+   <description>managementSucDocuments</description>
+   <template-instance>managementSucDocuments</template-instance>
+   <authentication>user</authentication>
+</page>

@@ -1,0 +1,6 @@
+<webscript>
+	<shortname>Edit Stage Tendering</shortname>
+	<description>Editar Estado licitaciones</description>
+	<family>dashlet</family>
+	<url>/dashlets/editStageTender</url>
+</webscript>

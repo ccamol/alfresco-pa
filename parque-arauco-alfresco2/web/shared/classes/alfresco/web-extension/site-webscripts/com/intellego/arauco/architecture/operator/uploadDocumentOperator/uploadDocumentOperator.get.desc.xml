@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>uploadDocumentOperator</shortname>
+  <description>uploadDocumentOperator</description>
+  <family>dashlet</family>
+  <url>/dashlets/uploadDocumentOperator</url>
+</webscript>

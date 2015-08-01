@@ -1,0 +1,7 @@
+<webscript>
+  <shortname>showWorkflowTasksPopup</shortname>
+  <description>Show all tasks associated to a document workflows</description>
+  <family>dashlet</family>
+  <url>/dashlets/showWorkflowTasksPopup</url>
+  <format default="html">extension</format>
+</webscript>

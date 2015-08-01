@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>autoClosePage</shortname>
+  <description>autoClosePage</description>
+  <family>dashlet</family>
+  <url>/dashlets/autoClosePage</url>
+</webscript>

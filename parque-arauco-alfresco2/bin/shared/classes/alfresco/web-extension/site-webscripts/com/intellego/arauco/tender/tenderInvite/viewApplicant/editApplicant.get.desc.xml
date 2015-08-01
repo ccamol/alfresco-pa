@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>createTenderPopUp</shortname>
+  <description>createTenderPopUp</description>
+  <family>dashlet</family>
+  <url>/dashlets/viewApplicant</url>
+</webscript>

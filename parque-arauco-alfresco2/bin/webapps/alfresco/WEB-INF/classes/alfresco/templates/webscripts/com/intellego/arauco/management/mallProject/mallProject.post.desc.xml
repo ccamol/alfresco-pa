@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>Project mall</shortname>
+	<description>Proyectos de mall</description>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+	  <format default="json">extension</format>
+	<url>/arauco/mallProject</url>
+</webscript>

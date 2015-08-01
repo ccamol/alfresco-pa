@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans.dtd'>
+<beans>
+  	<bean id="sapService" parent="baseJavaScriptExtension" class="com.intellego.parquearauco.sap.ws.baseprocessorextension.SAPProcess">
+        <property name="extensionName">
+            <value>SAPService</value>
+        </property>        
+      	<property name="serviceRegistry">
+        	<ref bean="ServiceRegistry"></ref>
+      	</property>
+    </bean>
+    
+    	<bean id="templateActionModelFactory" class="org.alfresco.repo.action.scheduled.FreeMarkerWithLuceneExtensionsModelFactory">
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"/>
+		</property>
+	</bean>
+
+    <bean id="SAPImport" class="org.alfresco.repo.action.scheduled.SimpleTemplateActionDefinition">
+        <property name="actionName">
+            <value>script</value>
+        </property>
+        <property name="parameterTemplates">
+            <map>
+                <entry>
+                    <key>
+                        <value>script-ref</value>
+                    </key>
+                    <!-- Note that as of Alfresco 4.0, due to a  Spring upgrade, the FreeMarker ${foo} entries must be escaped --> 
+                    <value>\$\{selectSingleNode('workspace://SpacesStore', 'lucene', 'PATH:"/app:company_home/app:dictionary/app:scripts/cm:sap.js"' )\}</value>
+                </entry>
+            </map>
+        </property>
+        <property name="templateActionModelFactory">
+            <ref bean="templateActionModelFactory"/>
+        </property>
+        <property name="dictionaryService">
+            <ref bean="DictionaryService"/>
+        </property>
+        <property name="actionService">
+            <ref bean="ActionService"/>
+        </property>
+        <property name="templateService">
+            <ref bean="TemplateService"/>
+        </property>
+    </bean>
+    
+    <!--
+   Run the script every minute - select the single node company home that is not used ...
+    -->
+    <bean id="runSAPImport" class="org.alfresco.repo.action.scheduled.CronScheduledQueryBasedTemplateActionDefinition">
+        <property name="transactionMode">
+            <value>UNTIL_FIRST_FAILURE</value>
+        </property>
+        <property name="compensatingActionMode">
+            <value>IGNORE</value>
+        </property>
+        <property name="searchService">
+            <ref bean="SearchService"/>
+        </property>
+        <property name="templateService">
+            <ref bean="TemplateService"/>
+        </property>
+        <property name="queryLanguage">
+            <value>lucene</value>
+        </property>
+        <property name="stores">
+            <list>
+                <value>workspace://SpacesStore</value>
+            </list>
+        </property>
+        <property name="queryTemplate">
+            <value>PATH:"/app:company_home"</value> 
+        </property>
+        <property name="cronExpression">
+            <value>0 15 15 * * ?</value>
+        </property>
+        <property name="jobName">
+            <value>jobD</value>
+        </property>
+        <property name="jobGroup">
+            <value>jobGroup</value>
+        </property>
+        <property name="triggerName">
+            <value>triggerD</value>
+        </property>
+        <property name="triggerGroup">
+            <value>triggerGroup</value>
+        </property>
+        <property name="scheduler">
+            <ref bean="schedulerFactory"/>
+        </property>
+        <property name="actionService">
+            <ref bean="ActionService"/>
+        </property>
+        <property name="templateActionModelFactory">
+            <ref bean="templateActionModelFactory"/>
+        </property>
+        <property name="templateActionDefinition">
+            <ref bean="SAPImport"/> <!-- This is name of the action (bean) that gets run -->
+        </property>
+        <property name="transactionService">
+            <ref bean="TransactionService"/>
+        </property>
+        <property name="runAsUser">
+            <value>System</value>
+        </property>
+    </bean>
+</beans>

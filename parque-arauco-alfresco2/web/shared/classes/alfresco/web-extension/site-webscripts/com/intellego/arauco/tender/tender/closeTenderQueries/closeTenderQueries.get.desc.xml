@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>Close Tender Queries</shortname>
+  <description>Cerrar consultas</description>
+  <family>dashlet</family>
+  <url>/dashlets/closeTenderQueries</url>
+</webscript>

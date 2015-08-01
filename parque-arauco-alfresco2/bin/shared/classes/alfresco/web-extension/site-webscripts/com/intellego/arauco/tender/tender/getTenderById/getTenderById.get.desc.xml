@@ -1,0 +1,7 @@
+<webscript>
+	<shortname>Edit Tender</shortname>
+	<description>Editar Licitaciones</description>
+	<family>dashlet</family>
+	<url>/dashlets/getTenderById</url>
+	<format default="json">extension</format>
+</webscript>

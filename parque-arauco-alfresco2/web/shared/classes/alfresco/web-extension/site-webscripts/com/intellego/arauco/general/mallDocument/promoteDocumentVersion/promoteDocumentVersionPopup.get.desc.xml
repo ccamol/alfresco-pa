@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>promoteDocumentVersionPopup</shortname>
+  <description>promoteDocumentVersionPopup</description>
+  <family>dashlet</family>
+  <url>/dashlets/promoteDocumentVersionPopup</url>
+</webscript>

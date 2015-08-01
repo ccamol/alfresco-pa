@@ -1,0 +1,5 @@
+<webscript>
+  <shortname>Classification</shortname>
+  <description>Remove classification</description>
+  <url>/dashlets/removeClassification</url>
+</webscript>

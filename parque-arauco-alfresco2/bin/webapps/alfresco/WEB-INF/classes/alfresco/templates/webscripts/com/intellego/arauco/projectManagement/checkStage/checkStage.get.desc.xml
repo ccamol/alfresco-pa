@@ -1,0 +1,7 @@
+<webscript>
+	<shortname>checkStage</shortname>
+	<description>checkStage</description>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+	<url>/arauco/checkStage</url>
+</webscript>

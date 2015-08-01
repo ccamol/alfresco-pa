@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<page>
+   <title>Preguntas y respuestas</title>
+   <description>Preguntas y respuestas</description>
+   <template-instance>questionsAndAnswers</template-instance>
+   <authentication>user</authentication>
+</page>

@@ -1,0 +1,8 @@
+<webscript>
+<shortname>versionContentDocument</shortname>
+<description>versionContentDocument</description>
+<url>/components/arauco/versionContentDocument</url>
+<authentication>user</authentication>
+<format default="html">extension</format>
+<transaction>required</transaction>
+</webscript>

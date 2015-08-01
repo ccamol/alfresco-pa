@@ -1,0 +1,7 @@
+<webscript>
+  <shortname>Createform</shortname>
+  <description>Createv orm</description>
+  <url>/components/createform</url>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

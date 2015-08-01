@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<page>
+   <title>moduleAccess</title>
+   <description>moduleAccess</description>
+   <template-instance>moduleAccess</template-instance>
+   <authentication>user</authentication>
+</page>

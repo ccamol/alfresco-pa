@@ -1,0 +1,9 @@
+<webscript>
+  <shortname>Document Uploader</shortname>
+  <description></description>
+  	<url>/test/docUploader?documentTypeId={documentTypeId}
+  	    &amp;year={year}
+  	</url>
+  <format default="html">argument</format>
+  <authentication>user</authentication>
+</webscript>

@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>stageList</shortname>
+  <description>Get the stages list</description>
+  <url>/arauco/getStageById</url>
+  <format default="json">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

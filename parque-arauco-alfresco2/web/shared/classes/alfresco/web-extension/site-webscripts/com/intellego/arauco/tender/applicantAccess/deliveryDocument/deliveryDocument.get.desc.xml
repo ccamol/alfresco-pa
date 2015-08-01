@@ -1,0 +1,7 @@
+<webscript>
+	<shortname>deliveryDocument</shortname>
+	<description>deliveryDocument</description>
+	<family>dashlet</family>
+	<url>/dashlets/deliveryDocument</url>
+	<format default="html">extension</format>
+</webscript>

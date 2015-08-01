@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component> 
+  <scope>page</scope>  
+  <region-id>consultingApplicant</region-id>  
+  <source-id>questionAnswersApplicantAccess</source-id>  
+  <url>/dashlets/consultingApplicant</url>  
+  <guid>page.consultingApplicant.questionAnswersApplicantAccess</guid>  
+  <properties> 
+    <height>500</height>
+    <with>800</with>
+  </properties> 
+</component>

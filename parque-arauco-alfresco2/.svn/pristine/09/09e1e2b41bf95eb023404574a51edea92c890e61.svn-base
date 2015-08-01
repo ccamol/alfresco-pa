@@ -1,0 +1,7 @@
+<webscript>
+	<shortname>getAssociatedThirdPartyArchitectureDocuments</shortname>
+	<description>getAssociatedThirdPartyArchitectureDocuments</description>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+	<url>/arauco/getAssociatedThirdPartyArchitectureDocuments</url>
+</webscript>

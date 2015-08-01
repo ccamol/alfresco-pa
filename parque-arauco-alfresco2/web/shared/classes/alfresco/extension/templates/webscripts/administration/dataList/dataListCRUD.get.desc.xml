@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>dataListCRUD</shortname>
+  <description>Maintenance from DataList</description>
+  <url>/arauco/administration/dataListCRUD</url>
+  <format default="json">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

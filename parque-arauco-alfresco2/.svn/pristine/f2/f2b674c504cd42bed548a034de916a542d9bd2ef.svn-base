@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>addTenderCategory</shortname>
+	<description>addTenderCategory</description>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+	  <format default="json">extension</format>
+	<url>/arauco/addTenderCategory</url>
+</webscript>

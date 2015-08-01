@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>getTasksByWorkflow</shortname>
+	<description>get all tasks associated to a workflow</description>
+	<url>/arauco/getTasksByWorkflow</url>
+	<format default="json">extension</format>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+</webscript>

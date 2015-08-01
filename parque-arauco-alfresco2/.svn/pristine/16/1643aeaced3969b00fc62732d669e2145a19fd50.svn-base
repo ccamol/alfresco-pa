@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>displayUpdateDocument</shortname>
+  <description>displayUpdateDocument</description>
+  <family>dashlet</family>
+  <url>/dashlets/displayUpdateDocument</url>
+</webscript>

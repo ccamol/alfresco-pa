@@ -1,0 +1,8 @@
+<webscript>
+  <shortname> parents Recurse folders </shortname>
+  <description>parents Recurse folders </description>
+  <url>/arauco/parentRecurseFolders</url>
+  <format default="json">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

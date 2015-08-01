@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>deleteMallType</shortname>
+  <description>Borrar Tipo Mall</description>
+  <url>/arauco/deleteMallType</url>
+  <format default="json">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

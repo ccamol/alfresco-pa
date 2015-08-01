@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component> 
+  <scope>page</scope>  
+  <region-id>shareDocuments</region-id>  
+  <source-id>handingOverDocumentation</source-id>  
+  <url>/dashlets/shareDocuments</url>  
+  <guid>page.shareDocuments.handingOverDocumentation</guid>  
+  <properties> 
+    <height>300</height>
+  </properties> 
+</component>
+
+
+

@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>editArchitectureProject</shortname>
+  <description>Editar Proyecto Arquitectura</description>
+  <url>/arauco/editArchitectureProject</url>
+  <format default="json">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

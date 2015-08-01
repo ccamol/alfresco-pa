@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>updateContentDocumentApplicant</shortname>
+  <description>updateContentDocumentApplicant</description>
+  <family>dashlet</family>
+  <url>/dashlets/updateContentDocumentApplicant</url>
+</webscript>

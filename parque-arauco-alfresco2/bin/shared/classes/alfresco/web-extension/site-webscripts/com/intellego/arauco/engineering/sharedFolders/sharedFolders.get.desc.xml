@@ -1,0 +1,8 @@
+<webscript>
+    <shortname>sharedFolders</shortname>
+    <description>sharedFolders</description>
+    <url>/dashlets/sharedFolders</url>
+    <format default="json">extension</format>
+    <authentication>user</authentication>
+    <transaction>required</transaction>
+</webscript>

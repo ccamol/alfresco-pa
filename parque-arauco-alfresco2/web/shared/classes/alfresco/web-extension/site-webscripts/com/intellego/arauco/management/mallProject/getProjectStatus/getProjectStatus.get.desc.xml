@@ -1,0 +1,5 @@
+<webscript>
+  <shortname>getProjectStatus</shortname>
+  <description>getProjectStatus</description>
+  <url>/dashlets/getProjectStatus</url>
+</webscript>

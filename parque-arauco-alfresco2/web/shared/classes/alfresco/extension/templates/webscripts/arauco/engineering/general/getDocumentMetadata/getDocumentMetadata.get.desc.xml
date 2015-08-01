@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>getDocumentMetada</shortname>
+	<description>get document metadata</description>
+	<url>/arauco/getDocumentMetadata</url>
+	<format default="json">extension</format>
+	<authentication runas="admin">user</authentication>
+	<transaction>required</transaction>
+</webscript>

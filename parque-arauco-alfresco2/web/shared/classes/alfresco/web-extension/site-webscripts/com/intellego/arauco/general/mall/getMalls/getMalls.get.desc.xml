@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>Get Malls</shortname>
+  <description>Get Malls</description>
+  <url>/dashlets/getMalls</url>
+  <format default="html">extension</format>
+</webscript>

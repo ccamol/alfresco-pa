@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component> 
+  <scope>page</scope>  
+  <region-id>applicants</region-id>  
+  <source-id>offersAnalysis</source-id>  
+  <url>/dashlets/applicants</url>  
+  <guid>page.applicants.offersAnalysis</guid>  
+  <properties> 
+    <height>300</height>
+  </properties> 
+</component>
+
+
+

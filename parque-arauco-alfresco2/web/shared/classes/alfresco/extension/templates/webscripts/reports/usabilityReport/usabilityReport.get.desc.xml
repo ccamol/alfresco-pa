@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Missing documents</shortname>
+  <description>Missing documents</description>
+  <url>/arauco/usabilityReport</url>
+   <format default="html">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

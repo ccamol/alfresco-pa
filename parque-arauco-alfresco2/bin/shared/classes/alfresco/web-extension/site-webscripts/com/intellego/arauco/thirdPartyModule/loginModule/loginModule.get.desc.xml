@@ -1,0 +1,5 @@
+<webscript>
+  <shortname>loginModule</shortname>
+  <description>loginModule</description>
+  <url>/dashlets/loginModule</url>
+</webscript>

@@ -1,0 +1,5 @@
+<webscript>
+	<shortname>Files in folder</shortname>
+	<description>Get the files in folder</description>
+	<url>/dashlets/folderFilesSAP</url>
+</webscript>

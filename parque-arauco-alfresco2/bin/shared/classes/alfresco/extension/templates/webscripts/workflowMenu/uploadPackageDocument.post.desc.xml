@@ -1,0 +1,8 @@
+<webscript>
+<shortname>Create workflow document</shortname>
+<description>Create workflow document</description>
+<url>/arauco/uploadPackageDocument</url>
+<authentication>user</authentication>
+<format default="html">extension</format>
+<transaction>required</transaction>
+</webscript>

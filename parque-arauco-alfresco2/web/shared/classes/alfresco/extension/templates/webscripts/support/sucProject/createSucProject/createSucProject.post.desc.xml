@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>createSucProject</shortname>
+  <description>Creación de Proyecto Suc</description>
+  <url>/arauco/createSucProject</url>
+  <format default="json">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

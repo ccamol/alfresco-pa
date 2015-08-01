@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<page>
+   <title>Ingeniería</title>
+   <description>Página de ingeniería</description>
+   <template-instance>engineering</template-instance>
+   <authentication>user</authentication>
+</page>

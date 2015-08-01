@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component> 
+  <scope>page</scope>  
+  <region-id>expiration</region-id>  
+  <source-id>projectManagement</source-id>  
+  <url>/dashlets/expiration</url>  
+  <guid>page.expiration.projectManagement</guid>  
+  <properties> 
+    
+  </properties> 
+</component>
+
+
+

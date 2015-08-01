@@ -1,0 +1,7 @@
+<webscript>
+	<shortname>importantDocument</shortname>
+	<description>Mall importantDocument</description>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+	<url>/arauco/importantDocument</url>
+</webscript>

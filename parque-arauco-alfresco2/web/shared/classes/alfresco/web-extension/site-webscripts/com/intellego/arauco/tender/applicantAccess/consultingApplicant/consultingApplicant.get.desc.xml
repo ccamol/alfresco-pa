@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>consultingApplicant</shortname>
+  <description>consultingApplicant</description>
+  <family>dashlet</family>
+  <url>/dashlets/consultingApplicant</url>
+</webscript>

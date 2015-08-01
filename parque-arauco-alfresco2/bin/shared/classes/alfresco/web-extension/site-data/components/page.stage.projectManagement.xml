@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component> 
+  <scope>page</scope>  
+  <region-id>stage</region-id>  
+  <source-id>projectManagement</source-id>  
+  <url>/dashlets/stage</url>  
+  <guid>page.stage.projectManagement</guid>  
+  <properties> 
+    <height>300</height>
+  </properties> 
+</component>
+
+
+

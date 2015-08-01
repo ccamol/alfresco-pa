@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>managingParameters</shortname>
+  <description>managingParameters</description>
+  <family>dashlet</family>
+  <url>/dashlets/managingParameters</url>
+</webscript>

@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Save Document Arauco Metadata</shortname>
+  <description>Save Document Arauco Metadata</description>
+  <url>/arauco/saveDocOperator</url>
+  <format default="json">extension</format>
+  <authentication runas="admin">user</authentication>
+  <transaction>required</transaction>
+</webscript>

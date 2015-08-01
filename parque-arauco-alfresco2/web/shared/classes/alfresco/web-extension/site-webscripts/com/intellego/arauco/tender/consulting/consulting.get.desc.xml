@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>consulting</shortname>
+  <description>consulting</description>
+  <family>dashlet</family>
+  <url>/dashlets/consulting</url>
+</webscript>

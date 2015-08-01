@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Classification</shortname>
+  <description>Classification</description>
+  <url>/dashlets/new_classify</url>
+  <format default="json">extension</format>
+   <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

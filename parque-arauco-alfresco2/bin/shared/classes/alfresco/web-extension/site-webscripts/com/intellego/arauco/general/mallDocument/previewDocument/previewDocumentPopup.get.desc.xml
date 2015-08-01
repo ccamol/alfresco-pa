@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>previewDocumentPopup</shortname>
+  <description>previewDocumentPopup</description>
+  <family>dashlet</family>
+  <url>/dashlets/previewDocumentPopup</url>
+</webscript>

@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>searchProject</shortname>
+	<description>searchProject</description>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+	  <format default="json">extension</format>
+	<url>/arauco/searchProjectThird</url>
+</webscript>

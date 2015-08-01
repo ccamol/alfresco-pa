@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>Get Country</shortname>
+  <description>Get Country</description>
+  <url>/dashlets/getCountries</url>
+  <format default="html">extension</format>
+</webscript>

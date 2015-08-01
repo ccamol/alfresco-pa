@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>Create mall</shortname>
+  <description>Create mall</description>
+  <family>dashlet</family>
+  <url>/dashlets/addMall</url>
+</webscript>

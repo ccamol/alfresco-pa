@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>getProjectArea</shortname>
+	<description>getProjectArea</description>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+	  <format default="json">extension</format>
+	<url>/arauco/getProjectArea</url>
+</webscript>

@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Version top 15</shortname>
+  <description>Version top 15</description>
+  <url>/dashlets/missingDocumentsReport</url>
+  <format default="html">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

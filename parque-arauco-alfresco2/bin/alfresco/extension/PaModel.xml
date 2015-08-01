@@ -1,0 +1,1644 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<model name="pa:model" xmlns="http://www.alfresco.org/model/dictionary/1.0">
+
+	<description>Parque Arauco repository Model</description>
+	<author>Intellego</author>
+	<version>2</version>
+
+
+	<imports>
+		<!-- Import Alfresco Dictionary Definitions -->
+		<import uri="http://www.alfresco.org/model/dictionary/1.0"
+			prefix="d" />
+		<!-- Import Alfresco Content Domain Model Definitions -->
+		<import uri="http://www.alfresco.org/model/content/1.0" prefix="cm" />
+	</imports>
+
+
+	<!-- Introduction of new namespaces defined by this model -->
+	<!-- NOTE: The following namespace custom.model should be changed to reflect 
+		your own namespace -->
+	<namespaces>
+		<namespace uri="http://www.parquearauco.cl/content/1.0"
+			prefix="pa" />
+	</namespaces>
+
+
+	<types>
+		<type name="pa:doc">
+			<title>parque Arauco</title>
+			<parent>cm:content</parent>
+		</type>
+
+		<type name="pa:paDocument">
+			<title>Resolucion</title>
+			<parent>pa:doc</parent>
+			<mandatory-aspects>
+				<aspect>pa:generalData</aspect>
+			</mandatory-aspects>
+		</type>
+
+	</types>
+
+	<aspects>
+
+		<aspect name="pa:generalData">
+			<title>Datos Generales</title>
+			<properties>
+
+				<property name="pa:nodeType">
+					<title>Tipo de nodo:</title>
+					<!-- agregar el nombre de la lista que corresponde -->
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:section">
+					<title>Sección</title>
+					<!-- agregar el nombre de la lista que corresponde -->
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:sectionID">
+					<title>Sección:</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:subsection">
+					<title>Subsección</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:subsectionID">
+					<title>Subsección:</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:serie">
+					<title>Serie</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:serieID">
+					<title>Serie:</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:documentType">
+					<title>Tipo de documento</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:documentTypeID">
+					<title>Tipo de documento</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:documentDate">
+					<title>Fecha Documento</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:date</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:mall">
+					<title>Mall</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:mallID">
+					<title>Mall</title>
+					<description>create.show:true;create.list:true;create.listName:paList_mall;create.area:false;details.show:false;details.area:false;search.show:true;search.list:true
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:mallType">
+					<title>Tipo de Mall</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:mallTypeID">
+					<title>Tipo de Mall</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:country">
+					<title>País</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:countryID">
+					<title>País</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:mallIDSAP">
+					<title>MallSAP</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+				<property name="pa:sharedDate">
+					<title>Fecha documento compartido</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:false;details.area:false;search.show:false;search.list:false
+					</description>
+					<type>d:date</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+				<property name="pa:sharedType">
+					<title>Compartido con</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:false;details.area:false;search.show:false;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+			</properties>
+		</aspect>
+
+		<aspect name="pa:projectData">
+			<title>Datos de Proyecto</title>
+			<properties>
+				<property name="pa:project">
+					<title>Proyecto</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+				<property name="pa:projectID">
+					<title>Proyecto</title>
+					<description>create.show:false;create.list:true;create.listName:none;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+				<property name="pa:stage">
+					<title>Etapa</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+				<property name="pa:stageID">
+					<title>Etapa</title>
+					<description>create.show:false;create.list:true;create.listName:none;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+			</properties>
+		</aspect>
+
+		<aspect name="pa:documentNumberData">
+			<title>Datos de Número de documento</title>
+			<properties>
+				<property name="pa:documentNumber">
+					<title>Número de Documento</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+			</properties>
+		</aspect>
+
+		<aspect name="pa:logicalAssoc">
+			<title>Asociación Logica</title>
+			<properties>
+				<property name="pa:statusAssoc">
+					<title>Estado de Asociación</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+				<property name="pa:parentDocument">
+					<title>Documento Padre</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+			</properties>
+		</aspect>
+
+		<aspect name="pa:itoData">
+			<title>Datos de ITO</title>
+			<properties>
+				<property name="pa:itoParquearauconame">
+					<title>Nombre ITO Parque Arauco</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:itoParquearauconameID">
+					<title>Nombre ITO Parque Arauco</title>
+					<description>create.show:true;create.list:true;create.listName:paList_itoParquearauconame;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+
+		<aspect name="pa:sucData">
+			<title>Datos SUC</title>
+			<properties>
+
+				<property name="pa:storeName">
+					<title>Nombre tienda</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:storeNameID">
+					<title>Nombre tienda</title>
+					<description>create.show:true;create.list:true;create.listName:paList_storeName;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:sucNumber">
+					<title>Número de Suc</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:sucNumberID">
+					<title>Número de Suc</title>
+					<description>create.show:true;create.list:true;create.listName:paList_sucNumber;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:idSUCSAP">
+					<title>SUCSAP</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+
+		<aspect name="pa:commercialData">
+			<title>Datos Comercial</title>
+			<properties>
+
+				<property name="pa:tradingNameParquearauco">
+					<title>Nombre Comercial Parque Arauco</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:tradingNameParquearaucoID">
+					<title>Nombre Comercial Parque Arauco</title>
+					<description>create.show:true;create.list:true;create.listName:paList_tradingNameParquearauco;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+
+		<aspect name="pa:receiptData">
+			<title>Datos Recibo</title>
+			<properties>
+
+				<property name="pa:whoReceivesname">
+					<title>Nombre de quien recibe </title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:whoReceivesnameID">
+					<title>Nombre de quien recibe </title>
+					<description>create.show:true;create.list:true;create.listName:paList_whoReceivesname;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:whoReceivesnamePosition">
+					<title>Cargo de quien recibe </title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:whoReceivesnamePositionID">
+					<title>Cargo de quien recibe </title>
+					<description>create.show:true;create.list:true;create.listName:paList_whoReceivesnamePosition;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+
+		<aspect name="pa:centerManagerData">
+			<title>Datos Center Manager</title>
+			<properties>
+
+
+				<property name="pa:centerManagerName">
+					<title>Nombre Center Manager </title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:centerManagerNameID">
+					<title>Nombre Center Manager </title>
+					<description>create.show:true;create.list:true;create.listName:paList_centerManagerName;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+
+		<aspect name="pa:constructionData">
+			<title>Datos Constructora</title>
+			<properties>
+
+				<property name="pa:constructionCompanyName">
+					<title>Nombre Constructora</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:constructionCompanyNameID">
+					<title>Nombre Constructora</title>
+					<description>create.show:true;create.list:true;create.listName:paList_constructionCompanyName;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:constructionCompanyRut">
+					<title>Rut Constructora</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:constructionCompanyRutID">
+					<title>Rut Constructora</title>
+					<description>create.show:true;create.list:true;create.listName:paList_constructionCompanyRut;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+
+			</properties>
+		</aspect>
+
+		<aspect name="pa:entryData">
+			<title>Datos Ingreso</title>
+			<properties>
+				<property name="pa:admissionDate">
+					<title>Fecha de ingreso</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:date</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+			</properties>
+		</aspect>
+
+		<aspect name="pa:amountData">
+			<title>Datos Monto</title>
+			<properties>
+				<property name="pa:amount">
+					<title>Monto</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+			</properties>
+		</aspect>
+
+		<aspect name="pa:bankData">
+			<title>Datos Banco</title>
+			<properties>
+
+				<property name="pa:bank">
+					<title>Banco</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:bankID">
+					<title>Banco</title>
+					<description>create.show:true;create.list:true;create.listName:paList_bank;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+
+		<aspect name="pa:minorWorkData">
+			<title>Datos de Obra Menor</title>
+			<properties>
+				<property name="pa:numberEntry">
+					<title>Ingreso Número</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:omName">
+					<title>Nombre OM</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:professionalNameResponsible">
+					<title>Nombre Profesional a cargo</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:professionalNameResponsibleID">
+					<title>Nombre Profesional a cargo</title>
+					<description>create.show:true;create.list:true;create.listName:paList_professionalNameResponsible;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:draftsmanNameParquearauco">
+					<title>Nombre Dibujante Parque Arauco a cargo</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:draftsmanNameParquearaucoID">
+					<title>Nombre Dibujante Parque Arauco a cargo</title>
+					<description>create.show:true;create.list:true;create.listName:paList_draftsmanNameParquearauco;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:municipalCertificatenumber">
+					<title>Certificado Municipal Número</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:municipalCertificatenumberID">
+					<title>Certificado Municipal Número</title>
+					<description>create.show:true;create.list:true;create.listName:paList_municipalCertificatenumber;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+
+		<aspect name="pa:specialistData">
+			<title>Datos de Especialista</title>
+			<properties>
+
+				<property name="pa:specialist">
+					<title>Especialista</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<multiple>true</multiple>
+				</property>
+
+				<property name="pa:specialistID">
+					<title>Especialista</title>
+					<description>create.show:true;create.list:true;create.listName:paList_specialist;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					s
+					<mandatory>true</mandatory>
+					<multiple>true</multiple>
+				</property>
+
+				<property name="pa:specialistRut">
+					<title>Rut Especialista</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:specialistRutID">
+					<title>Rut Especialista</title>
+					<description>create.show:true;create.list:true;create.listName:paList_specialistRut;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+
+		<aspect name="pa:roleData">
+			<title>Datos de Rol</title>
+			<properties>
+
+				<property name="pa:role">
+					<title>Rol</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:roleID">
+					<title>Rol</title>
+					<description>create.show:true;create.list:true;create.listName:paList_role;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+
+		<aspect name="pa:workData">
+			<title>Datos de Obra</title>
+			<properties>
+
+				<property name="pa:siteManagerNameOP">
+					<title>Nombre Jefe de Obra por operador</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:construction">
+					<title>Obra</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:constructionID">
+					<title>Obra</title>
+					<description>create.show:true;create.list:true;create.listName:paList_construction;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+
+		<aspect name="pa:workDetailData">
+			<title>Datos Detalles de Obra</title>
+			<properties>
+				<property name="pa:workPlanStructure">
+					<title>Detalle de las obras a realizar</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>true</multiple>
+				</property>
+				<property name="pa:startWorkdate">
+					<title>Fecha inicio de obra</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:date</type>
+					<mandatory>true</mandatory>
+					<multiple>true</multiple>
+				</property>
+			</properties>
+		</aspect>
+
+		<aspect name="pa:architectureChiefData">
+			<title>Datos Jefe de Arquitectura</title>
+
+			<properties>
+				<property name="pa:chiefArchitectNameParquearauco">
+					<title>Nombre Jefe de Arquitectura Parque Arauco </title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:chiefArchitectNameParquearaucoID">
+					<title>Nombre Jefe de Arquitectura Parque Arauco </title>
+					<description>create.show:true;create.list:true;create.listName:paList_chiefArchitectNameParquearauco;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+
+		<aspect name="pa:folioData">
+			<title>Datos de folio</title>
+			<properties>
+				<property name="pa:folio">
+					<title>Folio</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+			</properties>
+		</aspect>
+
+		<aspect name="pa:detailData">
+			<title>Datos de Detalle</title>
+			<properties>
+
+				<property name="pa:detail">
+					<title>Detalle</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<multiple>true</multiple>
+				</property>
+
+				<property name="pa:detailID">
+					<title>Detalle</title>
+					<description>create.show:true;create.list:true;create.listName:paList_detail;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>true</mandatory>
+					<multiple>true</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+
+		<aspect name="pa:actData">
+			<title>Datos Acta/Solicitud</title>
+			<properties>
+				<property name="pa:actNumber">
+					<title>Número de Acta</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:requestNumber">
+					<title>Número de Solicitud</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+			</properties>
+		</aspect>
+
+		<aspect name="pa:permissionData">
+			<title>Datos de Permiso</title>
+			<properties>
+				<property name="pa:permissionNumber">
+					<title>Número de Permiso</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+			</properties>
+		</aspect>
+
+		<aspect name="pa:fojasData">
+			<title>Datos de Año/Fojas</title>
+			<properties>
+				<property name="pa:fojas">
+					<title>Fojas</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:year">
+					<title>Año</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+			</properties>
+		</aspect>
+
+		<aspect name="pa:planeData">
+			<title>Datos de Plano</title>
+			<properties>
+				<property name="pa:planName">
+					<title>Nombre Plano</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<multiple>true</multiple>
+				</property>
+
+				<property name="pa:planNameID">
+					<title>Nombre Plano</title>
+					<description>create.show:true;create.list:true;create.listName:paList_planName;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:specialty">
+					<title>Especialidad</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:specialtyID">
+					<title>Especialidad</title>
+					<description>create.show:true;create.list:true;create.listName:paList_specialty;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+
+		<aspect name="pa:addressData">
+			<title>Datos de Dirección</title>
+			<properties>
+
+				<property name="pa:address">
+					<title>Dirección</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:addressID">
+					<title>Dirección</title>
+					<description>create.show:true;create.list:true;create.listName:paList_address;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+
+		<aspect name="pa:modificationData">
+			<title>Datos de Modificación</title>
+			<properties>
+				<property name="pa:modificationDetail">
+					<title>Detalle Modificación </title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+
+		<aspect name="pa:monthData">
+			<title>Datos de Mes</title>
+			<properties>
+
+				<property name="pa:month">
+					<title>Mes </title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+
+				<property name="pa:monthID">
+					<title>Mes </title>
+					<description>create.show:true;create.list:true;create.listName:paList_month;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+
+		<aspect name="pa:loadDateData">
+			<title>Datos de Fecha de Carga</title>
+			<properties>
+				<property name="pa:inputAgreedDate">
+					<title>Fecha comprometida de carga</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:date</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+			</properties>
+		</aspect>
+
+		<aspect name="pa:societyData">
+			<title>Datos de Sociedad</title>
+			<properties>
+
+				<property name="pa:society">
+					<title>Sociedad</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:societyID">
+					<title>Sociedad</title>
+					<description>create.show:true;create.list:true;create.listName:paList_society;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+
+			</properties>
+		</aspect>
+
+		<aspect name="pa:operatorData">
+			<title>Datos de Operador</title>
+			<properties>
+				<property name="pa:operator">
+					<title>Operador</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:operatorID">
+					<title>Operador</title>
+					<description>create.show:true;create.list:true;create.listName:paList_operator;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+			</properties>
+		</aspect>
+
+		<aspect name="pa:jobsData">
+			<title>Datos de Trabajos</title>
+			<properties>
+				<property name="pa:workDescription">
+					<title>Descripción de los trabajos</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+
+		<aspect name="pa:phisicalAreaData">
+			<title>Datos de área física</title>
+			<properties>
+				<property name="pa:m2">
+					<title>M2</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:m2Suc">
+					<title>M2 Suc</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:m2Terrace">
+					<title>M2 Terraza</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:m2Winery">
+					<title>M2 Bodega</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+			</properties>
+		</aspect>
+
+		<aspect name="pa:levelData">
+			<title>Datos de Nivel</title>
+			<properties>
+
+				<property name="pa:level">
+					<title>Nivel</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<multiple>true</multiple>
+				</property>
+
+				<property name="pa:levelID">
+					<title>Nivel</title>
+					<description>create.show:true;create.list:true;create.listName:paList_level;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+
+		<aspect name="pa:fileData">
+			<title>Datos de Ficha</title>
+			<properties>
+
+				<property name="pa:stateListing">
+					<title>Estado Ficha</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:stateListingID">
+					<title>Estado Ficha</title>
+					<description>create.show:true;create.list:true;create.listName:paList_state;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:sucType">
+					<title>Tipo SUC</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+			</properties>
+		</aspect>
+
+		<aspect name="pa:architectureCompanyData">
+			<title>Datos de Empresa de Arquitectura</title>
+			<properties>
+
+				<property name="pa:companyNamearchitecture">
+					<title>Nombre empresa Arquitectura</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>true</multiple>
+				</property>
+
+				<property name="pa:companyNamearchitectureID">
+					<title>Nombre empresa Arquitectura</title>
+					<description>create.show:true;create.list:true;create.listName:paList:companyNamearchitecture;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:companyRut">
+					<title>Rut empresa </title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:companyRutID">
+					<title>Rut empresa </title>
+					<description>create.show:true;create.list:true;create.listName:paList_companyRut;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+
+
+		<aspect name="pa:architectData">
+			<title>Datos de Arquitecto</title>
+			<properties>
+
+				<property name="pa:architectName">
+					<title>Nombre Arquitecto</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>true</multiple>
+				</property>
+
+				<property name="pa:architectNameID">
+					<title>Nombre Arquitecto</title>
+					<description>create.show:true;create.list:true;create.listName:none;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+
+
+		<aspect name="pa:awardedCompanyData">
+			<title>Datos de Empresa Adjudicada</title>
+			<properties>
+
+				<property name="pa:nameCompanyAwarded">
+					<title>Nombre Empresa Adjudicada</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:nameCompanyAwardedID">
+					<title>Nombre Empresa Adjudicada</title>
+					<description>create.show:true;create.list:true;create.listName:paList_nameCompanyAwarded;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+
+				<property name="pa:companyAwardedRut">
+					<title>Rut empresa adjudicada</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:companyAwardedRutID">
+					<title>Rut empresa adjudicada</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:false;details.area:false;search.show:false;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:professionalResponsiblesNameCompanyAwarded">
+					<title>Nombres Profesionales a cargo empresa adjudicada</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:OCNumber">
+					<title>OC Número</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+
+
+		<aspect name="pa:reportData">
+			<title>Datos de Informe</title>
+			<properties>
+
+				<property name="pa:answerDeliveryReportNumber">
+					<title>Informe respuesta entrega Nº</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+
+		<aspect name="pa:fileAssociatedData">
+			<title>Datos Ficha Asociada</title>
+			<properties>
+
+				<property name="pa:listingBudgetAssociated">
+					<title>Ficha presupuesta asociada</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:listingBudgetAssociatedID">
+					<title>Ficha presupuesta asociada</title>
+					<description>create.show:true;create.list:true;create.listName:paList_listingBudgetAssociated;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+
+
+		<aspect name="pa:correspondenceData">
+			<title>Datos de Correspondencia</title>
+			<properties>
+
+				<property name="pa:origin">
+					<title>Origen </title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:destination">
+					<title>Destino</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:subject">
+					<title>subject</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+
+
+		<aspect name="pa:deliveryData">
+			<title>Datos de Entrega</title>
+			<properties>
+				<property name="pa:numberOfdelivery">
+					<title>Número de Entrega</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+
+
+		<aspect name="pa:supplierData">
+			<title>Datos de Proveedor</title>
+			<properties>
+
+				<property name="pa:supplierRut">
+					<title>Rut Proveedor</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:supplierRutID">
+					<title>Rut Proveedor</title>
+					<description>create.show:true;create.list:true;create.listName:paList_supplierRut;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+
+
+		<aspect name="pa:vigencyData">
+			<title>Datos de Vigencia</title>
+			<properties>
+				<property name="pa:startDate">
+					<title>Fecha Inicio</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:date</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+				<property name="pa:endDate">
+					<title>Fecha Fin</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:date</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+
+
+		<aspect name="pa:reviserData">
+			<title>Datos de Revisor</title>
+			<properties>
+
+				<property name="pa:reviewerName">
+					<title>Nombre Revisor</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>true</multiple>
+				</property>
+
+				<property name="pa:reviewerNameID">
+					<title>Nombre Revisor</title>
+					<description>create.show:true;create.list:true;create.listName:paList:reviewerName;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+
+
+		<aspect name="pa:amountSucData">
+			<title>Datos Cantidad de SUC</title>
+			<properties>
+				<property name="pa:sucQuantity">
+					<title>Cantidad de Suc</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+
+
+		<aspect name="pa:parkingData">
+			<title>Datos ABL/Estacionamientos</title>
+			<properties>
+				<property name="pa:abl">
+					<title>ABL </title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:parkingQuantity">
+					<title>Cantidad de Estacionamientos</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>true</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+
+
+		<aspect name="pa:ownerData">
+			<title>Datos Propietario</title>
+			<properties>
+				<property name="pa:ownerName">
+					<title>Nombre Propietario</title>
+					<description>create.show:false;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>true</multiple>
+				</property>
+
+				<property name="pa:ownerNameID">
+					<title>Nombre Propietario</title>
+					<description>create.show:true;create.list:true;create.listName:paList_ownerName;create.area:false;details.show:false;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+
+
+		<aspect name="pa:documentTypeDetailData">
+			<title>Datos Detalle Tipo de Documento</title>
+			<properties>
+
+				<property name="pa:detailDocumentType">
+					<title>Detalle tipo de documento</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+
+		<aspect name="pa:tenantData">
+			<title>Datos de Arrendatario</title>
+			<properties>
+
+				<property name="pa:tenant">
+					<title>Arredatario</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+
+		<aspect name="pa:tenderingData">
+			<title>Datos Detalle Tipo de Documento</title>
+			<properties>
+
+				<property name="pa:tenderNumber">
+					<title>Número de Licitación</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:int</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:tenderBeginDate">
+					<title>Fecha inicio licitación</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:date</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="pa:tenderEndDate">
+					<title>Fecha término licitación</title>
+					<description>create.show:true;create.list:false;create.listName:none;create.area:false;details.show:true;details.area:false;search.show:true;search.list:false
+					</description>
+					<type>d:date</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+			</properties>
+		</aspect>
+		<aspect name="pa:swfAssociations">
+			<title>PA: Thumbnails asociados</title>
+			<associations>
+				<association name="pa:swfAssoc">
+					<title>PA: Preview de video en formato swf</title>
+					<source>
+						<mandatory>false</mandatory>
+						<many>true</many>
+					</source>
+					<target>
+						<class>cm:content</class>
+						<mandatory>false</mandatory>
+						<many>false</many>
+					</target>
+				</association>
+			</associations>
+		</aspect>
+		<aspect name="pa:downloadAssociations">
+			<title>PA: tipos de descargas asociados</title>
+			<associations>
+				<association name="pa:downlaodAssoc">
+					<title>PA: Documentos para descargar</title>
+					<source>
+						<mandatory>true</mandatory>
+						<many>true</many>
+					</source>
+					<target>
+						<class>cm:content</class>
+						<mandatory>false</mandatory>
+						<many>true</many>
+					</target>
+				</association>
+			</associations>
+		</aspect>
+
+	</aspects>
+</model>

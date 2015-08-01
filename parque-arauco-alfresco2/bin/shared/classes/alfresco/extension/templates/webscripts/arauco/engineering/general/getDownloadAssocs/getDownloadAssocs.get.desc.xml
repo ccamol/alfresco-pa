@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>getDownloadAssocs</shortname>
+	<description>get all assocs to download by a document</description>
+	<url>/arauco/getDownloadAssocs</url>
+	<format default="json">extension</format>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+</webscript>

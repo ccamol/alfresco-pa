@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>CheckList</shortname>
+  <description>Check List</description>
+  <url>/arauco/checklist</url>
+   <format default="html">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

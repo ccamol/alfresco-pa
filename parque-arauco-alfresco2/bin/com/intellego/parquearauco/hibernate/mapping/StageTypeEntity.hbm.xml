@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 26-05-2014 02:38:34 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.intellego.parquearauco.entities.StageTypeEntity"
+		table="intellego_stage_type">
+		<id name="id" type="java.lang.Integer">
+			<column name="id" />
+			<generator class="sequence">
+				<param name="sequence">stageType_id_seq</param>
+			</generator>
+		</id>
+		<property name="name" type="java.lang.String">
+			<column name="name" />
+		</property>
+		
+		
+		
+		<set name="projectTypes" table="intellego_stage_project" inverse="true"
+			lazy="false" fetch="select">
+			<key>
+				<column name="id_stage" not-null="true" />
+			</key>
+			<many-to-many entity-name="com.intellego.parquearauco.entities.ProjectTypeEntity">
+				<column name="id_project" not-null="true" />
+			</many-to-many>
+		</set>
+		
+		
+		
+		<set name="documentTypes" table="intellego_stage_document"
+			inverse="true" lazy="false" fetch="select">
+			<key>
+				<column name="id_stage" not-null="true" />
+			</key>
+			<many-to-many
+				entity-name="com.intellego.parquearauco.entities.DocumentTypeEntity">
+				<column name="id_document" not-null="true" />
+			</many-to-many>
+		</set>
+	</class>
+</hibernate-mapping>

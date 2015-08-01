@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>setTenderDocumentMetadata</shortname>
+  <description>setTenderDocumentMetadata</description>
+  <family>dashlet</family>
+  <url>/dashlets/setTenderDocumentMetadata</url>
+</webscript>

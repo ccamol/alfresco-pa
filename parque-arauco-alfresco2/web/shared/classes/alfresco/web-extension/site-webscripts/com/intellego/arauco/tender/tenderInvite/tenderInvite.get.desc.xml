@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>tenderInvite</shortname>
+  <description>tenderInvite</description>
+  <family>dashlet</family>
+  <url>/dashlets/tenderInvite</url>
+</webscript>

@@ -1,0 +1,7 @@
+<webscript>
+	<shortname>getConsultisApplicantQuestions</shortname>
+	<description>getConsultisApplicantQuestions</description>
+	<family>dashlet</family>
+	<url>/dashlets/getConsultisApplicantQuestions</url>
+	<format default="html">extension</format>
+</webscript>

@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>requestedDocument</shortname>
+  <description>requestedDocument mall</description>
+  <family>dashlet</family>
+  <url>/dashlets/requestedDocument</url>
+</webscript>

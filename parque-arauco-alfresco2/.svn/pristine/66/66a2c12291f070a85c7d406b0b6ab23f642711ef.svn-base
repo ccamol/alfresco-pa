@@ -1,0 +1,6 @@
+<webscript>
+	<shortname>Add Stage Tendering</shortname>
+	<description>Agregar Estado licitaciones</description>
+	<family>dashlet</family>
+	<url>/dashlets/addStageTender</url>
+</webscript>

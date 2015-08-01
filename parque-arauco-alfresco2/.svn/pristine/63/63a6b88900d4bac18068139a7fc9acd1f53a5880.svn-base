@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>getStageTender</shortname>
+  <description>getStageTender</description>
+  <family>dashlet</family>
+  <url>/dashlets/getStageTender</url>
+</webscript>

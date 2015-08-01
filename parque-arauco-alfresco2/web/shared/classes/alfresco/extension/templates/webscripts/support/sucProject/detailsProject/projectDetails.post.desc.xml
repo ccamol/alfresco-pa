@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>project details</shortname>
+  <description>Get details for project</description>
+  <url>/arauco/sucProjectDetails</url>
+  <format default="json">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

@@ -1,0 +1,7 @@
+<webscript>
+	<shortname>getRequestedDocumentApplicant</shortname>
+	<description>getRequestedDocumentApplicant</description>
+	<family>dashlet</family>
+	<url>/dashlets/getRequestedDocumentApplicant</url>
+	<format default="html">extension</format>
+</webscript>

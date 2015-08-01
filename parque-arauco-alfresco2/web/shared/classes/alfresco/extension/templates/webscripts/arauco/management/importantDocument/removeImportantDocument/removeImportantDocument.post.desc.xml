@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>removeImportantDocument</shortname>
+	<description>removeImportantDocument</description>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+	  <format default="json">extension</format>
+	<url>/arauco/removeImportantDocument</url>
+</webscript>

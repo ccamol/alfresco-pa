@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>reclassificateDocument</shortname>
+  <description>reclassificateDocument</description>
+  <family>dashlet</family>
+  <url>/dashlets/reclassificateDocument</url>
+</webscript>

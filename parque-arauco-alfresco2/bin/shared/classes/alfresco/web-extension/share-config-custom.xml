@@ -1,0 +1,525 @@
+<alfresco-config>
+	<!-- Repository Library config section -->
+	<config evaluator="string-compare" condition="RepositoryLibrary"
+		replace="true">
+		<!-- Whether the link to the Repository Library appears in the header component 
+			or not. -->
+		<visible>true</visible>
+	</config>
+	<config condition="SitePages" evaluator="string-compare">
+		<pages>
+			<page id="calendar">calendar</page>
+			<page id="wiki-page">wiki-page?title=Main_Page</page>
+			<page id="documentlibrary">documentlibrary</page>
+			<page id="discussions-topiclist">discussions-topiclist</page>
+			<page id="blog-postlist">blog-postlist</page>
+			<page id="links">links</page>
+			<page id="data-lists">data-lists</page>
+			<page id="engineering">engineering</page>
+			<page id="management">management</page>
+			<page id="searchDocument">searchDocument</page>
+			<page id="securityManagement">securityManagement</page>
+			<page id="workflow-menu">workflow-menu</page>
+			<page id="projectManagement">projectManagement</page>
+			<page id="parameters">parameters</page>
+			<page id="reports">reports</page>
+			<page id="moduleContractor">moduleContractor</page>
+			<page id="comment-pdf">comment-pdf</page>
+			<page id="moduleAccess">moduleAccess</page>
+			<page id="thirdPartyModule">thirdPartyModule</page>
+			<page id="architecture">architecture</page>
+			<page id="managementArchitecture">managementArchitecture</page>
+			<page id="managementArchitecture">managementSuc</page>
+			<page id="managementArchitecture">managementSucDocuments</page>
+			<page id="managementArchitecture">managementVirtualSuc</page>
+			<page id="tender">tender</page>
+			<page id="operators">operators</page>
+			<page id="thirdPartyArchitecture">thirdPartyArchitecture</page>
+			<page id="tenderStageInvite">tenderStageInvite</page>
+			<page id="questionsAndAnswers">questionsAndAnswers</page>
+			<page id="handingOverDocumentation">handingOverDocumentation</page>
+			<page id="offersDelivery">offersDelivery</page>
+			<page id="offersAnalysis">offersAnalysis</page>
+			<page id="awarding">awarding</page>
+			<page id="questionAnswersApplicantAccess">questionAnswersApplicantAccess</page>
+			<page id="offerDeliveryApplicant">offerDeliveryApplicant</page>
+			<page id="offerAnalysisApplicant">offerAnalysisApplicant</page>
+
+
+		</pages>
+	</config>
+	<config evaluator="string-compare" condition="Remote">
+		<remote>
+			<endpoint>
+				<id>alfresco-noauth</id>
+				<name>Alfresco - unauthenticated access</name>
+				<description>Access to Alfresco Repository WebScripts that do not
+					require authentication
+				</description>
+				<connector-id>alfresco</connector-id>
+				<endpoint-url>http://localhost:8080/alfresco/s</endpoint-url>
+				<identity>none</identity>
+			</endpoint>
+			<endpoint>
+				<id>alfresco</id>
+				<name>Alfresco - user access</name>
+				<description>Access to Alfresco Repository WebScripts that require
+					user authentication
+				</description>
+				<connector-id>alfresco</connector-id>
+				<endpoint-url>http://localhost:8080/alfresco/s</endpoint-url>
+				<identity>user</identity>
+			</endpoint>
+
+			<endpoint>
+				<id>alfresco-feed</id>
+				<name>Alfresco Feed</name>
+				<description>Alfresco Feed - supports basic HTTP authentication via
+					the EndPointProxyServlet
+				</description>
+				<connector-id>http</connector-id>
+				<endpoint-url>http://localhost:8080/alfresco/s</endpoint-url>
+				<basic-auth>true</basic-auth>
+				<identity>user</identity>
+			</endpoint>
+
+			<endpoint>
+				<id>activiti-admin</id>
+				<name>Activiti Admin UI - user access</name>
+				<description>Access to Activiti Admin UI, that requires user
+					authentication
+				</description>
+				<connector-id>activiti-admin-connector</connector-id>
+				<endpoint-url>http://localhost:8080/alfresco/activiti-admin
+				</endpoint-url>
+				<identity>user</identity>
+			</endpoint>
+		</remote>
+	</config>
+
+	<config evaluator="string-compare" condition="activiti$simpleApprovalProcess">
+		<forms>
+			<form>
+				<field-visibility>
+					<show id="bpm:workflowDescription" />
+					<show id="bpm:workflowDueDate" />
+					<show id="bpm:workflowPriority" />
+					<show id="packageItems" />
+					<show id="bpm:comment" />
+					<show id="bpm:sendEMailNotifications" />
+				</field-visibility>
+				<appearance>
+					<set id="" appearance="title" label="Datos generales del flujo" />
+					<set id="info" appearance=""
+						template="/org/alfresco/components/form/2-column-set.ftl" />
+					<set id="items" appearance="title" label="Documentos asociados al proceso" />
+					<set id="work" appearance="title" label="Formulario" />
+					<set id="check" appearance="title" label="Comprobaciones (Check list)" />
+					<set id="other" appearance="title" label="Otras opciones" />
+					<set id="response" appearance="title" label="Comentarios de la tarea" />
+
+					<field id="bpm:workflowDescription" label="Datos del caso">
+						<control template="/org/alfresco/components/form/controls/textarea.ftl">
+							<control-param name="style">width: 95%</control-param>
+						</control>
+					</field>
+
+					<field id="bpm:workflowDueDate" label-id="workflow.field.due"
+						set="info" />
+					<field id="bpm:workflowPriority" label-id="workflow.field.priority"
+						set="info">
+						<control
+							template="/org/alfresco/components/form/controls/workflow/priority.ftl" />
+					</field>
+					<field id="packageItems" set="items" />
+					<field id="bpm:sendEMailNotifications" set="other">
+						<control
+							template="/org/alfresco/components/form/controls/workflow/email-notification.ftl" />
+					</field>
+					<field id="bpm:comment" label-id="workflow.field.comment"
+						set="response">
+						<control template="/org/alfresco/components/form/controls/textarea.ftl" />
+					</field>
+				</appearance>
+			</form>
+		</forms>
+	</config>
+
+	<config evaluator="string-compare" condition="activiti$multipleApprovalProcess">
+		<forms>
+			<form>
+				<field-visibility>
+					<show id="bpm:workflowDescription" />
+					<show id="bpm:workflowDueDate" />
+					<show id="bpm:workflowPriority" />
+					<show id="packageItems" />
+					<show id="bpm:comment" />
+					<show id="bpm:sendEMailNotifications" />
+					<show id="pawf:reviewers" />
+					<show id="pawf:counter" />
+					<show id="pawf:conditionReviewer" />
+				</field-visibility>
+				<appearance>
+					<set id="" appearance="title" label="Datos generales del flujo" />
+					<set id="info" appearance=""
+						template="/org/alfresco/components/form/2-column-set.ftl" />
+					<set id="items" appearance="title" label="Documentos asociados al proceso" />
+					<set id="work" appearance="title" label="Formulario" />
+					<set id="check" appearance="title" label="Comprobaciones (Check list)" />
+					<set id="other" appearance="title" label="Otras opciones" />
+					<set id="response" appearance="title" label="Comentarios de la tarea" />
+
+					<field id="bpm:workflowDescription" label="Datos del caso">
+						<control template="/org/alfresco/components/form/controls/textarea.ftl">
+							<control-param name="style">width: 95%</control-param>
+						</control>
+					</field>
+
+					<field id="bpm:workflowDueDate" label-id="workflow.field.due"
+						set="info" />
+					<field id="bpm:workflowPriority" label-id="workflow.field.priority"
+						set="info">
+						<control
+							template="/org/alfresco/components/form/controls/workflow/priority.ftl" />
+					</field>
+					<field id="pawf:reviewers" label="Revisores" set="info" />
+					<field id="pawf:counter" label="Contador" set="info" />
+					<field id="pawf:conditionReviewer" label="Más revisores" set="info" />
+
+					<field id="packageItems" set="items" />
+					<field id="bpm:sendEMailNotifications" set="other">
+						<control
+							template="/org/alfresco/components/form/controls/workflow/email-notification.ftl" />
+					</field>
+					<field id="bpm:comment" label-id="workflow.field.comment"
+						set="response">
+						<control template="/org/alfresco/components/form/controls/textarea.ftl" />
+					</field>
+				</appearance>
+			</form>
+		</forms>
+	</config>
+
+	<config evaluator="string-compare" condition="activiti$deleteDocumentProcess">
+		<forms>
+			<form>
+				<field-visibility>
+					<show id="bpm:workflowDueDate" />
+					<show id="bpm:workflowPriority" />
+					<show id="packageItems" />
+					<show id="bpm:comment" />
+					<show id="bpm:sendEMailNotifications" />
+				</field-visibility>
+				<appearance>
+					<set id="info" appearance=""
+						template="/org/alfresco/components/form/2-column-set.ftl" />
+					<set id="items" appearance="title" label="Documentos asociados al proceso" />
+					<set id="work" appearance="title" label="Formulario" />
+					<set id="check" appearance="title" label="Comprobaciones (Check list)" />
+					<set id="other" appearance="title" label="Otras opciones" />
+					<set id="response" appearance="title" label="Comentarios de la tarea" />
+
+					<field id="bpm:workflowDueDate" label-id="workflow.field.due"
+						set="info" />
+					<field id="bpm:workflowPriority" label-id="workflow.field.priority"
+						set="info">
+						<control
+							template="/org/alfresco/components/form/controls/workflow/priority.ftl" />
+					</field>
+					<field id="packageItems" set="items" />
+					<field id="bpm:sendEMailNotifications" set="other">
+						<control
+							template="/org/alfresco/components/form/controls/workflow/email-notification.ftl" />
+					</field>
+					<field id="bpm:comment" label-id="workflow.field.comment"
+						set="response">
+						<control template="/org/alfresco/components/form/controls/textarea.ftl" />
+					</field>
+				</appearance>
+			</form>
+		</forms>
+	</config>
+
+
+	<config evaluator="task-type" condition="pawf:startEvent">
+		<forms>
+
+			<form id="workflow-details">
+				<field-visibility>
+					<show id="bpm:groupAssignee" />
+					<show id="bpm:sendEMailNotifications" />
+					<show id="packageItems" />
+				</field-visibility>
+				<appearance>
+					<set id="" appearance="title" label-id="workflow.set.workflow.more_info" />
+					<set id="items" appearance="title" label-id="workflow.set.items" />
+
+					<field id="packageItems" set="items" />
+				</appearance>
+			</form>
+		</forms>
+	</config>
+
+	<config evaluator="task-type" condition="pawf:multipleStartEvent">
+		<forms>
+			<form id="workflow-details">
+				<field-visibility>
+					<show id="bpm:groupAssignee" />
+					<show id="bpm:sendEMailNotifications" />
+					<show id="pawf:reviewers" />
+					<show id="pawf:counter" />
+					<show id="packageItems" />
+				</field-visibility>
+				<appearance>
+					<set id="" appearance="title" label-id="workflow.set.workflow.more_info" />
+					<set id="items" appearance="title" label-id="workflow.set.items" />
+
+					<field id="pawf:reviewers" label="Revisores" />
+					<field id="pawf:counter" label="Revisores" />
+
+
+					<field id="packageItems" set="items" />
+				</appearance>
+			</form>
+		</forms>
+	</config>
+
+	<config evaluator="task-type" condition="pawf:deleteStartEvent">
+		<forms>
+			<form id="workflow-details">
+				<field-visibility>
+					<show id="bpm:groupAssignee" />
+					<show id="bpm:sendEMailNotifications" />
+					<show id="packageItems" />
+				</field-visibility>
+				<appearance>
+					<set id="" appearance="title" label-id="workflow.set.workflow.more_info" />
+					<set id="items" appearance="title" label-id="workflow.set.items" />
+
+					<field id="packageItems" set="items" />
+				</appearance>
+			</form>
+		</forms>
+	</config>
+
+	<config evaluator="task-type" condition="pawf:approveDocument">
+		<forms>
+			<form>
+				<field-visibility>
+					<show id="bpm:workflowDescription" />
+					<show id="bpm:comment" />
+					<show id="pawf:reviewOutcome" />
+					<show id="bpm:taskId" />
+				</field-visibility>
+				<appearance>
+					<set id="info" appearance=""
+						template="/org/alfresco/components/form/2-column-set.ftl" />
+					<set id="items" appearance="title" label="Documentos asociados al proceso" />
+					<set id="other" appearance="title" label="Otras opciones" />
+					<set id="response" appearance="title" label="Comentarios de la tarea" />
+
+					<field id="bpm:workflowDescription" label="Datos del caso">
+						<control template="/org/alfresco/components/form/controls/textarea.ftl">
+							<control-param name="style">width: 95%</control-param>
+						</control>
+					</field>
+
+					<field id="bpm:taskId" set="items">
+						<control
+							template="/org/alfresco/components/form/controls/workflow/packageitems_own.ftl" />
+					</field>
+
+					<field id="bpm:comment" label-id="workflow.field.comment"
+						set="response">
+						<control template="/org/alfresco/components/form/controls/textarea.ftl" />
+					</field>
+
+					<field id="pawf:reviewOutcome" label="Decisión" set="response">
+						<control
+							template="/org/alfresco/components/form/controls/workflow/activiti-transitions.ftl" />
+					</field>
+
+
+
+				</appearance>
+			</form>
+		</forms>
+	</config>
+
+	<config evaluator="task-type" condition="pawf:multipleApproveDocument">
+		<forms>
+			<form>
+				<field-visibility>
+					<show id="bpm:workflowDescription" />
+					<show id="bpm:comment" />
+					<show id="pawf:reviewOutcome" />
+					<show id="bpm:taskId" />
+				</field-visibility>
+				<appearance>
+					<set id="" appearance="title" label="Datos generales del flujo" />
+					<set id="info" appearance=""
+						template="/org/alfresco/components/form/2-column-set.ftl" />
+					<set id="items" appearance="title" label="Documentos asociados al proceso" />
+					<set id="other" appearance="title" label="Otras opciones" />
+					<set id="response" appearance="title" label="Comentarios de la tarea" />
+
+					<field id="bpm:workflowDescription" label="Datos del caso">
+						<control template="/org/alfresco/components/form/controls/textarea.ftl">
+							<control-param name="style">width: 95%</control-param>
+						</control>
+					</field>
+
+					<field id="bpm:taskId" set="items">
+						<control
+							template="/org/alfresco/components/form/controls/workflow/packageitems_own.ftl" />
+					</field>
+
+					<field id="bpm:comment" label-id="workflow.field.comment"
+						set="response">
+						<control template="/org/alfresco/components/form/controls/textarea.ftl" />
+					</field>
+
+					<field id="pawf:reviewOutcome" label="Decisión" set="response">
+						<control
+							template="/org/alfresco/components/form/controls/workflow/activiti-transitions.ftl" />
+					</field>
+				</appearance>
+			</form>
+		</forms>
+	</config>
+
+	<config evaluator="task-type" condition="pawf:approveDeleteRequest">
+		<forms>
+			<form>
+				<field-visibility>
+					<show id="bpm:comment" />
+					<show id="pawf:reviewOutcome" />
+					<show id="bpm:taskId" />
+				</field-visibility>
+				<appearance>
+					<set id="info" appearance=""
+						template="/org/alfresco/components/form/2-column-set.ftl" />
+					<set id="items" appearance="title" label="Documentos asociados al proceso" />
+					<set id="other" appearance="title" label="Otras opciones" />
+					<set id="response" appearance="title" label="Comentarios de la tarea" />
+					<field id="bpm:taskId" set="items">
+						<control
+							template="/org/alfresco/components/form/controls/workflow/packageitems_own.ftl" />
+					</field>
+					<field id="bpm:comment" label-id="workflow.field.comment"
+						set="response">
+						<control template="/org/alfresco/components/form/controls/textarea.ftl" />
+					</field>
+
+					<field id="pawf:reviewOutcome" label="Decisión" set="response">
+						<control
+							template="/org/alfresco/components/form/controls/workflow/activiti-transitions.ftl" />
+					</field>
+				</appearance>
+			</form>
+		</forms>
+	</config>
+
+	<config evaluator="task-type" condition="pawf:notifyRejectDeleteRequest">
+		<forms>
+			<form>
+				<field-visibility>
+					<show id="bpm:comment" />
+					<show id="bpm:taskId" />
+					<show id="transitions" />
+				</field-visibility>
+				<appearance>
+					<set id="info" appearance=""
+						template="/org/alfresco/components/form/2-column-set.ftl" />
+					<set id="items" appearance="title" label="Documentos asociados al proceso" />
+					<set id="other" appearance="title" label="Otras opciones" />
+					<set id="response" appearance="title" label="Comentarios de la tarea" />
+					<field id="bpm:taskId" set="items">
+						<control
+							template="/org/alfresco/components/form/controls/workflow/packageitems_own.ftl" />
+					</field>
+					<field id="bpm:comment" label-id="workflow.field.comment"
+						set="response">
+						<control template="/org/alfresco/components/form/controls/textarea.ftl" />
+					</field>
+
+					<field id="transitions" set="response" />
+
+				</appearance>
+			</form>
+		</forms>
+	</config>
+
+	<config evaluator="task-type" condition="pawf:notifyApproveDeleteRequest">
+		<forms>
+			<form>
+				<field-visibility>
+					<show id="bpm:comment" />
+					<show id="bpm:taskId" />
+					<show id="transitions" />
+				</field-visibility>
+				<appearance>
+					<set id="info" appearance=""
+						template="/org/alfresco/components/form/2-column-set.ftl" />
+					<set id="items" appearance="title" label="Documentos asociados al proceso" />
+					<set id="other" appearance="title" label="Otras opciones" />
+					<set id="response" appearance="title" label="Comentarios de la tarea" />
+
+					<field id="bpm:taskId" set="items">
+						<control
+							template="/org/alfresco/components/form/controls/workflow/packageitems_own.ftl" />
+					</field>
+					<field id="bpm:comment" label-id="workflow.field.comment"
+						set="response">
+						<control template="/org/alfresco/components/form/controls/textarea.ftl" />
+					</field>
+
+					<field id="transitions" set="response" />
+
+				</appearance>
+			</form>
+		</forms>
+	</config>
+
+	<config evaluator="task-type" condition="pawf:updateDocument">
+		<forms>
+			<form>
+				<field-visibility>
+					<show id="bpm:workflowDescription" />
+					<show id="bpm:comment" />
+					<show id="transitions" />
+					<show id="bpm:taskId" />
+				</field-visibility>
+				<appearance>
+					<set id="" appearance="title" label="Datos generales del flujo" />
+					<set id="info" appearance=""
+						template="/org/alfresco/components/form/2-column-set.ftl" />
+					<set id="items" appearance="title" label="Documentos asociados al proceso" />
+					<set id="other" appearance="title" label="Otras opciones" />
+					<set id="response" appearance="title" label="Comentarios de la tarea" />
+
+					<field id="bpm:workflowDescription" label="Datos del caso">
+						<control template="/org/alfresco/components/form/controls/textarea.ftl">
+							<control-param name="style">width: 95%</control-param>
+						</control>
+					</field>
+
+					<field id="bpm:taskId" set="items">
+						<control
+							template="/org/alfresco/components/form/controls/workflow/packageitems_update.ftl" />
+					</field>
+
+					<field id="bpm:comment" label-id="workflow.field.comment"
+						set="response">
+						<control template="/org/alfresco/components/form/controls/textarea.ftl" />
+					</field>
+
+					<field id="transitions" set="response" />
+
+
+				</appearance>
+			</form>
+		</forms>
+	</config>
+
+</alfresco-config>

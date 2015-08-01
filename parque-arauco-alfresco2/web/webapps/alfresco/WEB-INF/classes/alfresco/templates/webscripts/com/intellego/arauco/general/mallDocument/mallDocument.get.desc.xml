@@ -1,0 +1,7 @@
+<webscript>
+	<shortname>MallDocument</shortname>
+	<description>Mall document</description>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+	<url>/arauco/mallDocument</url>
+</webscript>

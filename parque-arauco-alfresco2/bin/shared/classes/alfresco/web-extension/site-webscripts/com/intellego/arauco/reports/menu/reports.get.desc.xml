@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Reports</shortname>
+  <description>Reports menu</description>
+  <url>/dashlets/reports</url>
+  <format default="html">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

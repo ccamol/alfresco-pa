@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>Suc</shortname>
+	<description>Suc</description>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+	  <format default="json">extension</format>
+	<url>/arauco/getSucProject</url>
+</webscript>

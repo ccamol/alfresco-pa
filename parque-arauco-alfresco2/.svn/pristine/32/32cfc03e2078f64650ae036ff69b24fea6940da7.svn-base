@@ -1,0 +1,566 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans.dtd'>
+<beans>
+
+	<bean id="ArchitectureProjectSrv" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.ArchitectureProjects">
+		<property name="extensionName">
+			<value>ArchitectureProjectSrv</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+	<bean id="ContractSrv" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.Contracts">
+		<property name="extensionName">
+			<value>ContractSrv</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+	<bean id="ApplicantSrv" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.Applicants">
+		<property name="extensionName">
+			<value>ApplicantSrv</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+
+	<bean id="RequestedDocumentApplicantsSrv" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.RequestedDocumentApplicants">
+		<property name="extensionName">
+			<value>RequestedDocumentApplicantsSrv</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+
+
+	<bean id="CategoriesSrv" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.Categories">
+		<property name="extensionName">
+			<value>CategoriesSrv</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+	<bean id="ApplicantTenderSrv" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.ApplicantsTender">
+		<property name="extensionName">
+			<value>ApplicantTenderSrv</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+	<bean id="AwardApplicantTenderSrv" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.AwardApplicantsTender">
+		<property name="extensionName">
+			<value>AwardApplicantTenderSrv</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+
+	<bean id="CategoryTendersSrv" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.CategoryTenders">
+		<property name="extensionName">
+			<value>CategoryTendersSrv</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+
+	<bean id="CountrySrv" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.Countrys">
+		<property name="extensionName">
+			<value>CountrySrv</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+
+	<bean id="DocumentTypeSrv" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.DocumentTypes">
+		<property name="extensionName">
+			<value>DocumentTypeSrv</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+
+	<bean id="EngineeringProjectSrv" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.EngineeringProjects">
+		<property name="extensionName">
+			<value>EngineeringProjectSrv</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+
+	<bean id="OrganizationalAreasSrv" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.OrganizationalAreas">
+		<property name="extensionName">
+			<value>OrganizationalAreasSrv</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+
+	<bean id="ProjectStatusSrv" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.ProjectsStatus">
+		<property name="extensionName">
+			<value>ProjectStatusSrv</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+
+	<bean id="MallSrv" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.Malls">
+		<property name="extensionName">
+			<value>MallSrv</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+
+	<bean id="MallTypeSrv" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.MallTypes">
+		<property name="extensionName">
+			<value>MallTypeSrv</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+
+	<bean id="OperatorSrv" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.Operators">
+		<property name="extensionName">
+			<value>OperatorSrv</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+
+	<bean id="ProjectTypeSrv" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.ProjectTypes">
+		<property name="extensionName">
+			<value>ProjectTypeSrv</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+
+	<bean id="ProjectStagesSrv" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.ProjectStage">
+		<property name="extensionName">
+			<value>ProjectStagesSrv</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+	<bean id="TenderStagesSrv" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.TenderStage">
+		<property name="extensionName">
+			<value>TenderStagesSrv</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+	<bean id="DocumentsToCarrySrv" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.DocumentToCarry">
+		<property name="extensionName">
+			<value>DocumentsToCarrySrv</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+	<bean id="QuestionSrv" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.Questions">
+		<property name="extensionName">
+			<value>QuestionSrv</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+	<bean id="AnswerSrv" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.Answers">
+		<property name="extensionName">
+			<value>AnswerSrv</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+
+	<bean id="TendersSrv" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.Tenders">
+		<property name="extensionName">
+			<value>TendersSrv</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+
+	<bean id="StageTypeSrv" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.StageTypes">
+		<property name="extensionName">
+			<value>StageTypeSrv</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+
+	<bean id="StageTypeTenderSrv" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.StageTypesTender">
+		<property name="extensionName">
+			<value>StageTypeTenderSrv</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+
+	<bean id="SucProjectSrv" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.SucProjects">
+		<property name="extensionName">
+			<value>SucProjectSrv</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+
+	<bean id="CheckListSrv" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.CheckLists">
+		<property name="extensionName">
+			<value>CheckListService</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+
+
+	<bean id="CheckListsOperatorSrv" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.CheckListsOperator">
+		<property name="extensionName">
+			<value>CheckListsOperatorService</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+
+
+	<bean id="CheckListCommentSrv" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.CheckListComments">
+		<property name="extensionName">
+			<value>CheckListCommentService</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+
+	<bean id="SucSrv" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.Sucs">
+		<property name="extensionName">
+			<value>SucSrv</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+
+	<bean id="NodeTypesService" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.NodeTypes">
+		<property name="extensionName">
+			<value>NodeTypesService</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+
+
+
+	<bean id="ImportantDucumentsService" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.ImportantDucuments">
+		<property name="extensionName">
+			<value>ImportantDucumentsService</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+
+
+
+	<bean id="ThirdPartySharedDocumentsService" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.ThirdPartySharedDocuments">
+		<property name="extensionName">
+			<value>ThirdPartySharedDocumentsService</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+
+
+	<bean id="ThirdPartyProjectsService" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.ThirdPartyProjects">
+		<property name="extensionName">
+			<value>ThirdPartyProjectsService</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+
+
+	<bean id="UserMaintainer" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.UserMaintainer">
+		<property name="extensionName">
+			<value>UserMaintainer</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+
+
+
+
+	<bean id="GetDictionaryService" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.artifacts.dictionary.GetDictionaryService">
+		<property name="extensionName">
+			<value>GetDictionaryService</value>
+		</property>
+		<property name="contentService">
+			<ref bean="ContentService" />
+		</property>
+		<property name="searchService">
+			<ref bean="SearchService" />
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry" />
+		</property>
+		<property name="dictionaryService">
+			<ref bean="DictionaryService" />
+		</property>
+		<property name="namespaceService">
+			<ref bean="NamespaceService" />
+		</property>
+		<property name="nodeService">
+			<ref bean="NodeService" />
+		</property>
+	</bean>
+
+
+	<bean id="GetTicket" parent="baseJavaScriptExtension"
+		class="com.intellego.pa.utils.TicketAlfresco">
+		<property name="extensionName">
+			<value>GetTicket</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+
+	<bean id="Transform" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.transform.Transform">
+		<property name="extensionName">
+			<value>Transform</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+	<bean id="DocumentService" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.baseprocessorextension.DocumentService">
+		<property name="extensionName">
+			<value>DocumentService</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+
+	<bean id="DataListService" parent="baseJavaScriptExtension"
+		class="com.intellego.parquearauco.datalist.baseprocessorextension.DataListService">
+		<property name="extensionName">
+			<value>DataListService</value>
+		</property>
+		<property name="nodeService">
+			<ref bean="NodeService" />
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry" />
+		</property>
+		<property name="dictionaryService">
+			<ref bean="DictionaryService" />
+		</property>
+		<property name="namespaceService">
+			<ref bean="NamespaceService" />
+		</property>
+	</bean>
+	<bean id="VersionUtils" parent="baseJavaScriptExtension"
+		class="com.intellego.pa.utils.VersionUtils">
+		<property name="extensionName">
+			<value>VersionUtils</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry" />
+		</property>
+	</bean>
+	<bean id="webscript.artifacts.download.getDocument.get" class="com.intellego.pa.webscript.GetDocument"
+		parent="webscript">
+		<property name="serviceRegistry" ref="ServiceRegistry" />
+	</bean>
+
+	<!-- Cron integración SAP -->
+	<bean id="sapJobBean" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass"
+			value="com.intellego.parquearauco.quartz.sap.SapJobBean" />
+		<property name="jobDataAsMap">
+			<map>
+				<entry key="authenticationComponent" value-ref="authenticationComponent" />
+			</map>
+		</property>
+	</bean>
+	<bean id="sapJobBeanTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="sapJobBean" />
+		<property name="cronExpression" value="0 0/1 * * * ?" />
+	</bean>
+
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="sapJobBeanTrigger" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="emailService" parent="baseJavaScriptExtension"
+		class="com.intellego.pa.email.services.EmailServiceImpl">
+		<property name="extensionName">
+			<value>EmailService</value>
+		</property>
+		<property name="serviceRegistry">
+			<ref bean="ServiceRegistry"></ref>
+		</property>
+	</bean>
+	<bean id="propertyService" parent="baseJavaScriptExtension"
+		class="com.intellego.pa.property.services.PropertyService">
+		<property name="extensionName">
+			<value>PropertyService</value>
+		</property>
+		<property name="properties">
+			<ref bean="global-properties"></ref>
+		</property>
+	</bean>
+
+	<bean
+		id="webscript.arauco.service.documentService.downloadWs.downloadWs.get"
+		class="com.intellego.pa.webscripts.download.DownloadWs" parent="webscript">
+		<property name="serviceRegistry" ref="ServiceRegistry" />
+		<property name="namespaceService" ref="NamespaceService" />
+		<property name="contentService" ref="ContentService" />
+		<property name="nodeService" ref="NodeService" />
+	</bean>
+
+	<bean
+		id="webscript.arauco.engineering.general.externalUsersDownloadDocument.externalUsersDownloadDocument.get"
+		class="com.intellego.pa.webscripts.download.ExternalDownloadWs" parent="webscript">
+		<property name="serviceRegistry" ref="ServiceRegistry" />
+		<property name="namespaceService" ref="NamespaceService" />
+		<property name="contentService" ref="ContentService" />
+		<property name="nodeService" ref="NodeService" />
+	</bean>
+	
+	<bean
+		id="webscript.arauco.service.exportExcel.exportExcel.get"
+		class="com.intellego.pa.webscripts.download.exportExcelConsults" parent="webscript">
+		<property name="serviceRegistry" ref="ServiceRegistry" />
+		<property name="namespaceService" ref="NamespaceService" />
+		<property name="contentService" ref="ContentService" />
+		<property name="nodeService" ref="NodeService" />
+	</bean>
+	
+	<!-- Notificaciones -->
+	<!-- Documentos compartidos entre areas -->
+	<bean id="sharedDocumentJobBean" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.intellego.pa.quartz.notification.NotificationSharedDocument" />
+		<property name="jobDataAsMap">
+			<map>
+				<entry key="authenticationComponent" value-ref="authenticationComponent" />
+				<entry key="serviceRegistry" value-ref="ServiceRegistry" />
+				<entry key="namespaceService" value-ref="NamespaceService" />
+				<entry key="nodeService" value-ref="NodeService" />
+				<entry key="emailService" value-ref="emailService" />
+				<entry key="properties" value-ref="global-properties" />
+			</map>
+		</property>
+	</bean>
+	<bean id="notifySharedDocumentJobBeanTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="sharedDocumentJobBean" />
+		<!-- 1 minuto -->
+		<!-- <property name="cronExpression" value="0 * * * * ?" /> -->
+		<property name="cronExpression" value="0 0 23 * * ?" />
+	</bean>
+	
+	<!-- Documentos compartidos a terceros -->
+	<bean id="notifyJobBean" class="org.springframework.scheduling.quartz.JobDetailBean">
+		<property name="jobClass" value="com.intellego.pa.quartz.notification.NotificationSharedDocumentThird" />
+		<property name="jobDataAsMap">
+			<map>
+				<entry key="authenticationComponent" value-ref="authenticationComponent" />
+				<entry key="serviceRegistry" value-ref="ServiceRegistry" />
+				<entry key="emailService" value-ref="emailService" />
+				<entry key="properties" value-ref="global-properties" />
+			</map>
+		</property>
+	</bean>
+	<bean id="notifyJobBeanTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="notifyJobBean" />
+		<!-- 1 minuto -->
+		 <!-- <property name="cronExpression" value="0 * * * * ?" /> -->
+		<property name="cronExpression" value="0 0 23 * * ?" />
+	</bean>
+
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="notifyJobBeanTrigger" />
+				<ref bean="notifySharedDocumentJobBeanTrigger" />
+				
+			</list>
+		</property>
+	</bean>
+
+</beans>

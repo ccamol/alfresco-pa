@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27-05-2014 09:58:28 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.intellego.parquearauco.entities.ArchitectureProjectEntity" table="intellego_architecture_project">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="sequence">  
+                <param name="sequence">architectureproject_id_seq</param>  
+            </generator> 
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+         <property name="createDate" type="java.util.Date">
+            <column name="CREATEDATE" />
+        </property>
+        <property name="finishDate" type="java.util.Date">
+            <column name="FINISHDATE" />
+        </property>
+        <many-to-one name="mall" class="com.intellego.parquearauco.entities.MallEntity" fetch="join">
+            <column name="MALL" />
+        </many-to-one>
+        <many-to-one name="operator" class="com.intellego.parquearauco.entities.OperatorEntity" fetch="join">
+            <column name="OPERATOR" />
+        </many-to-one>
+        <many-to-one name="projectType" class="com.intellego.parquearauco.entities.ProjectTypeEntity" fetch="join">
+            <column name="PROJECTTYPE" />
+        </many-to-one>
+        
+        <many-to-one name="projectStatusEntity" class="com.intellego.parquearauco.entities.ProjectStatusEntity" fetch="join">
+            <column name="PROJECTSTATUSENTITY" />
+        </many-to-one>
+
+        <property name="chiefArchitect" type="java.lang.String">
+            <column name="CHIEFARCHITECT" />
+        </property>
+        <property name="companyAwarded" type="java.lang.String">
+            <column name="COMPANYAWARDED" />
+        </property>
+        <property name="professionalName" type="java.lang.String">
+            <column name="PROFESSIONALNAME" />
+        </property>
+        <property name="draftsmanName" type="java.lang.String">
+            <column name="DRAFTSMANNAME" />
+        </property>
+        <property name="numberOC" type="java.lang.String">
+            <column name="NUMBEROC" />
+        </property>
+         <property name="companyAwardedRut" type="java.lang.String">
+            <column name="COMPANYAWARDEDRUT" />
+        </property>
+        
+        <property name="description" type="java.lang.String">
+            <column name="DESCRIPTION" />
+        </property>
+    </class>
+</hibernate-mapping>

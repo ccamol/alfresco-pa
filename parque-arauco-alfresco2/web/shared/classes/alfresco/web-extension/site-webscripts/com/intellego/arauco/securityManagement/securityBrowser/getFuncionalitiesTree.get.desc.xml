@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>Funcionalities Tree</shortname>
+  <description>Funcionalities Management Management</description>
+  <family>dashlet</family>
+  <url>/dashlets/getFuncionalityTree</url>
+</webscript>

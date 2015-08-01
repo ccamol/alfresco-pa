@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component> 
+  <scope>page</scope>  
+  <region-id>importantDocument</region-id>  
+  <source-id>management</source-id>  
+  <url>/dashlets/workshopArea</url>  
+  <guid>page.workshopArea.managementArchitecture</guid>  
+  <properties> 
+  </properties> 
+</component>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+   <title>Acceso Postulantes</title>
+   <description>Acceso Postulantes</description>
+   <template-instance>applicantAccess</template-instance>
+   <authentication>user</authentication>
+</page>

@@ -1,0 +1,5 @@
+<webscript>
+  <shortname>getFilterProject</shortname>
+  <description>getFilterProject</description>
+  <url>/dashlets/getFilterProject</url>
+</webscript>

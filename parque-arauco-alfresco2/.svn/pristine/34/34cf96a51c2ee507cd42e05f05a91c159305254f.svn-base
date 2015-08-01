@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component> 
+  <scope>page</scope>  
+  <region-id>deliveryDocument</region-id>  
+  <source-id>deliveryDocument</source-id>  
+  <url>/dashlets/deliveryDocument</url>  
+  <guid>page.deliveryDocument.deliveryDocument</guid>  
+  <properties> 
+  </properties> 
+</component>

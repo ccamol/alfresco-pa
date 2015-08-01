@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>enableParticipating</shortname>
+  <description>enableParticipating</description>
+  <family>dashlet</family>
+  <url>/dashlets/questionsAnswers</url>
+</webscript>

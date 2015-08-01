@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>Project mall</shortname>
+  <description>Proyectos de mall</description>
+  <family>dashlet</family>
+  <url>/dashlets/mallProject</url>
+</webscript>

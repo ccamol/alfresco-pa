@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component> 
+  <scope>page</scope>  
+  <region-id>sucProject</region-id>  
+  <source-id>managementSuc</source-id>  
+  <url>/dashlets/sucProject</url>  
+  <guid>page.sucProject.managementSuc</guid>  
+  <properties> 
+  </properties> 
+</component>
+

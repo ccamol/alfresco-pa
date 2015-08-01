@@ -1,0 +1,5 @@
+<webscript>
+  <shortname>Rols</shortname>
+  <description>Security Rols Management</description>
+  <url>/dashlets/editRol</url>
+</webscript>

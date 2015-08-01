@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>paste File</shortname>
+  <description>copy paste or cut paste file in the folders</description>
+  <url>/arauco/pasteFile</url>
+   <format default="json">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

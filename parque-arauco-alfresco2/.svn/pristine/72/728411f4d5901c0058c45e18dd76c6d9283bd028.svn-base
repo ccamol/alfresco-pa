@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>getDocumentWorkflows</shortname>
+	<description>get all workflows associated to a document</description>
+	<url>/arauco/getDocumentWorkflows</url>
+	<format default="json">extension</format>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+</webscript>

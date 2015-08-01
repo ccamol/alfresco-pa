@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>getMallProjectContractor</shortname>
+  <description>getMallProjectContractor</description>
+  <family>dashlet</family>
+  <url>/dashlets/getMallProjectContractor</url>
+</webscript>

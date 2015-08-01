@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Search Document</shortname>
+  <description>Search Document</description>
+  <url>/arauco/getProjectDocuments</url>
+   <format default="json">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

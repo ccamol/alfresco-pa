@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>promoteDocumentVersion</shortname>
+	<description>promote a new document version as major</description>
+	<url>/arauco/promoteDocumentVersion</url>
+	<format default="json">extension</format>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+</webscript>

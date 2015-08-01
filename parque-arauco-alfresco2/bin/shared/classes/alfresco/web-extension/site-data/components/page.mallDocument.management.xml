@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component> 
+  <scope>page</scope>  
+  <region-id>mallDocument</region-id>  
+  <source-id>management</source-id>  
+  <url>/dashlets/mallDocument</url>  
+  <guid>page.mallDocument.management</guid>  
+  <properties> 
+   
+  </properties> 
+</component>
+

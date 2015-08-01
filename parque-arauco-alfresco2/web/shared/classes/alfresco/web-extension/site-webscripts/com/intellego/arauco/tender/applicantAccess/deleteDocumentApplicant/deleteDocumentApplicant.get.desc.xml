@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>deleteDocument</shortname>
+  <description>deleteDocument</description>
+  <url>/dashlets/deleteDocumentApplicant</url>
+  <format default="json">extension</format>
+</webscript>

@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>getDocsTenderOld</shortname>
+  <description>getDocsTenderOld</description>
+  <family>dashlet</family>
+  <url>/dashlets/getDocsTenderOld</url>
+</webscript>

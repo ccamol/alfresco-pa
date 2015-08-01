@@ -1,0 +1,5 @@
+<webscript>
+  <shortname>getSuc</shortname>
+  <description>getSuc</description>
+  <url>/dashlets/getVirtualSucHistory</url>
+</webscript>

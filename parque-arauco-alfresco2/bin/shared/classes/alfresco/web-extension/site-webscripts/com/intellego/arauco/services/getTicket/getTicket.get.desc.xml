@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>getTicket</shortname>
+  <description>getTicket</description>
+  <family>dashlet</family>
+  <url>/dashlets/getTicket</url>
+  <format default="json">extension</format>
+  <authentication>user</authentication>
+</webscript>

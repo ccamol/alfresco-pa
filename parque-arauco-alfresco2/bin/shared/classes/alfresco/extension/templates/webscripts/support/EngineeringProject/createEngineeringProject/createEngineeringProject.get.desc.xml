@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>createEngineeringProject</shortname>
+  <description>Creación de Proyecto Ingenieria</description>
+  <url>/arauco/createEngineeringProject</url>
+  <format default="json">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

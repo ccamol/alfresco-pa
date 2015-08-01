@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component> 
+  <scope>page</scope>  
+  <region-id>requestedDocumentsOperator</region-id>  
+  <source-id>operators</source-id>  
+  <url>/dashlets/requestedDocumentsOperator</url>  
+  <guid>page.requestedDocumentsOperator.operators</guid>  
+  <properties> 
+    <height>500</height>
+    <with>800</with>
+  </properties> 
+</component>

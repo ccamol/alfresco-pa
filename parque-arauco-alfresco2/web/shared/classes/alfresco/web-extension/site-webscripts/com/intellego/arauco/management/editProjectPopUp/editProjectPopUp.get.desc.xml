@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>editProjectPopUp</shortname>
+  <description>editProjectPopUp</description>
+  <family>dashlet</family>
+  <url>/dashlets/editProjectPopUp</url>
+</webscript>

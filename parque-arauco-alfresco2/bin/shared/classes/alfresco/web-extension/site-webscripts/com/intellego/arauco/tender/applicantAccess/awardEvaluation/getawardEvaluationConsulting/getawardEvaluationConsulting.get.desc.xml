@@ -1,0 +1,7 @@
+<webscript>
+	<shortname>getawardEvaluationConsulting</shortname>
+	<description>getawardEvaluationConsulting</description>
+	<family>dashlet</family>
+	<url>/dashlets/getawardEvaluationConsulting</url>
+	<format default="html">extension</format>
+</webscript>

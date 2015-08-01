@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>applicantAccess</shortname>
+  <description>Acceso Postulantes</description>
+  <family>dashlet</family>
+  <url>/dashlets/applicantAccess</url>
+  <authentication>user</authentication>
+<transaction>required</transaction>
+</webscript>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webscript>
+  	<shortname>Get Document</shortname>
+  	<description>Get a Document</description>
+  	<url>/arauco/downloadApplicant?uuid={uuid}</url>
+  	<format default="html">argument</format>
+  	<authentication>none</authentication>
+	<transaction>required</transaction>
+</webscript>
+

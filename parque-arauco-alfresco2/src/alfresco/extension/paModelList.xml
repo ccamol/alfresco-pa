@@ -1,0 +1,891 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Custom Model -->
+
+<!-- Note: This model is pre-configured to load at startup of the Repository. 
+	So, all custom -->
+<!-- types and aspects added here will automatically be registered -->
+
+<model name="paList:model" xmlns="http://www.alfresco.org/model/dictionary/1.0">
+
+	<!-- Optional meta-data about the model -->
+	<description>pa repository Model List</description>
+	<author>Intellego</author>
+	<version>1.0</version>
+
+
+	<imports>
+		<!-- Import Alfresco Dictionary Definitions -->
+		<import uri="http://www.alfresco.org/model/dictionary/1.0"
+			prefix="d" />
+		<!-- Import Alfresco Content Domain Model Definitions -->
+		<import uri="http://www.alfresco.org/model/content/1.0" prefix="cm" />
+		<import uri="http://www.alfresco.org/model/datalist/1.0"
+			prefix="dl" />
+	</imports>
+
+	<!-- Introduction of new namespaces defined by this model -->
+	<!-- NOTE: The following namespace custom.model should be changed to reflect 
+		your own namespace -->
+	<namespaces>
+		<namespace uri="http://www.parquearauco.com/content/list1.0"
+			prefix="paList" />
+	</namespaces>
+
+
+
+	<!--_____________________________________________________________________ -->
+
+	<types>
+
+		<type name="paList:mall">
+			<title>Mall</title>
+			<description>data.order=1</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+				<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+		<type name="paList:sucNumber">
+			<title>N° Suc</title>
+			<description>data.order=3</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+				<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:itoParquearauconame">
+			<title>Nombre ITO Parque Arauco</title>
+			<description>data.order=4</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+				<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:storeName">
+			<title>Nombre tienda</title>
+			<description>data.order=5</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+				<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:tradingNameParquearauco">
+			<title>Nombre Comercial Parque Arauco</title>
+			<description>data.order=6</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+				<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:whoReceivesname">
+			<title>Nombre de quien recibe</title>
+			<description>data.order=7</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+				<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:whoReceivesnamePosition">
+			<title>Cargo de quien recibe</title>
+			<description>data.order=8</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+				<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:construction">
+			<title>Obra</title>
+			<description>data.order=9</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+				<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:bank">
+			<title>Banco</title>
+			<description>data.order=10</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+				<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:constructionCompanyName">
+			<title>Nombre Constructora</title>
+			<description>data.order=11</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+				<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:constructionCompanyRut">
+			<title>Rut Constructora</title>
+			<description>data.order=12</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+				<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:professionalNameResponsibleBy">
+			<title>Nombre Inspector técnico</title>
+			<description>data.order=13</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+				<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:draftsmanNameParquearauco">
+			<title>Nombre Dibujante Parque Arauco a cargo</title>
+			<description>data.order=14</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+				<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:municipalCertificatenumber">
+			<title>Certificado Municipal N°</title>
+			<description>data.order=15</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+				<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:specialist">
+			<title>Especialista</title>
+			<description>data.order=16</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+				<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:address">
+			<title>Dirección</title>
+			<description>data.order=17</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+				<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:chiefArchitectNameParquearauco">
+			<title>Nombre Jefe de Arquitectura Parque Arauco</title>
+			<description>data.order=18</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+				<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+
+
+		<type name="paList:detail">
+			<title>Detalle </title>
+			<description>data.order=19</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+				<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:planName">
+			<title>Nombre Plano</title>
+			<description>data.order=20</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+				<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:specialty">
+			<title>Especialidad</title>
+			<description>data.order=21</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+				<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:centerManagerName">
+			<title>Nombre Center Manager a cargo</title>
+			<description>data.order=22</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+			<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:role">
+			<title>Rol</title>
+			<description>data.order=23</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+			<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:month">
+			<title>Mes</title>
+			<description>data.order=24</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+			<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:society">
+			<title>Sociedad</title>
+			<description>data.order=25</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+			<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:specialistRut">
+			<title>Rut Especialista</title>
+			<description>data.order=26</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+			<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:operatorTypes">
+			<title>Tipo de operador</title>
+			<description>data.order=48</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+			<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:operator">
+			<title>Operador</title>
+			<description>data.order=27</description>
+			<parent>dl:dataListItem</parent>
+			<properties>
+				<property name="paList:operatorType">
+					<title>Tipo de operador</title>
+					<description>data.show=true;data.order=3;data.list=true;data.list.type=paList:operatorTypes</description>
+					
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+				</property>
+			</properties>
+			<mandatory-aspects>
+			<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:level">
+			<title>Nivel</title>
+			<description>data.order=28</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+			<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:state">
+			<title>Estado</title>
+			<description>data.order=29</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+			<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:Type">
+			<title>Tipo</title>
+			<description>data.order=30</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+			<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+
+		<type name="paList:companyNamearchitecture">
+			<title>Nombre empresa Arquitectura</title>
+			<description>data.order=31</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+			<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:companyRut">
+			<title>Rut empresa</title>
+			<description>data.order=32</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+			<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:nameCompanyAwarded">
+			<title>Empresa adjudicada</title>
+			<description>data.order=33</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+			<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<!--  La empresa adjudicada tendra el rut en el id del nombre de esta, el nombre de esa lista es nameCompanyAwarded
+		<type name="paList:companyAwardedRut">
+			<title>Rut Empresa adjudicada</title>
+			<description>data.order=34</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+			<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+		-->
+
+
+		<type name="paList:listingBudgetAssociated">
+			<title>Ficha presupuesta asociada</title>
+			<description>data.order=36</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+			<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+
+		<type name="paList:supplierRut">
+			<title>Rut Proveedor</title>
+			<description>data.order=38</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+			<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:reviewerName">
+			<title>Nombre Revisor</title>
+			<description>data.order=39</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+			<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:ownerName">
+			<title>Nombre Propietario</title>
+			<description>data.order=40</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+			<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<!--_____________________________________________________________________ -->
+
+
+		<type name="paList:section">
+			<title>Sección</title>
+			<description>data.order=41</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+			<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:subsection">
+			<title>Subsección</title>
+			<description>data.order=42</description>
+			<parent>dl:dataListItem</parent>
+
+			<properties>
+				<property name="paList:sectionID">
+					<title>Sección</title>
+					<description>data.show=true;data.order=3;data.list=true;data.list.type=paList:section</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+			</properties>
+
+			<mandatory-aspects>
+				<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+			
+		</type>
+
+		<type name="paList:serie">
+			<title>Serie</title>
+			<description>data.order=43</description>
+			<parent>dl:dataListItem</parent>
+
+			<properties>
+
+				<property name="paList:subsectionID">
+					<title>Subsección</title>
+					<description>data.show=true;data.order=3;data.list=true;data.list.type=paList:subsection</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>false</multiple>
+				</property>
+
+				<property name="paList:documentType">
+					<title>Tipo de documento</title>
+					<description>data.show=true;data.order=4;data.list=true;data.list.type=paList:documentType</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>true</multiple>
+				</property>
+
+			</properties>
+			<mandatory-aspects>
+				<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:documentType">
+			<title>Tipo de Documento</title>
+			<description>data.order=44</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+				<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<!--_____________________________________________________________________ -->
+
+		<type name="paList:documentTypeAspectsList">
+			<title>Aspectos Tipos de Documentos</title>
+			<description>data.order=45;data.config=true</description>
+			<parent>dl:dataListItem</parent>
+			<properties>
+
+				<property name="paList:config">
+					<title>Configuración</title>
+					<description>data.show=false</description>
+					<type>d:text</type>
+					<mandatory>false</mandatory>
+					<multiple>true</multiple>
+				</property>
+
+				<property name="paList:generalData">
+					<title>Datos Generales</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:projectData">
+					<title>Datos de Proyecto</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:documentNumberData">
+					<title>Datos de Número de documento</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:itoData">
+					<title>Datos de ITO</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+				
+				<property name="paList:sucData">
+					<title>Datos SUC</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+				
+				<property name="paList:commercialData">
+					<title>Datos Comercial</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+				
+				<property name="paList:receiptData">
+					<title>Datos Recibo</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:centerManagerData">
+					<title>Datos Center Manager</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:constructionData">
+					<title>Datos Constructora</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:entryData">
+					<title>Datos Ingreso</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:amountData">
+					<title>Datos Monto</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:bankData">
+					<title>Datos Banco</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:minorWorkData">
+					<title>Datos de Obra Menor</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:specialistData">
+					<title>Datos de Especialista</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:roleData">
+					<title>Dato numero de control</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:workData">
+					<title>Datos de Obra</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:workDetailData">
+					<title>Datos Detalles de Obra</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:architectureChiefData">
+					<title>Datos Jefe de Arquitectura</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:folioData">
+					<title>Datos de folio</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:detailData">
+					<title>Datos de Detalle</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:actData">
+					<title>Datos Acta/Solicitud</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:permissionData">
+					<title>Datos de Permiso</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:fojasData">
+					<title>Datos de Año/Fojas</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:planeData">
+					<title>Datos de Plano</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:addressData">
+					<title>Datos de Dirección</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:modificationData">
+					<title>Datos de Modificación</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:monthData">
+					<title>Datos de Mes</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:loadDateData">
+					<title>Datos de Fecha de Carga</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:societyData">
+					<title>Datos de Sociedad</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:operatorData">
+					<title>Datos de Operador</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:jobsData">
+					<title>Datos de Trabajos</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:phisicalAreaData">
+					<title>Datos de área física</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:levelData">
+					<title>Datos de Nivel</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:fileData">
+					<title>Datos de Ficha</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:architectureCompanyData">
+					<title>Datos de Empresa de Arquitectura</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:architectData">
+					<title>Datos de Arquitecto</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:awardedCompanyData">
+					<title>Datos de Empresa Adjudicada</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:reportData">
+					<title>Datos de Informe</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:fileAssociatedData">
+					<title>Datos Ficha Asociada</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:correspondenceData">
+					<title>Datos de Correspondencia</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:deliveryData">
+					<title>Datos de Entrega</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:supplierData">
+					<title>Datos de Proveedor</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:vigencyData">
+					<title>Datos de Vigencia</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:reviserData">
+					<title>Datos de Revisor</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:amountSucData">
+					<title>Datos Cantidad de SUC</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:parkingData">
+					<title>Datos ABL/Estacionamientos</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:ownerData">
+					<title>Datos Propietario</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:documentTypeDetailData">
+					<title>Datos Detalle Tipo de Documento</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+				<property name="paList:tenderingData">
+					<title>Datos de Licitación</title>
+					<description>data.show=true</description>
+					<type>d:boolean</type>
+					<mandatory>false</mandatory>
+				</property>
+
+			</properties>
+			<mandatory-aspects>
+				<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:ArchitectNameParquearauco">
+			<title>Nombre Arquitecto</title>
+			<description>data.order=46</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+				<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="paList:professionalNameResponsible">
+			<title>Nombre Profesional</title>
+			<description>data.order=47</description>
+			<parent>dl:dataListItem</parent>
+			<mandatory-aspects>
+				<aspect>paList:baseListData</aspect>
+			</mandatory-aspects>
+		</type>
+
+	</types>
+
+	<aspects>
+		<aspect name="paList:baseListData">
+			<title>Lista Base</title>
+			<description>data.show=true;data.order=1</description>
+			<properties>
+			
+				<property name="paList:id">
+					<title>Id</title>
+					<description>data.show=true;data.order=1</description>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+				</property>
+				
+				<property name="paList:description">
+					<title>Descripción</title>
+					<description>data.show=true;data.order=2</description>
+					<type>d:mltext</type>
+					<mandatory>true</mandatory>
+				</property>
+				
+				<property name="paList:available">
+					<title>Activo</title>
+					<description>data.show=false</description>
+					<type>d:boolean</type>
+					<mandatory>true</mandatory>
+				</property>
+				
+				<property name="paList:marked">
+					<title>Marcado</title>
+					<description>data.show=false</description>
+					<type>d:boolean</type>
+					<mandatory>true</mandatory>
+				</property>
+
+			</properties>
+		</aspect>
+	</aspects>
+</model>

@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>getTypeProject</shortname>
+  <description>getTypeProject</description>
+  <url>/arauco/getTypeProject</url>
+   <format default="json">extension</format>
+</webscript>

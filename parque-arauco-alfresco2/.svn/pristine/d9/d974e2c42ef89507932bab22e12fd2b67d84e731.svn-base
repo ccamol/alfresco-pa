@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>addProjectMall</shortname>
+  <description>addProjectMall</description>
+  <url>/dashlets/addProjectArchitecture</url>
+  <format default="json">extension</format>
+</webscript>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+   <title>Arquitectura Terceros</title>
+   <description>Arquitectura Terceros</description>
+   <template-instance>thirdPartyArchitecture</template-instance>
+   <authentication>user</authentication>
+</page>

@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Asociación Documentos</shortname>
+  <description>Creates a document asociations</description>
+  <url>/components/createAssocDownload</url>
+  <authentication>user</authentication>
+  <format default="html">extension</format>
+  <transaction>required</transaction>
+</webscript>

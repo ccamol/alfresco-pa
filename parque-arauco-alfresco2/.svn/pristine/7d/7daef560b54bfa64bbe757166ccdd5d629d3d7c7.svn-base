@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Version Top 15</shortname>
+  <description>Version Top 15</description>
+  <url>/arauco/versionTo15Report</url>
+   <format default="html">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

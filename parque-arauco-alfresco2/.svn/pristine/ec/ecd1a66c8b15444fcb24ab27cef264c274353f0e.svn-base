@@ -1,0 +1,5 @@
+<webscript>
+  <shortname>getSucGroup</shortname>
+  <description>getSucGroup</description>
+  <url>/dashlets/getSucGroup</url>
+</webscript>

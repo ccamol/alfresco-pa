@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>sucMallSap</shortname>
+  <description>Suc Malls</description>
+  <family>dashlet</family>
+  <url>/dashlets/sucMallSap</url>
+  <authentication>user</authentication>
+<transaction>required</transaction>
+</webscript>

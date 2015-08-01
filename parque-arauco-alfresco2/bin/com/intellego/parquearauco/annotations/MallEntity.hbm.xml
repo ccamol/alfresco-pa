@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 26-05-2014 05:53:17 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.intellego.parquearauco.entities.MallEntity" table="intellego_mall">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="sequence">  
+                <param name="sequence">mall_id_seq</param>  
+            </generator> 
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+        <property name="idMallSap" type="java.lang.String">
+            <column name="IDMALLSAP" />
+        </property>
+        <property name="financeCompany" type="java.lang.String">
+            <column name="FINANCECOMPANY" />
+        </property>
+        <property name="imageUuid" type="java.lang.String">
+            <column name="IMAGEUUID" />
+        </property>
+          <property name="nameImage" type="java.lang.String">
+            <column name="NAMEIMAGE" />
+        </property>
+        
+        <property name="subProjectManager" type="java.lang.String">
+            <column name="SUBPROJECTMANAGER" />
+        </property>
+        <many-to-one name="country" class="com.intellego.parquearauco.entities.CountryEntity" fetch="join">
+            <column name="COUNTRY" />
+        </many-to-one>
+        <many-to-one name="mallType" class="com.intellego.parquearauco.entities.MallTypeEntity" fetch="join">
+            <column name="MALLTYPE" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

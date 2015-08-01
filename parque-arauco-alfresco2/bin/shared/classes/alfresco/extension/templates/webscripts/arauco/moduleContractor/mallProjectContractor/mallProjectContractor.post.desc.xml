@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>sharedDocument</shortname>
+	<description>sharedDocument</description>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+	  <format default="json">extension</format>
+	<url>/arauco/mallProjectContractor</url>
+</webscript>

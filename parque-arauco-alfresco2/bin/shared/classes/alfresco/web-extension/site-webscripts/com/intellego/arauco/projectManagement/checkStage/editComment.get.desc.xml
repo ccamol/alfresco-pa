@@ -1,0 +1,5 @@
+<webscript>
+  <shortname>Edit checklist comment</shortname>
+  <description>Edit checklist comment</description>
+  <url>/dashlets/editComment</url>
+</webscript>

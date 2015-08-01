@@ -1,0 +1,4 @@
+{
+	"resultSet" : "${resultSet}",
+	"validate" : "${validate}"
+}

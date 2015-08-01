@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Save Document Arauco Metadata</shortname>
+  <description>Save Document Arauco Metadata</description>
+  <url>/arauco/saveDocumentMetadataArauco</url>
+  <format default="json">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

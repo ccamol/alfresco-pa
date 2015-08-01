@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>Search Document</shortname>
+  <description>Buscador de documentos</description>
+  <family>dashlet</family>
+  <url>/dashlets/getDocsToCarryByTender</url>
+</webscript>

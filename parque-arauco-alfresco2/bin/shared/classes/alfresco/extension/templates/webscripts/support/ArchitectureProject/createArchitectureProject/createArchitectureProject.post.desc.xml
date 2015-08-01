@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>createArchitectureProject</shortname>
+  <description>Creación de Proyecto Arquitectura</description>
+  <url>/arauco/createArchitectureProject</url>
+  <format default="json">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

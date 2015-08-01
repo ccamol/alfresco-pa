@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 20-05-2014 01:49:42 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.intellego.parquearauco.security.entities.FuncionalityEntity" table="intellego_funcionalities">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+        <property name="nodeType" type="int">
+            <column name="NODETYPE" />
+        </property>
+        <many-to-one name="area" class="com.intellego.parquearauco.security.entities.AreaEntity" fetch="join">
+            <column name="AREA" />
+        </many-to-one>
+        </class>
+</hibernate-mapping>

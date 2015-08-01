@@ -1,0 +1,7 @@
+<webscript>
+  <shortname>statusProject</shortname>
+  <description>statusProject</description>
+  <family>dashlet</family>
+  <url>/dashlets/statusProject</url>
+   <format default="json">extension</format>
+</webscript>

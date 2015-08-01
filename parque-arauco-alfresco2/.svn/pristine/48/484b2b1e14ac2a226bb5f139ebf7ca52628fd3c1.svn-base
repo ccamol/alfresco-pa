@@ -1,0 +1,11 @@
+.list{
+	border-right:solid 1px #999;
+	width: 100%;
+	
+}
+
+.mantenedor{
+	width: 740px; 
+	
+	
+}

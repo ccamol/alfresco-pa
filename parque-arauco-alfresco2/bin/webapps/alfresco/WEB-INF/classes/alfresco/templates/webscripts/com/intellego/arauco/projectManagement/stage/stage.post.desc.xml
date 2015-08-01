@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>stage</shortname>
+	<description>stage</description>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+	 <format default="json">extension</format>
+	<url>/arauco/stage</url>
+</webscript>

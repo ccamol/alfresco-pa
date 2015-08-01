@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>deleteEngineeringProject</shortname>
+  <description>Borrar Proyecto Ingenieria</description>
+  <url>/arauco/deleteEngineeringProject</url>
+  <format default="json">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

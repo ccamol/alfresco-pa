@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<page>
+   <title>moduleContractor</title>
+   <description>moduleContractor</description>
+   <template-instance>moduleContractor</template-instance>
+   <authentication>user</authentication>
+</page>

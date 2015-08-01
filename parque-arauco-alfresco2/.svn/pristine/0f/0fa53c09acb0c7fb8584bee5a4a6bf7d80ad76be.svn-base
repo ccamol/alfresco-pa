@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>getDocumentAssoc</shortname>
+	<description>getDocumentAssoc</description>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+	  <format default="json">extension</format>
+	<url>/arauco/getSucProjectStageDocument</url>
+</webscript>

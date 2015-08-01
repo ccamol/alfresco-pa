@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webscript>
+  	<shortname>searchList</shortname>
+  	<description>Busca Listas</description>
+  	<url>/arauco/searchList</url>
+  	<format default="json">extension</format>
+  	<authentication>user</authentication>
+</webscript>
+

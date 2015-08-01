@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>Ingelog - Folder Tree</shortname>
+	<description>Get the folde tree under ingelog site</description>
+	<url>/arauco/folderTree</url>
+	<format default="json" />
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+</webscript>

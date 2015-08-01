@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<page>
+   <title>Bandeja de entrada</title>
+   <description>Bandeja de entrada</description>
+   <template-instance>workflow-menu</template-instance>
+   <authentication>user</authentication>
+</page>

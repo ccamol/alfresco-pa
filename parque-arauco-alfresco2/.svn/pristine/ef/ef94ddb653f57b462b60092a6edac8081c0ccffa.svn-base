@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>getProjectArea</shortname>
+  <description>getProjectArea</description>
+  <family>dashlet</family>
+  <url>/dashlets/getProjectArea</url>
+</webscript>

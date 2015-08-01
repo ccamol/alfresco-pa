@@ -1,0 +1,8 @@
+<webscript>
+	<shortname>getApplicants</shortname>
+	<description>getApplicants</description>
+	<authentication>user</authentication>
+	<transaction>required</transaction>
+	  <format default="json">extension</format>
+	<url>/arauco/getAllApplicants</url>
+</webscript>

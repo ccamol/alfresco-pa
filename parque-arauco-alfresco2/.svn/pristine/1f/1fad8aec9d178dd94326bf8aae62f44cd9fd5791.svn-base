@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>moveDocumentPopup</shortname>
+  <description>moveDocumentPopup</description>
+  <family>dashlet</family>
+  <url>/dashlets/moveDocumentPopup</url>
+</webscript>

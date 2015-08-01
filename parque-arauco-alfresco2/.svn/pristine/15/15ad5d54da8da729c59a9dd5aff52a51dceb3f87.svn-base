@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>Publish Tender Queries</shortname>
+  <description>Publicar consultas</description>
+  <family>dashlet</family>
+  <url>/dashlets/publishTenderQueries</url>
+</webscript>

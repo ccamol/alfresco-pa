@@ -1,0 +1,7 @@
+<webscript>
+	<shortname>offerAnalysisQuestions</shortname>
+	<description>offerAnalysisQuestions</description>
+	<family>dashlet</family>
+	<url>/dashlets/offerAnalysisQuestions</url>
+	<format default="html">extension</format>
+</webscript>

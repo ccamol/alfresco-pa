@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>stage</shortname>
+  <description>stage</description>
+  <family>dashlet</family>
+  <url>/dashlets/stage</url>
+</webscript>

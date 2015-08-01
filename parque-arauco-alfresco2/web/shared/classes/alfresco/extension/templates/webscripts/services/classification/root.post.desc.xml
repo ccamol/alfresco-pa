@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Get root</shortname>
+  <description>Get the classification area root</description>
+  <url>/arauco/root</url>
+  <format default="json">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

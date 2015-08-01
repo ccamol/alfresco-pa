@@ -1,0 +1,7 @@
+<webscript>
+	<shortname>Get Applicants</shortname>
+	<description>Buscar solicitantes</description>
+	<family>dashlet</family>
+	<url>/dashlets/deleteDocToCarry</url>
+	<format default="json">extension</format>
+</webscript>

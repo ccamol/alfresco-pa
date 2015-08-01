@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<page>
+   <title>thirdPartyModule</title>
+   <description>thirdPartyModule</description>
+   <template-instance>thirdPartyModule</template-instance>
+   <authentication>user</authentication>
+</page>
+

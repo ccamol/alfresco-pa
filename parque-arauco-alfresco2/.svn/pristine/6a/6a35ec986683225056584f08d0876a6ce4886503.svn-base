@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>Búsqueda</shortname>
+  <description>Búsqueda de documentos</description>
+  <url>/arauco/getListById</url>
+  <format default="json">extension</format>
+    <authentication runas="admin">user</authentication>
+  <transaction>required</transaction>
+</webscript>

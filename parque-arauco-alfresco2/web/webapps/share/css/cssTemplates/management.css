@@ -1,0 +1,28 @@
+#bodyTemplate{
+	height: 800px;
+	
+}
+.grid{
+	height: 80px;
+	with: 350px;
+}
+
+#proyectMalls{
+	height: 300px;		
+}
+
+#documentMall{
+	height: auto;	
+}
+
+#importantDocument{
+	height: 300px;	
+	overflow:auto;
+}
+
+#expiration{
+	height: 300px;	
+	overflow:auto;
+}
+
+

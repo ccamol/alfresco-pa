@@ -1,0 +1,5 @@
+ {
+ 	"status" : "${resultSet}",
+ 	"projectTypeId" : "${projectTypeId}"
+ }
+ 

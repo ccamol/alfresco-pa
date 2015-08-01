@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>deleteRol</shortname>
+  <description>Delete Rol</description>
+  <url>/arauco/addUpdateAcl</url>
+  <format default="json">extension</format>
+  <authentication>user</authentication>
+  <transaction>required</transaction>
+</webscript>

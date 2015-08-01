@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 20-05-2014 01:49:42 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.intellego.parquearauco.entities.ApplicantTenderEntity"
+		table="intellego_applicant_tender">
+		<id name="id" type="java.lang.Integer">
+			<column name="ID" />
+			<generator class="sequence">
+				<param name="sequence">applicant_tender_id_seq</param>
+			</generator>
+		</id>
+		<many-to-one name="tender"
+			class="com.intellego.parquearauco.entities.TenderEntity" fetch="join">
+			<column name="TENDER" />
+		</many-to-one>
+		<many-to-one name="applicant"
+			class="com.intellego.parquearauco.entities.ApplicantEntity" fetch="join">
+			<column name="APPLICANT" />
+		</many-to-one>
+	</class>
+</hibernate-mapping>

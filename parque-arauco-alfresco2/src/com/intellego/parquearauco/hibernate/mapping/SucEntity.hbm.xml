@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27-05-2014 09:58:28 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.intellego.parquearauco.entities.SucEntity" table="intellego_suc">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="sequence">  
+                <param name="sequence">suc_id_seq</param>  
+            </generator> 
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+        <property name="sucCode" type="java.lang.String">
+            <column name="SUCCODE" />
+        </property>
+        <property name="storeM2" type="java.lang.String">
+            <column name="STOREM2" />
+        </property>
+        
+        <property name="contractDate" type="java.util.Date">
+            <column name="CONTRACTDATE"/>
+        </property>
+        <property name="historySend" type="java.util.Date">
+            <column name="HISTORYSEND"/>
+        </property>
+        <property name="wareHouseM2" type="java.lang.String">
+            <column name="WAREHOUSEM2" />
+        </property>
+        <property name="terraseM2" type="java.lang.String">
+            <column name="TERRASEM2" />
+        </property>
+        <property name="escaparateM" type="java.lang.String">
+            <column name="ESCAPARATEM" />
+        </property>
+        <property name="sucType" type="int">
+            <column name="SUCTYPE" />
+        </property>
+        <property name="status" type="int">
+            <column name="STATUS" />
+        </property>
+        <property name="description" type="java.lang.String">
+            <column name="DESCRIPTION" />
+        </property>
+        <property name="financialCompany" type="java.lang.String">
+            <column name="FINANCIALCOMPANY" />
+        </property>
+        <many-to-one name="mall" class="com.intellego.parquearauco.entities.MallEntity" fetch="join">
+            <column name="MALL" />
+        </many-to-one>
+        <set name="sucProjectEntity" table="intellego_suc_project" inverse="false" lazy="true">
+            <key>
+                <column name="SUCENTITY" />
+            </key>
+            <one-to-many class="com.intellego.parquearauco.entities.SucProjectEntity" />
+        </set>
+    </class>
+</hibernate-mapping>

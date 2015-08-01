@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.password">password</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/alfresco</property>
+        <property name="hibernate.connection.username">alfresco</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <!-- <property name="show_sql">true</property> -->
+        <property name="hbm2ddl.auto">update</property>
+        
+       <!-- <mapping resource="com/intellego/parquearauco/hibernate/mapping/StatusProjectStageEntity.hbm.xml"/> -->
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/MallEntity.hbm.xml"/>
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/MallTypeEntity.hbm.xml"/>
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/CountryEntity.hbm.xml"/>
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/ProjectTypeEntity.hbm.xml"/>
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/StageTypeEntity.hbm.xml"/>
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/StageTypeTenderEntity.hbm.xml"/>
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/DocumentTypeEntity.hbm.xml"/>
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/ProjectStagesEntity.hbm.xml"/>
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/TenderStagesEntity.hbm.xml"/>
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/ContractsEntity.hbm.xml"/>
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/ApplicantEntity.hbm.xml"/>
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/ApplicantTenderEntity.hbm.xml"/>
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/AwardApplicantTenderEntity.hbm.xml"/>
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/DocumentsToCarryEntity.hbm.xml"/>
+        
+        
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/ArchitectureProjectEntity.hbm.xml"/>
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/EngineeringProjectEntity.hbm.xml"/>
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/ProjectStatusEntity.hbm.xml"/>
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/OperatorEntity.hbm.xml"/>
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/SucEntity.hbm.xml"/>
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/SucProjectEntity.hbm.xml"/>
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/ImportantDucumentEntity.hbm.xml"/>
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/NodeTypeEntity.hbm.xml"/>
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/ThirdPartyProjectEntity.hbm.xml"/>
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/CategoryEntity.hbm.xml"/>
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/CategoryTenderEntity.hbm.xml"/>
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/QuestionEntity.hbm.xml"/>
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/AnswerEntity.hbm.xml"/>
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/requestedDocumentApplicantEntity.hbm.xml"/>
+        
+        <mapping resource="com/intellego/parquearauco/security/hibernate/mapping/Acl.hbm.xml"/> 
+        <mapping resource="com/intellego/parquearauco/security/hibernate/mapping/Area.hbm.xml"/>
+        <mapping resource="com/intellego/parquearauco/security/hibernate/mapping/Funcionality.hbm.xml"/> 
+        <mapping resource="com/intellego/parquearauco/security/hibernate/mapping/Node.hbm.xml"/> 
+        <mapping resource="com/intellego/parquearauco/security/hibernate/mapping/Rol.hbm.xml"/> 
+        <mapping resource="com/intellego/parquearauco/security/hibernate/mapping/RolFuncionality.hbm.xml"/>
+
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/FlowByDocumentEntity.hbm.xml"/>
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/CheckListEntity.hbm.xml"/>
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/CheckListCommentEntity.hbm.xml"/>
+        
+        <!-- Licitaciones -->
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/OrganizationalAreaEntity.hbm.xml"/>
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/TenderEntity.hbm.xml"/>
+        <mapping resource="com/intellego/parquearauco/hibernate/mapping/thirdPartySharedDocumentEntity.hbm.xml"/>
+        
+        
+	</session-factory>
+</hibernate-configuration>

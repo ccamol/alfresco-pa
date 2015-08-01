@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans.dtd'>
+<beans>
+  	<bean id="versioningService" parent="baseJavaScriptExtension" class="com.intellego.parquearauco.baseprocessorextension.VersioningService">
+        <property name="extensionName">
+            <value>VersioningService</value>
+        </property>        
+      	<property name="serviceRegistry">
+        	<ref bean="ServiceRegistry"></ref>
+      	</property>
+    </bean>
+  	<bean id="documentWorkflowService" parent="baseJavaScriptExtension" class="com.intellego.parquearauco.baseprocessorextension.DocumentWorkflowService">
+        <property name="extensionName">
+            <value>DocumentWorkflowService</value>
+        </property>        
+      	<property name="serviceRegistry">
+        	<ref bean="ServiceRegistry"></ref>
+      	</property>
+    </bean>
+</beans>

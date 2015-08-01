@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 20-05-2014 01:49:42 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.intellego.parquearauco.entities.RequestedDocumentApplicantEntity"
+		table="intellego_requestedDocument_Applicant">
+		<id name="id" type="java.lang.Integer">
+			<column name="ID" />
+			<generator class="sequence">
+				<param name="sequence">equestedDocument_Applicant_id_seq</param>
+			</generator>
+		</id>
+		<property name="uuidDocument" type="java.lang.String">
+			<column name="UUIDDOCUMENT" />
+		</property>
+		<property name="userTender" type="java.lang.String">
+			<column name="USERTENDER" />
+		</property>
+		<property name="idTender" type="java.lang.Integer">
+			<column name="IDTENDER" />
+		</property>
+		<property name="fechaCarga" type="java.util.Date">
+			<column name="FECHACARGA" />
+		</property>
+		<many-to-one name="documentToCarry"
+			class="com.intellego.parquearauco.entities.DocumentsToCarryEntity" fetch="join">
+			<column name="DOCUMENTTOCARRY" />
+		</many-to-one>
+	</class>
+</hibernate-mapping>

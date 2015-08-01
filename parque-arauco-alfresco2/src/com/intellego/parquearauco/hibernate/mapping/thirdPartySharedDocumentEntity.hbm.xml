@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 20-05-2014 01:49:42 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.intellego.parquearauco.entities.ThirdPartySharedDocumentEntity"
+		table="intellego_thirdPartySharedDocument">
+		<id name="id" type="java.lang.Integer">
+			<column name="ID" />
+			<generator class="sequence">
+				<param name="sequence">thirdPartySharedDocument_id_seq</param>
+			</generator>
+		</id>
+		<property name="uuidDocument" type="java.lang.String">
+			<column name="UUIDDOCUMENT" />
+		</property>
+		<property name="thirdPartyName" type="java.lang.String">
+			<column name="THIRDPARTYNAME" />
+		</property>
+		<property name="sharedDate" type="java.util.Date">
+			<column name="SHAREDDATE" />
+		</property>
+		<many-to-one name="architectureProject" class="com.intellego.parquearauco.entities.ArchitectureProjectEntity" fetch="join">
+            <column name="architectureProject" />
+        </many-to-one>
+        
+        <many-to-one name="projectStages" class="com.intellego.parquearauco.entities.ProjectStagesEntity" fetch="join">
+            <column name="projectStages" />
+        </many-to-one>
+        
+	</class>
+</hibernate-mapping>

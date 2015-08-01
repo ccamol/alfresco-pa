@@ -1,0 +1,7 @@
+<webscript>
+	<shortname>getAwardEvaluationRequestedDocument</shortname>
+	<description>getAwardEvaluationRequestedDocument</description>
+	<family>dashlet</family>
+	<url>/dashlets/getAwardEvaluationRequestedDocument</url>
+	<format default="html">extension</format>
+</webscript>

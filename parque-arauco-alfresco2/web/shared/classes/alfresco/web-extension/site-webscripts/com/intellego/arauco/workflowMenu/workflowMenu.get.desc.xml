@@ -1,0 +1,7 @@
+<webscript>
+  <shortname>Workflow-menu</shortname>
+  <description>Workflow menu</description>
+  <url>/share/workflow-menu</url>
+  <authentication>none</authentication>
+  <transaction>required</transaction>
+</webscript>

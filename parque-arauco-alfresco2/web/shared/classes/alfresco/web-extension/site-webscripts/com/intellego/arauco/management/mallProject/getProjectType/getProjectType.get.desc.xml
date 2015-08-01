@@ -1,0 +1,5 @@
+<webscript>
+  <shortname>getProjectType</shortname>
+  <description>getProjectType</description>
+  <url>/dashlets/getProjectType</url>
+</webscript>
