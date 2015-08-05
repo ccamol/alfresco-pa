@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>getCheckListRequestedDocumentThirdParty</shortname>
+  <description>getCheckListRequestedDocumentThirdParty</description>
+  <family>dashlet</family>
+  <url>/dashlets/getCheckListRequestedDocumentThirdParty</url>
+</webscript>

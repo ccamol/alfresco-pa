@@ -15,7 +15,9 @@
 			<column name="name" />
 		</property>
 		
-		
+		<property name="stageParent" type="java.lang.Integer">
+			<column name="stageParent" />
+		</property>
 		
 		<set name="projectTypes" table="intellego_stage_project" inverse="true"
 			lazy="false" fetch="select">

@@ -78,7 +78,7 @@ if(classification.status>-1){
 
 	}
 
-	var newNode = oldNode.copy(cijFol); 
+	var newNode = oldNode.copy(cijFol);
 	
 	
 //	logger.log("newNode.properties[\"sys:node-uuid\"]: "+newNode.properties["sys:node-uuid"])

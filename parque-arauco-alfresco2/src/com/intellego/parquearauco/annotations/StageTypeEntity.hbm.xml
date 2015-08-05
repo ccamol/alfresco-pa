@@ -13,6 +13,11 @@
         <property name="name" type="java.lang.String">
             <column name="name" />
         </property>
+        
+        <property name="stageParent" type="java.lang.Integer">
+			<column name="stageParent" />
+		</property>
+		
         <set name="projects" table="intellego_stage_project" inverse="true" lazy="false" fetch="select">
             <key>
                 <column name="id_stage" not-null="true" />

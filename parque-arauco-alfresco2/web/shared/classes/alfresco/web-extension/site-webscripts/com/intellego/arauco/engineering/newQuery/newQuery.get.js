@@ -1,7 +1,7 @@
 var name= args.name ? args.name : null;
 var site= args.site ? args.site : null;
-logger.log("newQuery recive del ajax:" +name);
-logger.log("site recive del ajax:" +site);
+logger.log("newQuery recive del ajax: " +name);
+logger.log("site recive del ajax: " +site);
 if(site!=null){
 	var url = "/arauco/newQuery";
 

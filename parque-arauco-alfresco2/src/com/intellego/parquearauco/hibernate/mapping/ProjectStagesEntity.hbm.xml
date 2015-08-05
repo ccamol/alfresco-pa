@@ -22,6 +22,9 @@
         <many-to-one name="stageType" class="com.intellego.parquearauco.entities.StageTypeEntity" fetch="join">
             <column name="id_stage" />
         </many-to-one>
+        <property name="subStages" type="java.lang.Integer">
+            <column name="subStages" />
+        </property>
     </class>
 </hibernate-mapping>
 

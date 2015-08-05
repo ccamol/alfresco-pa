@@ -26,6 +26,11 @@
 <#else>
 "idStage" : "",
 </#if>
+<#if response.subStages?exists >
+"subStages" :"${response.subStages?string?replace(".", "")}",
+<#else>
+"subStages" : "",
+</#if>
 <#if response.stageType.name?exists >
 "stageName" :"${response.stageType.name}"
 <#else>

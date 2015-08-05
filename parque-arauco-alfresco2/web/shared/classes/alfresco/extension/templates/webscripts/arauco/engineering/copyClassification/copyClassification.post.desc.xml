@@ -1,0 +1,8 @@
+<webscript>
+  <shortname>copyClassification File</shortname>
+  <description>copyClassification</description>
+  <url>/arauco/copyClassification</url>
+   <format default="json">extension</format>
+  <authentication runas="admin">user</authentication>
+  <transaction>required</transaction>
+</webscript>

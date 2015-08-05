@@ -11,13 +11,14 @@ public class ProjectStagesEntity extends BasicEntity{
 	private Integer idProjectType;
 	private StageTypeEntity stageType;
 	private Integer stageStatus;
+	private Integer subStages;
 
 
 	public ProjectStagesEntity() {
 	}
 
 	public ProjectStagesEntity(Integer id, Integer idProject,
-			Integer idProjectType,StageTypeEntity stageType, Integer stageStatus) {
+			Integer idProjectType,StageTypeEntity stageType, Integer stageStatus, Integer subStages) {
 		this.id = id;
 		this.idProject = idProject;
 		this.idProjectType = idProjectType;
@@ -68,5 +69,12 @@ public class ProjectStagesEntity extends BasicEntity{
 		this.stageType = stageType;
 	}
 
+	public Integer getSubStages() {
+		return subStages;
+	}
+
+	public void setSubStages(Integer subStages) {
+		this.subStages = subStages;
+	}
 
 }

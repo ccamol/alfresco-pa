@@ -13,6 +13,8 @@ public class StageType extends Basic{
 	
 	private String name;
 	
+	private Integer stageParent;
+	
     private Integer status;
 
 	private Set<ProjectType> projectTypes = new HashSet<ProjectType>(0);
@@ -44,9 +46,6 @@ public class StageType extends Basic{
 		this.name = name;
 	}
 
-
-
-
 	public Set<ProjectType> getProjectTypes() {
 		return projectTypes;
 	}
@@ -70,5 +69,17 @@ public class StageType extends Basic{
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
+
+
+	public Integer getStageParent() {
+		return stageParent;
+	}
+
+
+	public void setStageParent(Integer stageParent) {
+		this.stageParent = stageParent;
+	}
+	
+	
 	
 }

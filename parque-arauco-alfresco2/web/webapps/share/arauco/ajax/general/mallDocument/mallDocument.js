@@ -118,7 +118,7 @@ var menu1 = [
             	 icon:'/share/images/icons/rename_classification.gif',
             	 disabled:checkDocumentalRol("collaborator")
              }
-             },	             
+             },	
              {'':{
             	 disabled:true
              }
@@ -192,7 +192,7 @@ var menu2 = [
              },
              {'Compartir documento':{
             	 onclick:function(menuItem,menu) { 
-            		 parentRecurseSite($(this).attr('id'), selectedElement, $(this).html());
+            		 parentRecurseSite($(this).attr('id'), selectedElement , $(this).html() );
             	 },
             	 icon:'/share/images/icons/compartida.gif',
             	 disabled:false
@@ -793,11 +793,11 @@ function newQuery(name, site) {
 	return variable;
 }
 
-function shareFolderClassification(uuidSelectedFolder){
+function shareFolderClassification(uuidClassification){
 
     var parents = new Array();
     var siteId = $("#siteId").val();
-    var folderName = $("#label_"+uuidSelectedFolder).html();
+    var folderName = $("#label_"+uuidClassification).html();
 
 //	popupAlert(folderName);
 
@@ -807,19 +807,19 @@ function shareFolderClassification(uuidSelectedFolder){
                 var site = "Ingeniería";
                 var name = null;
                 var query = newQuery(name, site);
-                var destFolderUUID = query.uuid;
+                var uuidNewParent = query.uuid;
 
                 $.ajax({
-                    url: '/share/page/dashlets/sharedFolders',
+                    url: '/share/page/dashlets/copyClassification',
                     type: "get",
                     dataType: "json",
                     async: false,
 
                     data: {
                         nodeType: nodeType,
-                        uuidSelectedFolder: uuidSelectedFolder,
-                        siteId: siteId,
-                        destFolderUUID: destFolderUUID
+                        siteId: siteId,                        
+                        uuidClassification: uuidClassification,
+                        uuidNewParent: uuidNewParent
                     },
                     success: function (data) {
                         if (data.status>-1) {
@@ -840,19 +840,19 @@ function shareFolderClassification(uuidSelectedFolder){
                 var site = "Arquitectura";
                 var name = null;
                 var query =newQuery(name, site);
-                var destFolderUUID = query.uuid;
+                var uuidNewParent = query.uuid;
 
                 $.ajax({
-                    url: '/share/page/dashlets/sharedFolders',
+                    url: '/share/page/dashlets/copyClassification',
                     type: "get",
                     dataType: "json",
                     async: false,
 
                     data: {
                         nodeType: nodeType,
-                        uuidSelectedFolder: uuidSelectedFolder,
-                        siteId: siteId,
-                        destFolderUUID: destFolderUUID
+                        siteId: siteId,                        
+                        uuidClassification: uuidClassification,
+                        uuidNewParent: uuidNewParent
                     },
                     success: function (data) {
                         if (data.status>-1) {
@@ -873,7 +873,6 @@ function shareFolderClassification(uuidSelectedFolder){
         }
     }).addClass("mdsuccess").attr('id','smallModal');
 }
-
 
 function parentRecurseSite(uuid_archivo, classification, nameDocument) {
 	var parents = new Array();
@@ -1200,8 +1199,8 @@ function statusProject(){
 			closeWaiting();
 		},
 	});
-	
-	
+
+
 }
 
 function selectOption(){

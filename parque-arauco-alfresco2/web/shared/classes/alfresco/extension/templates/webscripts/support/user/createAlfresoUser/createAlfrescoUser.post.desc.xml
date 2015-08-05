@@ -3,6 +3,6 @@
   <description>Creación de usuario en Alfresco</description>
   <url>/arauco/createAlfrescoUser</url>
   <format default="json">extension</format>
-  <authentication>user</authentication>
+  <authentication runas="admin">user</authentication>
   <transaction>required</transaction>
 </webscript>

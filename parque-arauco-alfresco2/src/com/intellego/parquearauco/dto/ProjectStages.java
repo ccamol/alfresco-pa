@@ -15,6 +15,7 @@ public class ProjectStages extends Basic{
 	private Integer idProjectType;
 	private StageType stageType;
 	private Integer stageStatus;
+	private Integer subStages;
 
 
 	public ProjectStages() {
@@ -71,6 +72,18 @@ public class ProjectStages extends Basic{
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+
+
+
+	public Integer getSubStages() {
+		return subStages;
+	}
+
+
+
+	public void setSubStages(Integer subStages) {
+		this.subStages = subStages;
 	}
 	
 	

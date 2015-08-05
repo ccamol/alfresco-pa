@@ -10,6 +10,7 @@ public class StageTypeEntity extends BasicEntity{
 
 	private Integer id;
 	private String name;
+	private Integer stageParent;
     private Integer status;
 	private Set<ProjectTypeEntity> projectTypes = new HashSet<ProjectTypeEntity>(0);
 	private Set<DocumentTypeEntity> documentTypes = new HashSet<DocumentTypeEntity>(0);
@@ -17,48 +18,37 @@ public class StageTypeEntity extends BasicEntity{
 	public StageTypeEntity() {
 	}
 
-	
-
-	public StageTypeEntity(Integer id, String name,
+	public StageTypeEntity(Integer id, String name, Integer stageParent,
 			Set<ProjectTypeEntity> projectTypes,
 			Set<DocumentTypeEntity> documentTypes,
 			Integer status, List<StatusProjectStageEntity> projects) {
 		this.id = id;
 		this.name = name;
+		this.stageParent = stageParent;
 		this.projectTypes = projectTypes;
 		this.documentTypes = documentTypes;
 		this.status = status;
-		
-		
 	}
-
 	
 	public Integer getStatus() {
 		return status;
 	}
 
-
-
 	public void setStatus(Integer status) {
 		this.status = status;
 	}
-
-
 
 	public Set<DocumentTypeEntity> getDocumentTypes() {
 		return documentTypes;
 	}
 
-
 	public void setDocumentTypes(Set<DocumentTypeEntity> documentTypes) {
 		this.documentTypes = documentTypes;
 	}
 
-
 	public Set<ProjectTypeEntity> getProjectTypes() {
 		return projectTypes;
 	}
-
 
 	public void setProjectTypes(Set<ProjectTypeEntity> projectTypes) {
 		this.projectTypes = projectTypes;
@@ -76,8 +66,14 @@ public class StageTypeEntity extends BasicEntity{
 	public void setName(String name) {
 		this.name = name;
 	}
+	public Integer getStageParent() {
+		return stageParent;
+	}
+	public void setStageParent(Integer stageParent) {
+		this.stageParent = stageParent;
+	}
 
-
+	
 
 
 }

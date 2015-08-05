@@ -3,6 +3,8 @@ package com.intellego.parquearauco.filters;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.apache.fop.datatypes.Numeric;
+
 import com.intellego.parquearauco.dto.ArchitectureProject;
 import com.intellego.parquearauco.dto.EngineeringProject;
 import com.intellego.parquearauco.dto.StageType;
@@ -20,11 +22,9 @@ public class ProjectStageFilter extends ObjectFilter{
 	private NumericFilter stageType;
 	private NumericFilter idProjectType;
 	private NumericFilter stageStatus;
-
-
+	private NumericFilter subStages;
 
 	public ProjectStageFilter(){ 
-		
 		
 		this.id = new NumericFilter();
 		this.id.setField("id");
@@ -41,18 +41,18 @@ public class ProjectStageFilter extends ObjectFilter{
 		this.stageType = new NumericFilter();
 		this.stageType.setField("stageType");
 		
+		this.subStages = new NumericFilter();
+		this.subStages.setField("subStages");
+		
 	}
-	
 	
 	public NumericFilter getStageType() {
 		return stageType;
 	}
 
-
 	public void setStageType(NumericFilter stageType) {
 		this.stageType = stageType;
 	}
-
 
 	public NumericFilter getId() {
 		return id;
@@ -61,31 +61,25 @@ public class ProjectStageFilter extends ObjectFilter{
 		this.id = id;
 	}
 
-
 	public NumericFilter getIdProject() {
 		return idProject;
 	}
-
 
 	public void setIdProject(NumericFilter idProject) {
 		this.idProject = idProject;
 	}
 
-
 	public NumericFilter getIdProjectType() {
 		return idProjectType;
 	}
-
 
 	public void setIdProjectType(NumericFilter idProjectType) {
 		this.idProjectType = idProjectType;
 	}
 
-
 	public NumericFilter getStageStatus() {
 		return stageStatus;
 	}
-
 
 	public void setStageStatus(NumericFilter stageStatus) {
 		this.stageStatus = stageStatus;
@@ -93,7 +87,5 @@ public class ProjectStageFilter extends ObjectFilter{
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}	
-	
-	
 	
 }

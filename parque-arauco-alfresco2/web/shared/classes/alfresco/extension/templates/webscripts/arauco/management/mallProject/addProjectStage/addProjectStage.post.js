@@ -53,6 +53,13 @@ resultProjectFilter = ProjectStagesSrv.getListByFilter(projectStageFilter);
 //				idStage = ids[a];
 //			}
 			
+			logger.log(ids[a] + "     #################################");
+			var subStagesResult = StageTypeSrv.getById(ids[a]).result;
+			
+			if(subStagesResult.stageParent != null || subStagesResult.stageParent != undefined || subStagesResult.stageParent != ""){
+				projectStage.subStages = subStagesResult.stageParent;
+			}
+			
 			if(resultProjectFilter.result.size()<1){
 			
 			StageTypeObject = StageTypeSrv.getById(ids[a]);
@@ -61,9 +68,7 @@ resultProjectFilter = ProjectStagesSrv.getListByFilter(projectStageFilter);
 				projectStage.stageStatus = 1;
 			}
 			
-			
 			projectStage.stageType = StageTypeObject.result;
-			
 			ProjectStagesSrv.add(projectStage);
 			
 			}

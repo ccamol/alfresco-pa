@@ -318,7 +318,11 @@ function getTask(){
 					}					
 					html=html+'<td><a style="font-style: italic; text-decoration:underline;" href="/share/page/task-edit?taskId='+data.data[i].id+'">' + data.data[i].description + '</a></td>';
 					html=html+'<td>'+data.data[i].title+'</td>';
-					html=html+'<td>'+data.data[i].workflowInstance.initiator.firstName+'</td>';
+					if(data.data[i].workflowInstance.initiator != null){
+						html=html+'<td>'+data.data[i].workflowInstance.initiator.firstName+'</td>';
+					}else{
+						html=html+'<td></td>';
+					}
 					html=html+'<td data-order="'+ getHideTaskFormat(data.data[i].workflowInstance.startDate)+'">'+getDateTaskFormat(data.data[i].workflowInstance.startDate)+'</td>';
 					//Actions icons 
 					html=html+'<td><a href="/share/page/task-details?taskId='+data.data[i].id+'"><img src="/alfresco/css/images/taskView.png" /></a>';
@@ -435,7 +439,11 @@ function getCompletedTask(){
 					}
 					html=html+'<td><a style="font-style: italic; text-decoration:underline;" href="/share/page/workflow-details?taskId='+data.data[i].id+'">' + data.data[i].description + '</a></td>';
 					html=html+'<td>'+data.data[i].title+'</td>';
-					html=html+'<td>'+data.data[i].workflowInstance.initiator.firstName+'</td>';
+					if(data.data[i].workflowInstance.initiator != null){
+						html=html+'<td>'+data.data[i].workflowInstance.initiator.firstName+'</td>';
+					}else{
+						html=html+'<td></td>';
+					}
 					html=html+'<td data-order="'+ getHideTaskFormat(data.data[i].workflowInstance.startDate)+'">'+getDateTaskFormat(data.data[i].workflowInstance.startDate)+'</td>';
 					//Actions icons
 					html=html+'<td><a href="/share/page/task-details?taskId='+data.data[i].id+'"><img src="/alfresco/css/images/taskView.png" /></a>';
@@ -529,7 +537,11 @@ function getOverdueTasks(date){
 					}
 					html=html+'<td><a style="font-style: italic; text-decoration:underline;" href="/share/page/task-edit?taskId='+data.data[i].id+'">' + data.data[i].description + '</a></td>';
 					html=html+'<td>'+data.data[i].title+'</td>';
-					html=html+'<td>'+data.data[i].workflowInstance.initiator.firstName+'</td>';
+					if(data.data[i].workflowInstance.initiator != null){
+						html=html+'<td>'+data.data[i].workflowInstance.initiator.firstName+'</td>';
+					}else{
+						html=html+'<td></td>';
+					}
 					html=html+'<td data-order="'+ getHideTaskFormat(data.data[i].workflowInstance.startDate)+'">'+getDateTaskFormat(data.data[i].workflowInstance.startDate)+'</td>';
 					//Actions icons
 					html=html+'<td><a href="/share/page/task-details?taskId='+data.data[i].id+'"><img src="/alfresco/css/images/taskView.png" /></a>';
@@ -624,7 +636,11 @@ function getTasksToExpire(today, tomorrow){
 					}
 					html=html+'<td><a style="font-style: italic; text-decoration:underline;" href="/share/page/task-edit?taskId='+data.data[i].id+'">' + data.data[i].description + '</a></td>';
 					html=html+'<td>'+data.data[i].title+'</td>';
-					html=html+'<td>'+data.data[i].workflowInstance.initiator.firstName+'</td>';
+					if(data.data[i].workflowInstance.initiator != null){
+						html=html+'<td>'+data.data[i].workflowInstance.initiator.firstName+'</td>';
+					}else{
+						html=html+'<td></td>';
+					}
 					html=html+'<td data-order="'+ getHideTaskFormat(data.data[i].workflowInstance.startDate)+'">'+getDateTaskFormat(data.data[i].workflowInstance.startDate)+'</td>';
 					//Actions icons
 					html=html+'<td><a href="/share/page/task-details?taskId='+data.data[i].id+'"><img src="/alfresco/css/images/taskView.png" /></a>';
@@ -720,7 +736,11 @@ function getRequestTask(){
 					}
 					html=html+'<td><a style="font-style: italic; text-decoration:underline;" href="/share/page/task-edit?taskId='+data.data[i].id+'">' + data.data[i].description + '</a></td>';
 					html=html+'<td>'+data.data[i].title+'</td>';
-					html=html+'<td>'+data.data[i].workflowInstance.initiator.firstName+'</td>';
+					if(data.data[i].workflowInstance.initiator != null){
+						html=html+'<td>'+data.data[i].workflowInstance.initiator.firstName+'</td>';
+					}else{
+						html=html+'<td></td>';
+					}
 					html=html+'<td data-order="'+ getHideTaskFormat(data.data[i].workflowInstance.startDate)+'">'+getDateTaskFormat(data.data[i].workflowInstance.startDate)+'</td>';
 					//Actions icons
 					html=html+'<td><a href="/share/page/task-details?taskId='+data.data[i].id+'"><img src="/alfresco/css/images/taskView.png" /></a>';

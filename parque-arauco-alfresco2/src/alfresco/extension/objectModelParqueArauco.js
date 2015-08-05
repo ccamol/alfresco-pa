@@ -110,6 +110,7 @@ function StageType(){
 	var dto = Packages.com.intellego.parquearauco.dto.StageType;
 	return dto();
 }
+
 function StageTypeTender(){
 	var dto = Packages.com.intellego.parquearauco.dto.StageTypeTender;
 	return dto();
@@ -223,6 +224,11 @@ function OrganizationalAreaFilter(){
 
 function StageFilter(){
 	var dto = Packages.com.intellego.parquearauco.filters.StageFilter;
+	return dto();
+}
+
+function StageTypeFilter(){
+	var dto = Packages.com.intellego.parquearauco.dto.StageTypeFilter;
 	return dto();
 }
 

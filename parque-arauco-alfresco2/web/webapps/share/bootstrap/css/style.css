@@ -661,6 +661,11 @@ width:45%;
 	height:80px !important;
 }
 
+.subStageList input{
+	width:33px !important;
+	height:33px !important;
+}
+
 /*****************MODAL***********************/
 .block{
 	float:left;
