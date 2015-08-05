@@ -1,7 +1,7 @@
 <webscript>
-  <shortname>sharedFolders</shortname>
-  <description>create new sharedFolders action</description>
-  <url>/arauco/sharedFolders</url>
+  <shortname>remove</shortname>
+  <description>create new remove action</description>
+  <url>/arauco/remove</url>
    <format default="json">extension</format>
   <authentication>user</authentication>
   <transaction>required</transaction>

@@ -35,6 +35,10 @@ public class ClassificationServiceBaseProccesor extends BaseProcessorExtension{
 		return service.getByUuid(Uuid);
 	}
 	
+	public Response<Classification> deleteNode(String uuid){
+		return service.deleteNode(uuid);
+	}
+	
 	public Response<Classification> getEngineeringRoot(){
 		return service.getEngineeringRoot();
 	}

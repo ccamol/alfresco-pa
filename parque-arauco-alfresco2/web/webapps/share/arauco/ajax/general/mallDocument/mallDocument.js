@@ -145,6 +145,21 @@ var menu1 = [
             	 disabled:checkDocumentalRol("collaborator")
 */            	 
              	} 
+             },    
+             {'Eliminar':{
+            	 onclick:function(menuItem,menu) { 
+            		 removeNode($(this).attr('id'));
+            	 },
+            	 icon:'/share/images/icons/close_panel.gif',
+            	 disabled:false
+            	 
+/*            	 onclick:function(menuItem,menu) { 
+            		 shareFolderClassification($(this).attr('id')); 
+            	 },
+            	 icon:'/share/images/icons/compartida.gif',
+            	 disabled:checkDocumentalRol("collaborator")
+*/            	 
+             	} 
              },             
              {'':{
             	 disabled:true
@@ -792,6 +807,40 @@ function newQuery(name, site) {
 
 	return variable;
 }
+
+
+function removeNode(uuid){
+    var parents = new Array();
+    var siteId = $("#siteId").val();
+    var folderName = $("#label_"+uuid).html();
+    
+    bootbox.confirm("Desea eliminar: "+folderName+" ¿Desea continuar?", "Cancelar", "Aceptar", function(result) {
+        if(result==true) {
+            $.ajax({
+                url: '/share/page/dashlets/remove',
+                type: "get",
+                dataType: "json",
+                async: false,
+
+                data: {
+                    nodeType: nodeType,
+                    uuid: uuid,
+                    siteId: siteId
+                },
+                success: function (data) {
+                    if (data.status>-1) {
+                    	//popupSuccess("Se compartió el archivo con éxito");
+                    }
+        			//$('#removeDialog').remove();
+        			//popupBoxDialog(data);
+        			//$("#removeParent").val(uuid);
+    				popupSuccess("Proceso terminado");
+                }
+            });
+        }
+    }).addClass("mdsuccess").attr('id','smallModal');
+}
+
 
 function shareFolderClassification(uuidClassification){
 

@@ -1,0 +1,6 @@
+<webscript>
+    <shortname>remove</shortname>
+    <description>remove</description>
+    <url>/dashlets/remove</url>
+    <format default="json">extension</format>
+</webscript>

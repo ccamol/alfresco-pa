@@ -41,23 +41,27 @@ if(nodeUuidClassification.status>-1 && nodeUuidNewParent.status>-1){
 	
 	validateFolder(nodo1);
 	//logger.log("newNode.getId()" + newNode.getId());
+	//captura ruta
 	var nodeArauco = companyhome.childByNamePath("Data Dictionary/Ingenier\u00eda/Compartida");
 	logger.log("nodeArauco: " + nodeArauco);
 	
+	//rescatar asociaciones node1 y cambiar sectionID
 	var newNode = nodo1.copy(nodeArauco,true); 
 	logger.log("newNode copiado: " + newNode);
 	
-	logger.log("poseen estado mayor a 1");
+	logger.log("newNode.properties['sys:node-uuid']: " + newNode.properties['sys:node-uuid']);
 	//var response = ClassificationService.copyClassification(nodeUuidClassification.result, nodeUuidNewParent.result);
-	var response = ClassificationService.copyClassification(uuidClassification, uuidNewParent);
+//	var response = ClassificationService.copyClassification(uuidClassification, uuidNewParent);
 	
-	logger.log("response: " + response);
+//	logger.log("response: " + response);
 	
-	var nodeList = search.luceneSearch('@sys\\:node-uuid:"'+response.message+'"');
+//	var nodeList = search.luceneSearch('@sys\\:node-uuid:"'+response.message+'"');
+	var nodeList = search.luceneSearch('@sys\\:node-uuid:"'+newNode.properties['sys:node-uuid']+'"');
 	
 	logger.log("nodeList: " + nodeList);
 	
-	data = ClassificationService.getByUuid(response.message).result;
+//	data = ClassificationService.getByUuid(response.message).result;
+	data = ClassificationService.getByUuid(newNode.properties['sys:node-uuid']).result;
 	
 	logger.log("data: " + data);
 	

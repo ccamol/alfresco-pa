@@ -1,23 +1,18 @@
 var nodeType = args.nodeType ? args.nodeType : null;
-var uuidSelectedFolder = args.uuidSelectedFolder ? args.uuidSelectedFolder : null;
+var uuid = args.uuid ? args.uuid : null;
 var siteId = args.siteId ? args.siteId : null;
-var destFolderUUID = args.destFolderUUID ? args.destFolderUUID : null;
 
 
-if(nodeType!=null && uuidSelectedFolder!=null){
-	var url = "/arauco/sharedFolders";
+if(nodeType!=null && uuid!=null){
+	var url = "/arauco/remove";
 
 	var params = new Array();
 	params["nodeType"]=nodeType;
-	params["uuidSelectedFolder"]=uuidSelectedFolder;
+	params["uuid"]=uuid;
     params["siteId"]=siteId;
-    params["destFolderUUID"]=destFolderUUID;
 
-	
 	var connector = remote.connect("alfresco");
 	var data = connector.post(url, jsonUtils.toJSONString(params), "application/json");
-
-
 
 	model.response = data;
 }

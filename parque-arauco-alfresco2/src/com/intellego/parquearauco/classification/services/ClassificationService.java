@@ -40,7 +40,7 @@ public class ClassificationService {
 	private ResultSet resultSet;
 
 	public Response<Classification> getEngineeringRoot(){
-		return this.getRoot("Ingeniería");
+		return this.getRoot("Ingenier\u00eda");
 	}
 
 	public Response<Classification> getArchitectureRoot(){
@@ -117,6 +117,30 @@ public class ClassificationService {
 			response.setStatus(-1);
 			response.setMessage("Se produjo un error al copiar la  clasificación");
 		}
+		return response;
+	}
+	
+	//TODO
+	public Response<Classification> deleteNode(String uuid){
+		System.out.println("[deleteAssocs] @ iniciando proceso eliminacion de nodo");
+		Response<Classification> response = new Response<Classification>();
+		NodeService nodeService = this.serviceRegistry.getNodeService();
+		NodeRef node = getNode(uuid);
+//		QName TYPE_PA_DOCUMENT=QName.createQName("http://www.parquearauco.cl/content/1.0","paDocument");
+		nodeService.deleteNode(node);
+		
+		
+//		response = this.getByUuid(fileInfo.getNodeRef().getId());
+		//TODO bloque para eliminar asociaciones
+//		List<AssociationRef> assocs = nodeService.getTargetAssocs(node, ContentModel.ASSOC_REFERENCES);
+//		int ind = 0;
+//		for(AssociationRef each : assocs){
+//			ind++;
+//			System.out.println(ind + ": " + each.getId() + " | " + each.getTypeQName());
+//			nodeService.removeAssociation(node, each.getSourceRef(), TYPE_PA_DOCUMENT);
+//		}
+		
+		System.out.println("[deleteNode] | fin llamada");
 		return response;
 	}
 	
